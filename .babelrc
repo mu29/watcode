@@ -1,0 +1,19 @@
+{
+  "presets": ["env", "react", "stage-0", "react-native"],
+  "plugins": [
+    ["module-resolver", {
+      "root": ["./src"]
+    }]
+  ],
+  "env": {
+    "development": {
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        ["styled-components", { "minify": false }]
+      ]
+    },
+    "test": {
+      "plugins": ["transform-es2015-modules-commonjs"]
+    }
+  }
+}

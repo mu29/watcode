@@ -91,7 +91,7 @@ Button.defaultProps = {
   primaryColor: 'yellow.default',
   backgroundColor: 'gray.90',
   border: undefined,
-  borderRadius: 0,
+  borderRadius: 1,
 }
 
 export default Button

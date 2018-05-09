@@ -7,10 +7,11 @@ const errorColor = ({ error, theme }) => error && `1px solid ${palette('red.defa
 
 const styles = css`
   width: ${width};
-  border: ${border};
   color: ${color};
   font-family: ${fontFamily};
   font-size: ${fontSize};
+  border: ${border};
+  border-radius: 0.0625rem;
   background: transparent;
   padding: 0.75rem;
   transition: border 0.3s;
@@ -70,7 +71,7 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   width: undefined,
-  border: 'gray.20',
+  border: 'gray.30',
   block: false,
   font: 'default',
   fontSize: 16,

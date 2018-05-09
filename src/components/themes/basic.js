@@ -22,7 +22,7 @@ const theme = {
       default: '#F9D14C',
     },
     red: {
-      default: '#FA5D63',
+      default: '#FF8787',
     },
   },
   fonts: {

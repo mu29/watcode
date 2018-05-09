@@ -1,7 +1,9 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled, { css } from 'styled-components'
-import { width, border, color, primaryColor, fontFamily, fontSize } from 'services/style'
+import { width, border, color, primaryColor, fontFamily, fontSize, palette } from 'services/style'
+
+const errorColor = ({ error, theme }) => error && `1px solid ${palette('red.default')({ theme })}`
 
 const styles = css`
   width: ${width};
@@ -19,7 +21,7 @@ const styles = css`
 
   &:active, &:focus {
     outline: none;
-    border: 1px solid ${primaryColor}
+    border: 1px solid ${primaryColor};
   }
 
   &::placeholder {
@@ -35,7 +37,14 @@ const styles = css`
   }
 `
 
-const StyledInput = styled.input`${styles}`
+const StyledInput = styled.input`
+  ${styles}
+  border: ${errorColor};
+
+  &:active, &:focus {
+  border: ${errorColor};
+  }
+`
 const StyledTextArea = styled.textarea`${styles}`
 
 const Input = (props) => {
@@ -62,7 +71,7 @@ Input.defaultProps = {
   type: 'text',
   width: undefined,
   border: 'gray.20',
-  block: true,
+  block: false,
   font: 'default',
   fontSize: 16,
   color: 'gray.90',

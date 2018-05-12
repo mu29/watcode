@@ -11,20 +11,21 @@ const borderBottom = ({ href, location, theme }) => palette(href === location ? 
 const Wrapper = styled.div`
   display: flex;
   justify-content: space-between;
+  margin: 0 -0.0625rem;
   background-color: ${palette('gray.10')};
-  border-bottom: 1px solid ${palette('gray.30')};
+  border-bottom: 0.0625rem solid ${palette('gray.30')};
 `
 
 const StyledIconButton = styled(IconButton)`
-  margin-bottom: -1px;
+  margin-bottom: -0.0625rem;
   color: ${color};
   background-color: ${background};
-  border-right: 1px solid ${palette('gray.30')};
-  border-bottom: 1px solid ${borderBottom};
+  border-right: 0.0625rem solid ${palette('gray.30')};
+  border-bottom: 0.0625rem solid ${borderBottom};
   border-radius: 0;
 
   &:first-child {
-    border-left: 1px solid ${palette('gray.30')};
+    border-left: 0.0625rem solid ${palette('gray.30')};
   }
 `
 

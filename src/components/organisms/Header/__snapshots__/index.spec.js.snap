@@ -1,8 +1,19 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Header /> 5개의 메뉴를 가진다 1`] = `
+.c0 {
+  margin-bottom: -0.0625rem;
+  border-right: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-radius: 0;
+}
+
+.c0:first-child {
+  border-left: 0.0625rem solid;
+}
+
 <IconButton
-  className="sc-bwzfXH jhGJxg"
+  className="c0"
   href="/"
   icon="home"
   location="/"
@@ -10,8 +21,19 @@ exports[`<Header /> 5개의 메뉴를 가진다 1`] = `
 `;
 
 exports[`<Header /> 5개의 메뉴를 가진다 2`] = `
+.c0 {
+  margin-bottom: -0.0625rem;
+  border-right: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-radius: 0;
+}
+
+.c0:first-child {
+  border-left: 0.0625rem solid;
+}
+
 <IconButton
-  className="sc-bwzfXH jhGJxg"
+  className="c0"
   href="/auth"
   icon="user"
   location="/"
@@ -19,8 +41,21 @@ exports[`<Header /> 5개의 메뉴를 가진다 2`] = `
 `;
 
 exports[`<Header /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -0.0625rem;
+  border-bottom: 0.0625rem solid;
+}
+
 <div
-  className="sc-bdVaJa eUZheN"
+  className="c0"
 >
   <LeftMenu>
     <StyledIconButton
@@ -55,8 +90,21 @@ exports[`<Header /> 정상적으로 렌더링된다 1`] = `
 `;
 
 exports[`<Header /> 커뮤니티 메뉴가 선택되어 있다 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -0.0625rem;
+  border-bottom: 0.0625rem solid;
+}
+
 <div
-  className="sc-bdVaJa eUZheN"
+  className="c0"
 >
   <LeftMenu>
     <StyledIconButton

@@ -22,7 +22,7 @@ const styles = css`
 
   &:active, &:focus {
     outline: none;
-    border: 1px solid ${primaryColor};
+    border: 0.0625rem solid ${primaryColor};
   }
 
   &::placeholder {

@@ -156,7 +156,6 @@ exports[`<Field /> 정상적으로 렌더링된다 1`] = `
 <div
   className="c0"
 >
-  <LabelArea />
   <Input
     id="name"
     name="name"

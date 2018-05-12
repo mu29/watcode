@@ -5,7 +5,7 @@ exports[`<Input /> 오류 메시지를 표시한다 1`] = `
   color: #424242;
   font-family: Spoqa Han Sans,Helvetica Neue,Nanum Gothic;
   font-size: 1rem;
-  border: 1px solid #E0E0E0;
+  border: 0.0625rem solid #E0E0E0;
   border-radius: 0.0625rem;
   background: transparent;
   padding: 0.75rem;
@@ -21,7 +21,7 @@ exports[`<Input /> 오류 메시지를 표시한다 1`] = `
 .c0:active,
 .c0:focus {
   outline: none;
-  border: 1px solid #F9D14C;
+  border: 0.0625rem solid #F9D14C;
 }
 
 .c0::-webkit-input-placeholder {
@@ -70,7 +70,7 @@ exports[`<Input /> 정상적으로 렌더링된다 1`] = `
   color: #424242;
   font-family: Spoqa Han Sans,Helvetica Neue,Nanum Gothic;
   font-size: 1rem;
-  border: 1px solid #E0E0E0;
+  border: 0.0625rem solid #E0E0E0;
   border-radius: 0.0625rem;
   background: transparent;
   padding: 0.75rem;
@@ -85,7 +85,7 @@ exports[`<Input /> 정상적으로 렌더링된다 1`] = `
 .c0:active,
 .c0:focus {
   outline: none;
-  border: 1px solid #F9D14C;
+  border: 0.0625rem solid #F9D14C;
 }
 
 .c0::-webkit-input-placeholder {

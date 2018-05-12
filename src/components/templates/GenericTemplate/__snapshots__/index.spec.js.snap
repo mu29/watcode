@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<GenericTemplate /> 정상적으로 렌더링된다 1`] = `
+<Wrapper>
+  <Header>
+    header
+  </Header>
+  <Content>
+    test
+  </Content>
+</Wrapper>
+`;

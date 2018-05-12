@@ -17,8 +17,8 @@ export default class Router extends React.Component {
       return <Redirect to={{ pathname: '/login', state: { from: props.location } }} />
     }
 
-    if (isLoggedIn && ['/login', '/'].includes(route.path)) {
-      return <Redirect to="/profile" />
+    if (isLoggedIn && ['/login', '/register'].includes(route.path)) {
+      return <Redirect to="/" />
     }
 
     return <route.component { ...props } />

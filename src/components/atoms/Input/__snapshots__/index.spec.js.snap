@@ -1,0 +1,60 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Input /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  color: #424242;
+  font-family: Spoqa Han Sans,Helvetica Neue,Nanum Gothic;
+  font-size: 1rem;
+  border: 1px solid #E0E0E0;
+  border-radius: 0.0625rem;
+  background: transparent;
+  padding: 0.75rem;
+  -webkit-transition: border 0.3s;
+  transition: border 0.3s;
+}
+
+.c0:hover {
+  outline: none;
+}
+
+.c0:active,
+.c0:focus {
+  outline: none;
+  border: 1px solid #F9D14C;
+}
+
+.c0::-webkit-input-placeholder {
+  -webkit-filter: opacity(50%);
+  filter: opacity(50%);
+}
+
+.c0::-moz-placeholder {
+  -webkit-filter: opacity(50%);
+  filter: opacity(50%);
+}
+
+.c0:-ms-input-placeholder {
+  -webkit-filter: opacity(50%);
+  filter: opacity(50%);
+}
+
+.c0::placeholder {
+  -webkit-filter: opacity(50%);
+  filter: opacity(50%);
+}
+
+.c0:-webkit-autofill,
+.c0:-webkit-autofill:hover,
+.c0:-webkit-autofill:focus,
+.c0:-webkit-autofill:active {
+  -webkit-transition: "color 9999s ease-out, background-color 9999s ease-out";
+  -webkit-transition-delay: 9999s;
+}
+
+<input
+  className="c0"
+  color="gray.90"
+  fontSize={16}
+  type="text"
+/>
+`;

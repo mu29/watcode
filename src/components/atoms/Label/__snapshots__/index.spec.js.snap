@@ -1,0 +1,17 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Label /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  margin-bottom: 0.25rem;
+  color: #424242;
+  font-family: Spoqa Han Sans,Helvetica Neue,Nanum Gothic;
+  font-size: 0.75rem;
+  font-weight: bold;
+}
+
+<label
+  className="c0"
+  color="gray.90"
+  fontSize={12}
+/>
+`;

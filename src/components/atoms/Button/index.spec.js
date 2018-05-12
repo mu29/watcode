@@ -1,7 +1,7 @@
 import React from 'react'
 import { shallow } from 'enzyme'
-import 'jest-styled-components'
 import { basicTheme } from 'components/themes'
+import 'jest-styled-components'
 import Button from '.'
 
 const onClick = jest.fn()
@@ -22,7 +22,7 @@ describe('<Button />', () => {
 
   it('임의의 속성이 들어온 경우 그려준다', () => {
     const wrapper = wrap({ name: 'foo' })
-    expect(wrapper.prop('name')).toEqual('foo')
+    expect(wrapper.props().name).toEqual('foo')
   })
 
   it('기본으로 button 태그를 그려준다', () => {

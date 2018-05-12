@@ -1,0 +1,101 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
+<styled.button
+  backgroundColor="gray.90"
+  block={false}
+  borderRadius={1}
+  color="white.default"
+  font="default"
+  fontSize={16}
+  height={48}
+  onClick={[MockFunction]}
+  padding="0 24"
+  primaryColor="yellow.default"
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+      },
+      "palette": Object {
+        "gray": Object {
+          "0": "FAFAFA",
+          "10": "#F5F5F5",
+          "100": "#212121",
+          "20": "#EEEEEE",
+          "30": "#E0E0E0",
+          "40": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
+>
+  test
+</styled.button>
+`;
+
+exports[`<Button /> 정상적으로 렌더링된다 1`] = `
+<styled.button
+  backgroundColor="gray.90"
+  block={false}
+  borderRadius={1}
+  color="white.default"
+  font="default"
+  fontSize={16}
+  height={48}
+  onClick={[MockFunction]}
+  padding="0 24"
+  primaryColor="yellow.default"
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+      },
+      "palette": Object {
+        "gray": Object {
+          "0": "FAFAFA",
+          "10": "#F5F5F5",
+          "100": "#212121",
+          "20": "#EEEEEE",
+          "30": "#E0E0E0",
+          "40": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
+/>
+`;

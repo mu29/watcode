@@ -19,7 +19,7 @@ exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준�
       },
       "palette": Object {
         "gray": Object {
-          "0": "FAFAFA",
+          "0": "#FAFAFA",
           "10": "#F5F5F5",
           "100": "#212121",
           "20": "#EEEEEE",
@@ -67,7 +67,7 @@ exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = 
       },
       "palette": Object {
         "gray": Object {
-          "0": "FAFAFA",
+          "0": "#FAFAFA",
           "10": "#F5F5F5",
           "100": "#212121",
           "20": "#EEEEEE",
@@ -117,7 +117,7 @@ exports[`<Heading /> 정상적으로 렌더링된다 1`] = `
       },
       "palette": Object {
         "gray": Object {
-          "0": "FAFAFA",
+          "0": "#FAFAFA",
           "10": "#F5F5F5",
           "100": "#212121",
           "20": "#EEEEEE",

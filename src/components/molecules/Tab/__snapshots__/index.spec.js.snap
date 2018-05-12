@@ -1,26 +1,26 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 표시한다 1`] = `
-<styled.div
+<TabContainer
   borderColor="gray.20"
 >
-  <styled.div>
-    <Styled(Button)
+  <TabHeader>
+    <TabItem
       key="title1"
       onClick={[Function]}
       selected={true}
     >
       title1
-    </Styled(Button)>
-    <Styled(Button)
+    </TabItem>
+    <TabItem
       key="title2"
       onClick={[Function]}
       selected={false}
     >
       title2
-    </Styled(Button)>
-  </styled.div>
-  <styled.div
+    </TabItem>
+  </TabHeader>
+  <TabDivider
     borderColor="gray.20"
   />
   <TabPage
@@ -28,30 +28,30 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
   >
     탭 페이지 1
   </TabPage>
-</styled.div>
+</TabContainer>
 `;
 
 exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 표시한다 2`] = `
-<styled.div
+<TabContainer
   borderColor="gray.20"
 >
-  <styled.div>
-    <Styled(Button)
+  <TabHeader>
+    <TabItem
       key="title1"
       onClick={[Function]}
       selected={false}
     >
       title1
-    </Styled(Button)>
-    <Styled(Button)
+    </TabItem>
+    <TabItem
       key="title2"
       onClick={[Function]}
       selected={true}
     >
       title2
-    </Styled(Button)>
-  </styled.div>
-  <styled.div
+    </TabItem>
+  </TabHeader>
+  <TabDivider
     borderColor="gray.20"
   />
   <TabPage
@@ -59,7 +59,7 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
   >
     탭 페이지 2
   </TabPage>
-</styled.div>
+</TabContainer>
 `;
 
 exports[`<Tab /> 정상적으로 렌더링된다 1`] = `
@@ -71,23 +71,23 @@ exports[`<Tab /> 정상적으로 렌더링된다 1`] = `
 <div
   className="c0"
 >
-  <styled.div>
-    <Styled(Button)
+  <TabHeader>
+    <TabItem
       key="title1"
       onClick={[Function]}
       selected={true}
     >
       title1
-    </Styled(Button)>
-    <Styled(Button)
+    </TabItem>
+    <TabItem
       key="title2"
       onClick={[Function]}
       selected={false}
     >
       title2
-    </Styled(Button)>
-  </styled.div>
-  <styled.div
+    </TabItem>
+  </TabHeader>
+  <TabDivider
     borderColor="gray.20"
   />
   <TabPage

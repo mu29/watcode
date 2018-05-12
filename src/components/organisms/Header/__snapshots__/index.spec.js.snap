@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> 정상적으로 렌더링된다 1`] = `
+<div
+  className="sc-bdVaJa eUZheN"
+>
+  <LeftMenu>
+    <StyledIconButton
+      href="/"
+      icon="home"
+      location="/"
+    />
+    <StyledIconButton
+      href="/ranking"
+      icon="trophy"
+      location="/"
+    />
+    <StyledIconButton
+      href="/bookmarks"
+      icon="star"
+      location="/"
+    />
+    <StyledIconButton
+      href="/community"
+      icon="comments"
+      location="/"
+    />
+  </LeftMenu>
+  <RightMenu>
+    <StyledIconButton
+      href="/auth"
+      icon="user"
+      location="/"
+    />
+  </RightMenu>
+</div>
+`;
+
+exports[`<Header /> 커뮤니티 메뉴가 선택되어 있다 1`] = `
+<div
+  className="sc-bdVaJa eUZheN"
+>
+  <LeftMenu>
+    <StyledIconButton
+      href="/"
+      icon="home"
+      location="/community"
+    />
+    <StyledIconButton
+      href="/ranking"
+      icon="trophy"
+      location="/community"
+    />
+    <StyledIconButton
+      href="/bookmarks"
+      icon="star"
+      location="/community"
+    />
+    <StyledIconButton
+      href="/community"
+      icon="comments"
+      location="/community"
+    />
+  </LeftMenu>
+  <RightMenu>
+    <StyledIconButton
+      href="/auth"
+      icon="user"
+      location="/community"
+    />
+  </RightMenu>
+</div>
+`;

@@ -19,13 +19,13 @@ exports[`<InputField /> label 속성이 들어오면 그려준다 1`] = `
 <div
   className="c0"
 >
-  <styled.div>
+  <LabelArea>
     <Label
       htmlFor="name"
     >
       foo label
     </Label>
-  </styled.div>
+  </LabelArea>
   <Input
     id="name"
     name="name"
@@ -36,7 +36,7 @@ exports[`<InputField /> label 속성이 들어오면 그려준다 1`] = `
         },
         "palette": Object {
           "gray": Object {
-            "0": "FAFAFA",
+            "0": "#FAFAFA",
             "10": "#F5F5F5",
             "100": "#212121",
             "20": "#EEEEEE",
@@ -88,11 +88,11 @@ exports[`<InputField /> 오류 메시지를 표시한다 1`] = `
 <div
   className="c0"
 >
-  <styled.div>
-    <styled.span>
+  <LabelArea>
+    <Error>
       foo error
-    </styled.span>
-  </styled.div>
+    </Error>
+  </LabelArea>
   <Input
     error="foo error"
     id="name"
@@ -104,7 +104,7 @@ exports[`<InputField /> 오류 메시지를 표시한다 1`] = `
         },
         "palette": Object {
           "gray": Object {
-            "0": "FAFAFA",
+            "0": "#FAFAFA",
             "10": "#F5F5F5",
             "100": "#212121",
             "20": "#EEEEEE",
@@ -156,7 +156,7 @@ exports[`<InputField /> 정상적으로 렌더링된다 1`] = `
 <div
   className="c0"
 >
-  <styled.div />
+  <LabelArea />
   <Input
     id="name"
     name="name"
@@ -167,7 +167,7 @@ exports[`<InputField /> 정상적으로 렌더링된다 1`] = `
         },
         "palette": Object {
           "gray": Object {
-            "0": "FAFAFA",
+            "0": "#FAFAFA",
             "10": "#F5F5F5",
             "100": "#212121",
             "20": "#EEEEEE",

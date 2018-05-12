@@ -1,25 +1,26 @@
 import React from 'react'
 import { shallow } from 'enzyme'
+import 'jest-styled-components'
 import ReduxField from '.'
 
-let meta
-let input
+const meta = {
+  touched: false,
+  error: null,
+}
+const input = {
+  name: 'test',
+}
 const wrap = (props = {}) => shallow(<ReduxField { ...{ meta, input, ...props } } />)
 
-beforeEach(() => {
-  meta = {
-    touched: false,
-    error: null,
-  }
-  input = {
-    name: 'test',
-  }
-})
-
 describe('<ReduxField />', () => {
+  it('정상적으로 렌더링된다', () => {
+    const wrapper = wrap()
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('임의의 속성을 그려준다', () => {
     const wrapper = wrap({ id: 'foo' })
-    expect(wrapper.find({ id: 'foo' })).toHaveLength(1)
+    expect(wrapper.props().id).toEqual('foo')
   })
 
   it('touched 되지 않았다면 오류를 표시하지 않는다', () => {

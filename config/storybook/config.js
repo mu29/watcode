@@ -14,8 +14,6 @@ import { api } from 'services/api'
 import configureStore from 'store/configure'
 import theme from 'components/themes/basic'
 
-api.setToken('20170115010230587a4b9658dc59.25633050')
-
 const history = createHistory()
 const store = configureStore({}, history, { api })
 const req = require.context('../../src/components', true, /.stories.jsx?$/)

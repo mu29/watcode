@@ -3,8 +3,7 @@
   "plugins": [
     ["module-resolver", {
       "root": ["./src"]
-    }],
-    "styled-components-named"
+    }]
   ],
   "env": {
     "development": {
@@ -14,7 +13,10 @@
       ]
     },
     "test": {
-      "plugins": ["transform-es2015-modules-commonjs"]
+      "plugins": [
+        "transform-es2015-modules-commonjs",
+        "styled-components-named"
+      ]
     }
   }
 }

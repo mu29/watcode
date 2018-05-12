@@ -5,14 +5,14 @@ import { camelizeKeys, decamelizeKeys } from 'services/utils'
 export const actionCreatorFactory = (prefix) => {
   const base = prefix ? `${prefix}/` : ''
 
-  const actionCreator = (type, meta, camelize = false, isError = false) => {
+  const actionCreator = (type, meta, map = p => p, error = false) => {
     const fullType = base + type
     return Object.assign((payload) => {
       const action = {
         type: fullType,
-        payload: camelize ? camelizeKeys(payload) : decamelizeKeys(payload),
+        payload: map(payload),
         meta,
-        error: isError,
+        error,
       }
 
       return action
@@ -24,9 +24,9 @@ export const actionCreatorFactory = (prefix) => {
 
   const asyncActionCreators = (type, meta) => ({
     type: base + type,
-    request: actionCreator(`${type}_REQUEST`, meta),
-    success: actionCreator(`${type}_SUCCESS`, meta, true),
-    failure: actionCreator(`${type}_FAILURE`, meta, true, true),
+    request: actionCreator(`${type}_REQUEST`, meta, decamelizeKeys),
+    success: actionCreator(`${type}_SUCCESS`, meta, camelizeKeys),
+    failure: actionCreator(`${type}_FAILURE`, meta, camelizeKeys, true),
   })
 
   return Object.assign(actionCreator, { async: asyncActionCreators })

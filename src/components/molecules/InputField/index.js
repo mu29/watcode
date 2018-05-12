@@ -7,10 +7,7 @@ import { palette } from 'services/style'
 const Wrapper = styled.div`
   display: flex;
   flex-direction: column;
-  margin-bottom: 1rem;
-  padding: 0;
-  border-radius: 0.375rem;
-  transition: border-color 0.3s;
+  width: 100%;
 `
 
 const LabelArea = styled.div`
@@ -38,11 +35,14 @@ const InputField = ({
   }
 
   return (
-    <Wrapper error={ error } { ...props }>
-      <LabelArea>
-        { label && <Label htmlFor={ inputProps.id }>{ label }</Label> }
-        { error && <Error>{ error }</Error> }
-      </LabelArea>
+    <Wrapper error={ error }>
+      {
+        (label || error) &&
+        <LabelArea>
+          { label && <Label htmlFor={ inputProps.id }>{ label }</Label> }
+          { error && <Error>{ error }</Error> }
+        </LabelArea>
+      }
       <Input { ...inputProps } error={ error } />
     </Wrapper>
   )

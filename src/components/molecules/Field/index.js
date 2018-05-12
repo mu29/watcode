@@ -39,10 +39,13 @@ const Field = ({
 
   return (
     <Wrapper error={ error } { ...props }>
-      <LabelArea>
-        { label && <Label htmlFor={ inputProps.id }>{ label }</Label> }
-        { error && <Error>{ error }</Error> }
-      </LabelArea>
+      {
+        (label || error) &&
+        <LabelArea>
+          { label && <Label htmlFor={ inputProps.id }>{ label }</Label> }
+          { error && <Error>{ error }</Error> }
+        </LabelArea>
+      }
       <Input { ...inputProps } error={ error } />
     </Wrapper>
   )

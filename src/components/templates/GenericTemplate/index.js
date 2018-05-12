@@ -21,6 +21,7 @@ const Content = styled.section`
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  width: 100%;
 `
 
 const GenericTemplate = ({ header, children, ...props }) => (

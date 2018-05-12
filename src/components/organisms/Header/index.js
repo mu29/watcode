@@ -16,9 +16,7 @@ const Wrapper = styled.div`
 `
 
 const StyledIconButton = styled(IconButton)`
-  height: 2.4rem;
   margin-bottom: -1px;
-  padding: 0 1rem;
   color: ${color};
   background-color: ${background};
   border-right: 1px solid ${palette('gray.30')};

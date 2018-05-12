@@ -40,9 +40,7 @@ const styles = css`
   }
 `
 
-const StyledLink = styled(({
-  to, ...props
-}) => <Link to={ to } { ...props } />)`${styles}`
+const StyledLink = styled(Link)`${styles}`
 
 const Anchor = styled.a`${styles}`
 

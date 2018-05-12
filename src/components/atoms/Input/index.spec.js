@@ -17,6 +17,11 @@ describe('<Input />', () => {
     expect(wrapper.props().name).toEqual('foo')
   })
 
+  it('오류 메시지를 표시한다', () => {
+    const wrapper = wrap({ error: 'foo error' }).dive()
+    expect(wrapper).toMatchSnapshot()
+  })
+
   it('기본으로 input 태그를 그려준다', () => {
     const wrapper = wrap().dive()
     expect(wrapper.find('input')).toHaveLength(1)

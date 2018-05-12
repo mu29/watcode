@@ -16,11 +16,13 @@ const Wrapper = styled.div`
 const LabelArea = styled.div`
   display: flex;
   justify-content: space-between;
+  margin-bottom: 0.25rem;
   padding: 0.25rem;
 `
 
 const Error = styled.span`
   display: flex;
+  align-items: center;
   color: ${palette('red.default')};
   font-size: 0.75rem;
 `

@@ -29,7 +29,7 @@ const styles = css`
   border: ${border};
   border-radius: ${borderRadius};
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.2s;
 
   &:hover {
     color: ${primaryColor};

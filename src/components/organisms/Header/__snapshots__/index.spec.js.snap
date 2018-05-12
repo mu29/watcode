@@ -1,5 +1,23 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
+exports[`<Header /> 5개의 메뉴를 가진다 1`] = `
+<IconButton
+  className="sc-bwzfXH jhGJxg"
+  href="/"
+  icon="home"
+  location="/"
+/>
+`;
+
+exports[`<Header /> 5개의 메뉴를 가진다 2`] = `
+<IconButton
+  className="sc-bwzfXH jhGJxg"
+  href="/auth"
+  icon="user"
+  location="/"
+/>
+`;
+
 exports[`<Header /> 정상적으로 렌더링된다 1`] = `
 <div
   className="sc-bdVaJa eUZheN"

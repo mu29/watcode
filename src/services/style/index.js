@@ -37,7 +37,7 @@ export const width = ({ block, width }) => (block ? '100%' : applyRules(width, t
 export const height = ({ height }) => applyRules(height, toPercent, toRem)
 export const padding = ({ padding }) => applyRules(padding, toRem)
 export const margin = ({ margin }) => applyRules(margin, toRem)
-export const fontFamily = ({ font }) => (font ? fonts(font) : fonts('myeongjo'))
+export const fontFamily = ({ font }) => (font ? fonts(font) : fonts('default'))
 export const fontSize = ({ fontSize }) => applyRules(fontSize, toRem)
 export const fontWeight = ({ fontWeight }) => applyRules(fontWeight, extract)
 export const color = ({ color }) => applyRules(color, toColor)

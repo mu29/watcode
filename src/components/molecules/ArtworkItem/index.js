@@ -2,50 +2,86 @@ import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
 import { Heading, Text } from 'components'
-import { width, height, margin, palette } from 'services/style'
+import { palette } from 'services/style'
 
 const Wrapper = styled.div`
   display: flex;
-  height: 5.875rem;
   padding: 1rem;
   border: 0.0625rem solid ${palette('gray.30')};
   background-color: ${palette('white.default')};
+
+  @media(max-width: 639px) {
+    flex-direction: column;
+  }
 `
 
 const HeadingArea = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: space-around;
   width: 10rem;
+
+  @media(max-width: 639px) {
+    width: 100%;
+  }
 `
 
 const InfoArea = styled.div`
+  flex: 1;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding-top: 0.375rem;
+  overflow: hidden;
 `
 
 const Divider = styled.div`
-  width: ${width};
-  height: ${height};
-  margin: ${margin};
+  width: 0.0625rem;
+  margin: 0 1rem;
   background-color: ${palette('gray.20')};
+
+  @media(max-width: 639px) {
+    width: 100%;
+    height: 0.0625rem;
+    margin: 1rem 0;
+  }
+`
+
+const Title = styled(Heading)`
+  width: 100%;
+  overflow: scroll;
+  white-space: nowrap;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
+
+  @media(max-width: 639px) {
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
 `
 
 const TagArea = styled.div`
   display: flex;
+  width: 100%;
+  overflow: scroll;
+
+  ::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+  }
 `
 
 const Tag = styled.div`
-  height: 1.5rem;
   margin-right: 0.25rem;
   padding: 0.25rem 0.5rem;
   font-size: 0.75rem;
   color: ${palette('white.default')};
   background-color: ${palette('gray.90')};
   border-radius: 0.25rem;
-  text-overflow: ellipsis;
+  white-space: nowrap;
 `
 
 const Image = styled.img`
@@ -63,15 +99,16 @@ const ArtworkItem = ({
     imageUrl,
   },
   showImage,
+  ...props
 }) => (
-  <Wrapper>
+  <Wrapper { ...props }>
     <HeadingArea>
-      <Heading level={ 2 } fontWeight={ 900 }>#{ code }</Heading>
-      <Text color="gray.40" small>by { artist }</Text>
+      <Heading level={ 3 }>#{ code }</Heading>
+      <Text color="gray.40" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
     </HeadingArea>
-    <Divider width={ 1 } margin="0 16" />
+    <Divider />
     <InfoArea>
-      <Heading level={ 5 } fontWeight={ 400 }>{ title }</Heading>
+      <Title level={ 5 } fontWeight={ 400 }>{ title }</Title>
       <TagArea>
         { tags.map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
       </TagArea>

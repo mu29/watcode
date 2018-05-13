@@ -26,7 +26,8 @@ const theme = {
     },
   },
   fonts: {
-    default: 'Spoqa Han Sans, Helvetica Neue, Nanum Gothic',
+    default: "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+    monospace: "'Monaco', 'Consolas'",
   },
   sizes: {},
 }

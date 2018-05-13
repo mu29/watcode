@@ -40,7 +40,21 @@ const styles = css`
   }
 `
 
-const StyledLink = styled(Link)`${styles}`
+/* eslint-disable no-shadow */
+const StyledLink = styled(({
+  width,
+  height,
+  block,
+  padding,
+  fontFamily,
+  fontSize,
+  color,
+  backgroundColor,
+  primaryColor,
+  border,
+  borderRadius,
+  ...props
+}) => <Link { ...props } />)`${styles}`
 
 const Anchor = styled.a`${styles}`
 

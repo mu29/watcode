@@ -4,9 +4,9 @@ import styled from 'styled-components'
 import { IconButton } from 'components'
 import { palette } from 'services/style'
 
-const color = ({ href, location, theme }) => palette(href === location ? 'yellow.default' : 'gray.90')({ theme })
-const background = ({ href, location, theme }) => palette(href === location ? 'white.default' : 'gray.10')({ theme })
-const borderBottom = ({ href, location, theme }) => palette(href === location ? 'white.default' : 'gray.30')({ theme })
+const color = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'gray.90')({ theme })
+const background = ({ to, location, theme }) => palette(to === location ? 'white.default' : 'gray.10')({ theme })
+const borderBottom = ({ to, location, theme }) => palette(to === location ? 'white.default' : 'gray.30')({ theme })
 
 const Wrapper = styled.div`
   display: flex;
@@ -40,13 +40,13 @@ const Header = ({
 }) => (
   <Wrapper>
     <LeftMenu>
-      <StyledIconButton icon="home" href="/" location={ location } />
-      <StyledIconButton icon="trophy" href="/ranking" location={ location } />
-      <StyledIconButton icon="star" href="/bookmarks" location={ location } />
-      <StyledIconButton icon="comments" href="/community" location={ location } />
+      <StyledIconButton icon="home" to="/" location={ location } />
+      <StyledIconButton icon="trophy" to="/ranking" location={ location } />
+      <StyledIconButton icon="star" to="/bookmarks" location={ location } />
+      <StyledIconButton icon="comments" to="/community" location={ location } />
     </LeftMenu>
     <RightMenu>
-      <StyledIconButton icon="user" href="/auth" location={ location } />
+      <StyledIconButton icon="user" to="/auth" location={ location } />
     </RightMenu>
   </Wrapper>
 )

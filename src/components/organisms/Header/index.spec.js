@@ -14,9 +14,9 @@ describe('<Header />', () => {
   it('5개의 메뉴를 가진다', () => {
     const wrapper = wrap()
     expect(wrapper.find('StyledIconButton')).toHaveLength(5)
-    const firstMenu = wrapper.childAt(0).childAt(0).dive()
+    const firstMenu = wrapper.childAt(0).childAt(0).dive().dive()
     expect(firstMenu).toMatchSnapshot()
-    const lastMenu = wrapper.childAt(1).childAt(0).dive()
+    const lastMenu = wrapper.childAt(1).childAt(0).dive().dive()
     expect(lastMenu).toMatchSnapshot()
   })
 

@@ -11,12 +11,12 @@ const wrap = (props = {}) =>
 
 describe('<Button />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap()
+    const wrapper = wrap().dive()
     expect(wrapper).toMatchSnapshot()
   })
 
   it('자식 컴포넌트가 들어온 경우 그려준다', () => {
-    const wrapper = wrap({ children: 'test' })
+    const wrapper = wrap({ children: 'test' }).dive()
     expect(wrapper).toMatchSnapshot()
   })
 

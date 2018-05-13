@@ -1,6 +1,6 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
-import { InputField } from 'components'
+import { Field } from 'components'
 
 const ReduxField = ({
   input, meta, ...props
@@ -13,7 +13,7 @@ const ReduxField = ({
   }
 
   return (
-    <InputField { ...fieldProps } />
+    <Field { ...fieldProps } />
   )
 }
 

@@ -8,7 +8,7 @@ const wrap = (props = {}) => shallow(<IconButton theme={ basicTheme } { ...props
 
 describe('<IconButton />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap({ icon: 'user' })
+    const wrapper = wrap({ icon: 'user' }).dive()
     expect(wrapper).toMatchSnapshot()
   })
 })

@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   }
 `
 
-const StyledField = styled(Field)`
+const StyledField = styled(props => <Field { ...props } />)`
   min-width: 18.5rem;
   border: none;
   border-radius: 0;
@@ -28,7 +28,7 @@ const StyledField = styled(Field)`
   }
 `
 
-const StyledIconButton = styled(IconButton)`
+const StyledIconButton = styled(props => <IconButton { ...props } />)`
   padding: 0 1rem;
   border-radius: 0;
 `

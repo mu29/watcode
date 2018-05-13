@@ -33,9 +33,9 @@ describe('<Tab />', () => {
 
   it('선택되지 않은 탭을 누르면 해당 탭 페이지를 표시한다', () => {
     const wrapper = wrap()
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.dive()).toMatchSnapshot()
     wrapper.find({ selected: false }).simulate('click')
     expect(wrapper.state('index')).toBe(1)
-    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.dive()).toMatchSnapshot()
   })
 })

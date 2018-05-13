@@ -16,7 +16,7 @@ const Wrapper = styled.div`
   border-bottom: 0.0625rem solid ${palette('gray.30')};
 `
 
-const StyledIconButton = styled(IconButton)`
+const StyledIconButton = styled(props => <IconButton { ...props } />)`
   margin-bottom: -0.0625rem;
   color: ${color};
   background-color: ${background};

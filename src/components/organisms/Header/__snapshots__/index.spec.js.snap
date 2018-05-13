@@ -17,6 +17,7 @@ exports[`<Header /> 5개의 메뉴를 가진다 1`] = `
   href="/"
   icon="home"
   location="/"
+  size={16}
 />
 `;
 
@@ -37,6 +38,7 @@ exports[`<Header /> 5개의 메뉴를 가진다 2`] = `
   href="/auth"
   icon="user"
   location="/"
+  size={16}
 />
 `;
 

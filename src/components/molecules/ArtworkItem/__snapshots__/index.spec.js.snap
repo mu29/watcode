@@ -1,0 +1,543 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
+.c2 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.c6 {
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.c3 {
+  font-size: 0.875rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.875rem;
+  padding: 1rem;
+  border: 0.0625rem solid;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 10rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 0.375rem;
+}
+
+.c4 {
+  width: 0.0625rem;
+  margin: 0rem 1rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  height: 1.5rem;
+  margin-right: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  text-overflow: ellipsis;
+}
+
+.c9 {
+  height: 5.75rem;
+  margin: -1rem;
+  margin-left: auto;
+}
+
+<ArtworkItem
+  artwork={
+    Object {
+      "artist": "nagatsuki taffee",
+      "code": 112047,
+      "imageUrl": "https://cdn.namuwikiusercontent.com/s/3f75b87a3b69db1af44479a12315ed58c7e6121c2842cf929209cbf74fa23b7b214a9124e7e494f6ffc8312bdcf231d53278bdf5e7330fb8b23c59ac2ebaf299a3775c6479795372d4b4be0533d58d63?e=1535506665&k=FZxNDPx_iAUdg9ZFqsqXGg",
+      "tags": Array [
+        "rebirth",
+        "loop",
+        "harem",
+        "this is a long tag",
+      ],
+      "title": "Re: 제로부터 시작하는 이세계 생활",
+    }
+  }
+  showImage={true}
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+      },
+      "palette": Object {
+        "gray": Object {
+          "0": "#FAFAFA",
+          "10": "#F5F5F5",
+          "100": "#212121",
+          "20": "#EEEEEE",
+          "30": "#E0E0E0",
+          "40": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
+>
+  <Wrapper>
+    <div
+      className="c0"
+    >
+      <HeadingArea>
+        <div
+          className="c1"
+        >
+          <Heading
+            font="myeongjo"
+            fontWeight={900}
+            level={2}
+          >
+            <Component
+              className="c2"
+              font="myeongjo"
+              fontWeight={900}
+              level={2}
+            >
+              <h2
+                className="c2"
+                font="myeongjo"
+                fontWeight={900}
+              >
+                #
+                112047
+              </h2>
+            </Component>
+          </Heading>
+          <Text
+            color="gray.40"
+            font="default"
+            fontSize={14}
+            small={true}
+          >
+            <SmallText
+              color="gray.40"
+              font="default"
+              fontSize={14}
+            >
+              <small
+                className="c3"
+                color="gray.40"
+                fontSize={14}
+              >
+                by 
+                nagatsuki taffee
+              </small>
+            </SmallText>
+          </Text>
+        </div>
+      </HeadingArea>
+      <Divider
+        margin="0 16"
+        width={1}
+      >
+        <div
+          className="c4"
+          width={1}
+        />
+      </Divider>
+      <InfoArea>
+        <div
+          className="c5"
+        >
+          <Heading
+            font="myeongjo"
+            fontWeight={400}
+            level={5}
+          >
+            <Component
+              className="c6"
+              font="myeongjo"
+              fontWeight={400}
+              level={5}
+            >
+              <h5
+                className="c6"
+                font="myeongjo"
+                fontWeight={400}
+              >
+                Re: 제로부터 시작하는 이세계 생활
+              </h5>
+            </Component>
+          </Heading>
+          <TagArea>
+            <div
+              className="c7"
+            >
+              <Tag
+                key="rebirth"
+              >
+                <div
+                  className="c8"
+                >
+                  rebirth
+                </div>
+              </Tag>
+              <Tag
+                key="loop"
+              >
+                <div
+                  className="c8"
+                >
+                  loop
+                </div>
+              </Tag>
+              <Tag
+                key="harem"
+              >
+                <div
+                  className="c8"
+                >
+                  harem
+                </div>
+              </Tag>
+              <Tag
+                key="this is a long tag"
+              >
+                <div
+                  className="c8"
+                >
+                  this is a long tag
+                </div>
+              </Tag>
+            </div>
+          </TagArea>
+        </div>
+      </InfoArea>
+      <Image
+        alt=""
+        src="https://cdn.namuwikiusercontent.com/s/3f75b87a3b69db1af44479a12315ed58c7e6121c2842cf929209cbf74fa23b7b214a9124e7e494f6ffc8312bdcf231d53278bdf5e7330fb8b23c59ac2ebaf299a3775c6479795372d4b4be0533d58d63?e=1535506665&k=FZxNDPx_iAUdg9ZFqsqXGg"
+      >
+        <img
+          alt=""
+          className="c9"
+          src="https://cdn.namuwikiusercontent.com/s/3f75b87a3b69db1af44479a12315ed58c7e6121c2842cf929209cbf74fa23b7b214a9124e7e494f6ffc8312bdcf231d53278bdf5e7330fb8b23c59ac2ebaf299a3775c6479795372d4b4be0533d58d63?e=1535506665&k=FZxNDPx_iAUdg9ZFqsqXGg"
+        />
+      </Image>
+    </div>
+  </Wrapper>
+</ArtworkItem>
+`;
+
+exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
+.c2 {
+  font-weight: 900;
+  font-size: 2rem;
+  margin: 0;
+}
+
+.c6 {
+  font-weight: 400;
+  font-size: 1.125rem;
+  margin: 0;
+}
+
+.c3 {
+  font-size: 0.875rem;
+}
+
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  height: 5.875rem;
+  padding: 1rem;
+  border: 0.0625rem solid;
+}
+
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  width: 10rem;
+}
+
+.c5 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  padding-top: 0.375rem;
+}
+
+.c4 {
+  width: 0.0625rem;
+  margin: 0rem 1rem;
+}
+
+.c7 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c8 {
+  height: 1.5rem;
+  margin-right: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  text-overflow: ellipsis;
+}
+
+<ArtworkItem
+  artwork={
+    Object {
+      "artist": "nagatsuki taffee",
+      "code": 112047,
+      "imageUrl": "https://cdn.namuwikiusercontent.com/s/3f75b87a3b69db1af44479a12315ed58c7e6121c2842cf929209cbf74fa23b7b214a9124e7e494f6ffc8312bdcf231d53278bdf5e7330fb8b23c59ac2ebaf299a3775c6479795372d4b4be0533d58d63?e=1535506665&k=FZxNDPx_iAUdg9ZFqsqXGg",
+      "tags": Array [
+        "rebirth",
+        "loop",
+        "harem",
+        "this is a long tag",
+      ],
+      "title": "Re: 제로부터 시작하는 이세계 생활",
+    }
+  }
+  showImage={false}
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+      },
+      "palette": Object {
+        "gray": Object {
+          "0": "#FAFAFA",
+          "10": "#F5F5F5",
+          "100": "#212121",
+          "20": "#EEEEEE",
+          "30": "#E0E0E0",
+          "40": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
+>
+  <Wrapper>
+    <div
+      className="c0"
+    >
+      <HeadingArea>
+        <div
+          className="c1"
+        >
+          <Heading
+            font="myeongjo"
+            fontWeight={900}
+            level={2}
+          >
+            <Component
+              className="c2"
+              font="myeongjo"
+              fontWeight={900}
+              level={2}
+            >
+              <h2
+                className="c2"
+                font="myeongjo"
+                fontWeight={900}
+              >
+                #
+                112047
+              </h2>
+            </Component>
+          </Heading>
+          <Text
+            color="gray.40"
+            font="default"
+            fontSize={14}
+            small={true}
+          >
+            <SmallText
+              color="gray.40"
+              font="default"
+              fontSize={14}
+            >
+              <small
+                className="c3"
+                color="gray.40"
+                fontSize={14}
+              >
+                by 
+                nagatsuki taffee
+              </small>
+            </SmallText>
+          </Text>
+        </div>
+      </HeadingArea>
+      <Divider
+        margin="0 16"
+        width={1}
+      >
+        <div
+          className="c4"
+          width={1}
+        />
+      </Divider>
+      <InfoArea>
+        <div
+          className="c5"
+        >
+          <Heading
+            font="myeongjo"
+            fontWeight={400}
+            level={5}
+          >
+            <Component
+              className="c6"
+              font="myeongjo"
+              fontWeight={400}
+              level={5}
+            >
+              <h5
+                className="c6"
+                font="myeongjo"
+                fontWeight={400}
+              >
+                Re: 제로부터 시작하는 이세계 생활
+              </h5>
+            </Component>
+          </Heading>
+          <TagArea>
+            <div
+              className="c7"
+            >
+              <Tag
+                key="rebirth"
+              >
+                <div
+                  className="c8"
+                >
+                  rebirth
+                </div>
+              </Tag>
+              <Tag
+                key="loop"
+              >
+                <div
+                  className="c8"
+                >
+                  loop
+                </div>
+              </Tag>
+              <Tag
+                key="harem"
+              >
+                <div
+                  className="c8"
+                >
+                  harem
+                </div>
+              </Tag>
+              <Tag
+                key="this is a long tag"
+              >
+                <div
+                  className="c8"
+                >
+                  this is a long tag
+                </div>
+              </Tag>
+            </div>
+          </TagArea>
+        </div>
+      </InfoArea>
+    </div>
+  </Wrapper>
+</ArtworkItem>
+`;

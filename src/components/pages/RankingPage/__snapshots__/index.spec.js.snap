@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<RankingPage /> 정상적으로 렌더링된다 1`] = `
+<GenericTemplate
+  header={
+    <Header
+      location="/ranking"
+    />
+  }
+>
+  <StyledTab>
+    <TabPage
+      title="오늘"
+    >
+      <Connect(ArtworkListContainer) />
+    </TabPage>
+    <TabPage
+      title="주간"
+    >
+      <Connect(ArtworkListContainer) />
+    </TabPage>
+    <TabPage
+      title="월간"
+    >
+      <Connect(ArtworkListContainer) />
+    </TabPage>
+  </StyledTab>
+</GenericTemplate>
+`;

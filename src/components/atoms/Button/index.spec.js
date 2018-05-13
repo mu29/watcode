@@ -36,7 +36,7 @@ describe('<Button />', () => {
   })
 
   it('to 속성이 들어온 경우 Link 컴포넌트를 그려준다', () => {
-    const wrapper = wrap({ to: 'test' }).dive()
+    const wrapper = wrap({ to: 'test' }).dive().dive()
     expect(wrapper.find('Link')).toHaveLength(1)
   })
 

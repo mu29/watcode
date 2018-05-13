@@ -7,13 +7,16 @@ const Wrapper = styled.div`
   display: flex;
   align-items: flex-end;
   width: 40%;
-  min-width: 22rem;
   padding: 0.25rem;
   box-shadow: 0 0.125rem 0.125rem 0 rgba(0,0,0,0.1), 0 0 0 0.0625rem rgba(0,0,0,0.08);
   transition: box-shadow 0.2s;
 
   &:focus-within {
     box-shadow: 0 0.25rem 0.25rem 0 rgba(0,0,0,0.1), 0 0 0 0.0625rem rgba(0,0,0,0.08);
+  }
+
+  @media(max-width: 1024px) {
+    width: 80%;
   }
 `
 

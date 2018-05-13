@@ -14,10 +14,10 @@ exports[`<Header /> 5개의 메뉴를 가진다 1`] = `
 
 <IconButton
   className="c0"
-  href="/"
   icon="home"
   location="/"
   size={16}
+  to="/"
 />
 `;
 
@@ -35,10 +35,10 @@ exports[`<Header /> 5개의 메뉴를 가진다 2`] = `
 
 <IconButton
   className="c0"
-  href="/auth"
   icon="user"
   location="/"
   size={16}
+  to="/auth"
 />
 `;
 
@@ -61,31 +61,31 @@ exports[`<Header /> 정상적으로 렌더링된다 1`] = `
 >
   <LeftMenu>
     <StyledIconButton
-      href="/"
       icon="home"
       location="/"
+      to="/"
     />
     <StyledIconButton
-      href="/ranking"
       icon="trophy"
       location="/"
+      to="/ranking"
     />
     <StyledIconButton
-      href="/bookmarks"
       icon="star"
       location="/"
+      to="/bookmarks"
     />
     <StyledIconButton
-      href="/community"
       icon="comments"
       location="/"
+      to="/community"
     />
   </LeftMenu>
   <RightMenu>
     <StyledIconButton
-      href="/auth"
       icon="user"
       location="/"
+      to="/auth"
     />
   </RightMenu>
 </div>
@@ -110,31 +110,31 @@ exports[`<Header /> 커뮤니티 메뉴가 선택되어 있다 1`] = `
 >
   <LeftMenu>
     <StyledIconButton
-      href="/"
       icon="home"
       location="/community"
+      to="/"
     />
     <StyledIconButton
-      href="/ranking"
       icon="trophy"
       location="/community"
+      to="/ranking"
     />
     <StyledIconButton
-      href="/bookmarks"
       icon="star"
       location="/community"
+      to="/bookmarks"
     />
     <StyledIconButton
-      href="/community"
       icon="comments"
       location="/community"
+      to="/community"
     />
   </LeftMenu>
   <RightMenu>
     <StyledIconButton
-      href="/auth"
       icon="user"
       location="/community"
+      to="/auth"
     />
   </RightMenu>
 </div>

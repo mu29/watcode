@@ -3,7 +3,7 @@
 exports[`<Input /> 오류 메시지를 표시한다 1`] = `
 .c0 {
   color: #424242;
-  font-family: Spoqa Han Sans,Helvetica Neue,Nanum Gothic;
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
   font-size: 1rem;
   border: 0.0625rem solid #E0E0E0;
   border-radius: 0.0625rem;
@@ -68,7 +68,7 @@ exports[`<Input /> 오류 메시지를 표시한다 1`] = `
 exports[`<Input /> 정상적으로 렌더링된다 1`] = `
 .c0 {
   color: #424242;
-  font-family: Spoqa Han Sans,Helvetica Neue,Nanum Gothic;
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
   font-size: 1rem;
   border: 0.0625rem solid #E0E0E0;
   border-radius: 0.0625rem;

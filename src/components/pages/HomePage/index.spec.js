@@ -5,10 +5,6 @@ import HomePage from '.'
 
 const wrap = (props = {}) => shallow(<HomePage { ...props } />)
 
-it('renders', () => {
-  shallow(<HomePage />)
-})
-
 describe('<HomePage />', () => {
   it('정상적으로 렌더링된다', () => {
     const wrapper = wrap()

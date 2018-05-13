@@ -2,6 +2,7 @@
 
 exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준다 1`] = `
 .c0 {
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
   font-weight: 600;
   font-size: 1rem;
   margin: 0;
@@ -9,13 +10,14 @@ exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준�
 
 <h1
   className="c0"
-  font="myeongjo"
+  font="default"
   fontSize={16}
   fontWeight={600}
   theme={
     Object {
       "fonts": Object {
-        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
       },
       "palette": Object {
         "gray": Object {
@@ -51,6 +53,7 @@ exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준�
 
 exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
 .c0 {
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
   font-weight: 600;
   font-size: 3rem;
   margin: 0;
@@ -58,12 +61,13 @@ exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = 
 
 <h1
   className="c0"
-  font="myeongjo"
+  font="default"
   fontWeight={600}
   theme={
     Object {
       "fonts": Object {
-        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
       },
       "palette": Object {
         "gray": Object {
@@ -101,6 +105,7 @@ exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = 
 
 exports[`<Heading /> 정상적으로 렌더링된다 1`] = `
 .c0 {
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
   font-weight: 600;
   font-size: 3rem;
   margin: 0;
@@ -108,12 +113,13 @@ exports[`<Heading /> 정상적으로 렌더링된다 1`] = `
 
 <h1
   className="c0"
-  font="myeongjo"
+  font="default"
   fontWeight={600}
   theme={
     Object {
       "fonts": Object {
-        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
       },
       "palette": Object {
         "gray": Object {

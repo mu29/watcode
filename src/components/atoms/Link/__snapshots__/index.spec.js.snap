@@ -17,7 +17,8 @@ exports[`<Link /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
   theme={
     Object {
       "fonts": Object {
-        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
       },
       "palette": Object {
         "gray": Object {
@@ -71,7 +72,8 @@ exports[`<Link /> 정상적으로 렌더링된다 1`] = `
   theme={
     Object {
       "fonts": Object {
-        "default": "Spoqa Han Sans, Helvetica Neue, Nanum Gothic",
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
       },
       "palette": Object {
         "gray": Object {

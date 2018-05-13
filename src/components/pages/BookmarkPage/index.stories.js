@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import RankingPage from '.'
+import BookmarkPage from '.'
 
-storiesOf('Pages/RankingPage', module)
+storiesOf('Pages/BookmarkPage', module)
   .add('기본', () => (
-    <RankingPage />
+    <BookmarkPage />
   ))

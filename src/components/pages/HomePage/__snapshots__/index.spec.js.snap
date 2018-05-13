@@ -8,6 +8,6 @@ exports[`<HomePage /> 정상적으로 렌더링된다 1`] = `
     />
   }
 >
-  <ReduxForm />
+  <StyledSearchBar />
 </GenericTemplate>
 `;

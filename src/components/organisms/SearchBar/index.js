@@ -36,8 +36,8 @@ const StyledIconButton = styled(props => <IconButton { ...props } />)`
   border-radius: 0;
 `
 
-const SearchBar = () => (
-  <Wrapper>
+const SearchBar = props => (
+  <Wrapper { ...props }>
     <StyledField name="query" placeholder="무엇을 찾으세요? (번호, 제목, 작가, 태그)" component={ ReduxField } />
     <StyledIconButton backgroundColor="white.default" color="yellow.default" icon="search" />
   </Wrapper>

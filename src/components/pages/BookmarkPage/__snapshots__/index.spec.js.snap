@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<BookmarkPage /> 정상적으로 렌더링된다 1`] = `
+<GenericTemplate
+  header={
+    <Header
+      location="/bookmarks"
+    />
+  }
+>
+  <StyledTab>
+    <TabPage
+      title="즐겨찾기"
+    >
+      <Connect(ArtworkListContainer) />
+    </TabPage>
+    <TabPage
+      title="추천 작품"
+    >
+      <Message>
+        준비중입니다 :)
+      </Message>
+    </TabPage>
+  </StyledTab>
+</GenericTemplate>
+`;

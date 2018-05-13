@@ -1,9 +1,9 @@
-const req = require.context('.', true, /\.\/.+\/selectors\.js$/)
+import * as auth from './auth/selectors'
+import * as entity from './entity/selectors'
+import * as loading from './loading/selectors'
+import * as post from './post/selectors'
 
-req.keys().forEach((key) => {
-  const selectors = req(key)
-
-  Object.keys(selectors).forEach((name) => {
-    module.exports[name] = selectors[name]
-  })
-})
+module.exports[auth] = auth
+module.exports[entity] = entity
+module.exports[loading] = loading
+module.exports[post] = post

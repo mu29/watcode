@@ -32,7 +32,7 @@ Heading.propTypes = {
 
 Heading.defaultProps = {
   level: 1,
-  font: 'myeongjo',
+  font: 'default',
   fontSize: undefined,
   fontWeight: 600,
 }

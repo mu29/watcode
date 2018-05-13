@@ -1,0 +1,154 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준다 1`] = `
+.c0 {
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-weight: 600;
+  font-size: 1rem;
+  margin: 0;
+}
+
+<h1
+  className="c0"
+  font="default"
+  fontSize={16}
+  fontWeight={600}
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
+      },
+      "palette": Object {
+        "gray": Object {
+          "0": "#FAFAFA",
+          "10": "#F5F5F5",
+          "100": "#212121",
+          "20": "#EEEEEE",
+          "30": "#E0E0E0",
+          "40": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
+/>
+`;
+
+exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
+.c0 {
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 0;
+}
+
+<h1
+  className="c0"
+  font="default"
+  fontWeight={600}
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
+      },
+      "palette": Object {
+        "gray": Object {
+          "0": "#FAFAFA",
+          "10": "#F5F5F5",
+          "100": "#212121",
+          "20": "#EEEEEE",
+          "30": "#E0E0E0",
+          "40": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
+>
+  test
+</h1>
+`;
+
+exports[`<Heading /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-weight: 600;
+  font-size: 3rem;
+  margin: 0;
+}
+
+<h1
+  className="c0"
+  font="default"
+  fontWeight={600}
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
+      },
+      "palette": Object {
+        "gray": Object {
+          "0": "#FAFAFA",
+          "10": "#F5F5F5",
+          "100": "#212121",
+          "20": "#EEEEEE",
+          "30": "#E0E0E0",
+          "40": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
+/>
+`;

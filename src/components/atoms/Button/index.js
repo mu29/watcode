@@ -29,7 +29,7 @@ const styles = css`
   border: ${border};
   border-radius: ${borderRadius};
   cursor: pointer;
-  transition: color 0.3s;
+  transition: color 0.2s;
 
   &:hover {
     color: ${primaryColor};
@@ -40,9 +40,21 @@ const styles = css`
   }
 `
 
+/* eslint-disable no-shadow */
 const StyledLink = styled(({
-  to, ...props
-}) => <Link to={ to } { ...props } />)`${styles}`
+  width,
+  height,
+  block,
+  padding,
+  fontFamily,
+  fontSize,
+  color,
+  backgroundColor,
+  primaryColor,
+  border,
+  borderRadius,
+  ...props
+}) => <Link { ...props } />)`${styles}`
 
 const Anchor = styled.a`${styles}`
 
@@ -91,7 +103,7 @@ Button.defaultProps = {
   primaryColor: 'yellow.default',
   backgroundColor: 'gray.90',
   border: undefined,
-  borderRadius: 0,
+  borderRadius: 1,
 }
 
 export default Button

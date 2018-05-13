@@ -1,0 +1,13 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<HomePage /> 정상적으로 렌더링된다 1`] = `
+<GenericTemplate
+  header={
+    <Header
+      location="/"
+    />
+  }
+>
+  <StyledSearchBar />
+</GenericTemplate>
+`;

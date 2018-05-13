@@ -1,0 +1,141 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Header /> 5개의 메뉴를 가진다 1`] = `
+.c0 {
+  margin-bottom: -0.0625rem;
+  border-right: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-radius: 0;
+}
+
+.c0:first-child {
+  border-left: 0.0625rem solid;
+}
+
+<IconButton
+  className="c0"
+  icon="home"
+  location="/"
+  size={16}
+  to="/"
+/>
+`;
+
+exports[`<Header /> 5개의 메뉴를 가진다 2`] = `
+.c0 {
+  margin-bottom: -0.0625rem;
+  border-right: 0.0625rem solid;
+  border-bottom: 0.0625rem solid;
+  border-radius: 0;
+}
+
+.c0:first-child {
+  border-left: 0.0625rem solid;
+}
+
+<IconButton
+  className="c0"
+  icon="user"
+  location="/"
+  size={16}
+  to="/auth"
+/>
+`;
+
+exports[`<Header /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -0.0625rem;
+  border-bottom: 0.0625rem solid;
+}
+
+<div
+  className="c0"
+>
+  <LeftMenu>
+    <StyledIconButton
+      icon="home"
+      location="/"
+      to="/"
+    />
+    <StyledIconButton
+      icon="trophy"
+      location="/"
+      to="/ranking"
+    />
+    <StyledIconButton
+      icon="star"
+      location="/"
+      to="/bookmarks"
+    />
+    <StyledIconButton
+      icon="comments"
+      location="/"
+      to="/community"
+    />
+  </LeftMenu>
+  <RightMenu>
+    <StyledIconButton
+      icon="user"
+      location="/"
+      to="/auth"
+    />
+  </RightMenu>
+</div>
+`;
+
+exports[`<Header /> 커뮤니티 메뉴가 선택되어 있다 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+  -webkit-justify-content: space-between;
+  -ms-flex-pack: justify;
+  justify-content: space-between;
+  margin: 0 -0.0625rem;
+  border-bottom: 0.0625rem solid;
+}
+
+<div
+  className="c0"
+>
+  <LeftMenu>
+    <StyledIconButton
+      icon="home"
+      location="/community"
+      to="/"
+    />
+    <StyledIconButton
+      icon="trophy"
+      location="/community"
+      to="/ranking"
+    />
+    <StyledIconButton
+      icon="star"
+      location="/community"
+      to="/bookmarks"
+    />
+    <StyledIconButton
+      icon="comments"
+      location="/community"
+      to="/community"
+    />
+  </LeftMenu>
+  <RightMenu>
+    <StyledIconButton
+      icon="user"
+      location="/community"
+      to="/auth"
+    />
+  </RightMenu>
+</div>
+`;

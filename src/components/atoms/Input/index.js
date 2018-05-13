@@ -1,14 +1,17 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled, { css } from 'styled-components'
-import { width, border, color, primaryColor, fontFamily, fontSize } from 'services/style'
+import { width, border, color, primaryColor, fontFamily, fontSize, palette } from 'services/style'
+
+const errorColor = ({ error, theme }) => error && `1px solid ${palette('red.default')({ theme })}`
 
 const styles = css`
   width: ${width};
-  border: ${border};
   color: ${color};
   font-family: ${fontFamily};
   font-size: ${fontSize};
+  border: ${border};
+  border-radius: 0.0625rem;
   background: transparent;
   padding: 0.75rem;
   transition: border 0.3s;
@@ -19,7 +22,7 @@ const styles = css`
 
   &:active, &:focus {
     outline: none;
-    border: 1px solid ${primaryColor}
+    border: 0.0625rem solid ${primaryColor};
   }
 
   &::placeholder {
@@ -35,7 +38,14 @@ const styles = css`
   }
 `
 
-const StyledInput = styled.input`${styles}`
+const StyledInput = styled.input`
+  ${styles}
+  border: ${errorColor};
+
+  &:active, &:focus {
+  border: ${errorColor};
+  }
+`
 const StyledTextArea = styled.textarea`${styles}`
 
 const Input = (props) => {
@@ -61,8 +71,8 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   width: undefined,
-  border: 'gray.20',
-  block: true,
+  border: 'gray.30',
+  block: false,
   font: 'default',
   fontSize: 16,
   color: 'gray.90',

@@ -2,7 +2,7 @@
 const checkIfValid = value => value === undefined && value
 const extract = value => value
 const toColor = (value, theme) => {
-  if (typeof value === 'string' && value.includes('.')) {
+  if (theme.palette && typeof value === 'string' && value.includes('.')) {
     const data = value.split('.')
     const color = data[0]
     const level = data[1]
@@ -36,12 +36,14 @@ export const filteredBy = (filter, extractor) => props => (props[filter] ? extra
 export const width = ({ block, width }) => (block ? '100%' : applyRules(width, toPercent, toRem))
 export const height = ({ height }) => applyRules(height, toPercent, toRem)
 export const padding = ({ padding }) => applyRules(padding, toRem)
-export const fontFamily = ({ font }) => (font ? fonts(font) : fonts('myeongjo'))
+export const margin = ({ margin }) => applyRules(margin, toRem)
+export const fontFamily = ({ font }) => (font ? fonts(font) : fonts('default'))
 export const fontSize = ({ fontSize }) => applyRules(fontSize, toRem)
 export const fontWeight = ({ fontWeight }) => applyRules(fontWeight, extract)
 export const color = ({ color }) => applyRules(color, toColor)
 export const primaryColor = ({ primaryColor }) => applyRules(primaryColor, toColor)
 export const backgroundColor = ({ backgroundColor }) => applyRules(backgroundColor, toColor)
-export const border = ({ border }) => ({ theme }) => (border ? `1px solid ${toColor(border, theme)}` : 'none')
+export const border = ({ border }) => ({ theme }) => (border ? `0.0625rem solid ${toColor(border, theme)}` : 'none')
 export const borderColor = ({ borderColor }) => applyRules(borderColor, toColor)
 export const borderRadius = ({ borderRadius }) => applyRules(borderRadius, toRem)
+export const size = ({ size }) => applyRules(size, toRem)

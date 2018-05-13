@@ -18,6 +18,7 @@
     "collectCoverageFrom": [
       "**/src/**/*.{js,jsx}",
       "!**/src/components/*.js",
+      "!**/src/components/*/index.js",
       "!**/src/*.js",
       "!**/src/store/*.js",
       "!**/node_modules/**",
@@ -34,10 +35,9 @@
     "moduleDirectories": [
       "node_modules"
     ],
-    "moduleNameMapper": {
-      "^\\.\\.\\/\\.\\.$": "<rootDir>/config/jest/componentsMock.js",
-      "^.*containers$": "<rootDir>/config/jest/componentsMock.js"
-    }
+    "snapshotSerializers": [
+      "enzyme-to-json/serializer"
+    ]
   },
   "dependencies": {
     "babel-polyfill": "^6.26.0",
@@ -84,6 +84,7 @@
     "babel-loader": "^7.1.4",
     "babel-plugin-module-resolver": "^3.1.1",
     "babel-plugin-styled-components": "^1.5.1",
+    "babel-plugin-styled-components-named": "^0.1.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
     "babel-preset-env": "^1.6.1",
@@ -94,6 +95,7 @@
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
     "enzyme-adapter-react-16": "^1.1.1",
+    "enzyme-to-json": "^3.3.3",
     "eslint": "^4.19.1",
     "eslint-config-airbnb": "^16.1.0",
     "eslint-plugin-import": "^2.11.0",
@@ -102,6 +104,7 @@
     "eslint-plugin-react": "^7.7.0",
     "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "jest-cli": "^22.4.3",
+    "jest-styled-components": "^5.0.1",
     "node-sass": "^4.8.3",
     "react-test-renderer": "^16.3.2",
     "sass-loader": "^6.0.7",

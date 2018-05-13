@@ -3,7 +3,6 @@ import styled from 'styled-components'
 import { color, fontFamily, fontSize } from 'services/style'
 
 const Label = styled.label`
-  margin-bottom: 0.375rem;
   color: ${color};
   font-family: ${fontFamily};
   font-size: ${fontSize};

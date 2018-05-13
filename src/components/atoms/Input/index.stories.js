@@ -9,3 +9,6 @@ storiesOf('Atoms/Input', module)
   .add('도움 텍스트', () => (
     <Input placeholder="메일 주소를 입력해주세요" />
   ))
+  .add('오류', () => (
+    <Input placeholder="메일 주소를 입력해주세요" error />
+  ))

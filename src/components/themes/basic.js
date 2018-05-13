@@ -16,17 +16,18 @@ const theme = {
       30: '#E0E0E0',
       20: '#EEEEEE',
       10: '#F5F5F5',
-      0: 'FAFAFA',
+      0: '#FAFAFA',
     },
     yellow: {
       default: '#F9D14C',
     },
     red: {
-      default: '#FA5D63',
+      default: '#FF8787',
     },
   },
   fonts: {
-    default: 'Spoqa Han Sans, Helvetica Neue, Nanum Gothic',
+    default: "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+    monospace: "'Monaco', 'Consolas'",
   },
   sizes: {},
 }

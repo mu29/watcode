@@ -1,0 +1,95 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Button /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 3rem;
+  padding: 0rem 1.5rem;
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-size: 1rem;
+  color: #FFF;
+  background-color: #424242;
+  border: none;
+  border-radius: 0.0625rem;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.c0:hover {
+  color: #F9D14C;
+}
+
+.c0:active,
+.c0:focus,
+.c0:hover {
+  outline: none;
+}
+
+<button
+  className="c0"
+  color="white.default"
+  fontSize={16}
+  height={48}
+  onClick={[MockFunction]}
+>
+  test
+</button>
+`;
+
+exports[`<Button /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  display: -webkit-inline-box;
+  display: -webkit-inline-flex;
+  display: -ms-inline-flexbox;
+  display: inline-flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  height: 3rem;
+  padding: 0rem 1.5rem;
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-size: 1rem;
+  color: #FFF;
+  background-color: #424242;
+  border: none;
+  border-radius: 0.0625rem;
+  cursor: pointer;
+  -webkit-transition: color 0.2s;
+  transition: color 0.2s;
+}
+
+.c0:hover {
+  color: #F9D14C;
+}
+
+.c0:active,
+.c0:focus,
+.c0:hover {
+  outline: none;
+}
+
+<button
+  className="c0"
+  color="white.default"
+  fontSize={16}
+  height={48}
+  onClick={[MockFunction]}
+/>
+`;

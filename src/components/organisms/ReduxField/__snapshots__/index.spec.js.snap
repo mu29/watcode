@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ReduxField /> 정상적으로 렌더링된다 1`] = `
+<Field
+  error=""
+  name="test"
+  touched={false}
+  type="text"
+/>
+`;

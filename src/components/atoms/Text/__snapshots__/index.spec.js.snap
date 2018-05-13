@@ -1,0 +1,49 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Text /> small 속성이 들어온 경우 smll 태그를 그려준다 1`] = `
+.c0 {
+  color: #424242;
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-size: 0.875rem;
+  font-weight: 400;
+}
+
+<small
+  className="c0"
+  color="gray.90"
+  fontSize={14}
+  fontWeight={400}
+/>
+`;
+
+exports[`<Text /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
+.c0 {
+  color: #424242;
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-size: 0.875rem;
+}
+
+<span
+  className="c0"
+  color="gray.90"
+  fontSize={14}
+  fontWeight={400}
+>
+  test
+</span>
+`;
+
+exports[`<Text /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  color: #424242;
+  font-family: 'Spoqa Han Sans','Sans-serif','Helvetica Neue','Nanum Gothic';
+  font-size: 0.875rem;
+}
+
+<span
+  className="c0"
+  color="gray.90"
+  fontSize={14}
+  fontWeight={400}
+/>
+`;

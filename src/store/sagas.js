@@ -1,6 +1,6 @@
 import { all, fork } from 'redux-saga/effects'
-import * as auth from './auth/sagas'
-import * as post from './post/sagas'
+import auth from './auth/sagas'
+import post from './post/sagas'
 
 const sagas = [auth, post]
 

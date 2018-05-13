@@ -2,7 +2,7 @@
 const checkIfValid = value => value === undefined && value
 const extract = value => value
 const toColor = (value, theme) => {
-  if (typeof value === 'string' && value.includes('.')) {
+  if (theme.palette && typeof value === 'string' && value.includes('.')) {
     const data = value.split('.')
     const color = data[0]
     const level = data[1]
@@ -42,6 +42,7 @@ export const fontWeight = ({ fontWeight }) => applyRules(fontWeight, extract)
 export const color = ({ color }) => applyRules(color, toColor)
 export const primaryColor = ({ primaryColor }) => applyRules(primaryColor, toColor)
 export const backgroundColor = ({ backgroundColor }) => applyRules(backgroundColor, toColor)
-export const border = ({ border }) => ({ theme }) => (border ? `1px solid ${toColor(border, theme)}` : 'none')
+export const border = ({ border }) => ({ theme }) => (border ? `0.0625rem solid ${toColor(border, theme)}` : 'none')
 export const borderColor = ({ borderColor }) => applyRules(borderColor, toColor)
 export const borderRadius = ({ borderRadius }) => applyRules(borderRadius, toRem)
+export const size = ({ size }) => applyRules(size, toRem)

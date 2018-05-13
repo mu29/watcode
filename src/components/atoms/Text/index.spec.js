@@ -4,7 +4,7 @@ import { basicTheme } from 'components/themes'
 import 'jest-styled-components'
 import Text from '.'
 
-const wrap = (props = {}) => shallow(<Text theme={ basicTheme } { ...props } />)
+const wrap = (props = {}) => shallow(<Text theme={ basicTheme } { ...props } />).dive()
 
 describe('<Text />', () => {
   it('정상적으로 렌더링된다', () => {
@@ -25,5 +25,11 @@ describe('<Text />', () => {
   it('span 태그를 기본으로 그려준다', () => {
     const wrapper = wrap()
     expect(wrapper.find('span')).toHaveLength(1)
+  })
+
+  it('small 속성이 들어온 경우 smll 태그를 그려준다', () => {
+    const wrapper = wrap({ small: true })
+    expect(wrapper).toMatchSnapshot()
+    expect(wrapper.find('small')).toHaveLength(1)
   })
 })

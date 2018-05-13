@@ -5,18 +5,15 @@ import { palette } from 'services/style'
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   min-height: 100vh;
   background-color: ${palette('white.default')};
 `
 
-const Header = styled.header`
-  position: fixed;
-  top: 0;
-  width: 100%;
-  z-index: 999;
-`
+const Header = styled.header``
 
 const Content = styled.section`
+  flex: 1;
   display: flex;
   flex-direction: column;
   align-items: center;

@@ -2,7 +2,7 @@ import 'babel-polyfill'
 import React from 'react'
 import { Provider } from 'react-redux'
 import { BrowserRouter } from 'react-router-dom'
-import { ThemeProvider } from 'styled-components'
+import { injectGlobal, ThemeProvider } from 'styled-components'
 import createHistory from 'history/createBrowserHistory'
 
 import '@storybook/addon-console'
@@ -19,6 +19,13 @@ const store = configureStore({}, history, { api })
 const req = require.context('../../src/components', true, /.stories.jsx?$/)
 
 const loadStories = () => req.keys().forEach(filename => req(filename))
+
+/* eslint-disable no-unused-expressions */
+injectGlobal`
+  * {
+    box-sizing: border-box;
+  }
+`
 
 configureViewport({
   defaultViewport: 'responsive',

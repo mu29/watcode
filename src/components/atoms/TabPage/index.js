@@ -5,7 +5,7 @@ const TabPage = styled.div`
 `
 
 TabPage.propTypes = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   children: PropTypes.node,
 }
 

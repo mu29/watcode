@@ -20,10 +20,10 @@ const Message = styled.div`
 const BookmarkPage = () => (
   <GenericTemplate header={ <Header location="/bookmarks" /> }>
     <StyledTab>
-      <TabPage title="즐겨찾기">
+      <TabPage name="즐겨찾기">
         <ArtworkList />
       </TabPage>
-      <TabPage title="추천 작품">
+      <TabPage name="추천 작품">
         <Message>준비중입니다 :)</Message>
       </TabPage>
     </StyledTab>

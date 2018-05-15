@@ -53,19 +53,19 @@ class Tab extends Component {
   render() {
     const { children } = this.props
     const { index } = this.state
-    const titles = children.map(c => c.props.title)
+    const names = children.map(c => c.props.name)
 
     return (
       <TabContainer { ...this.props }>
         <TabHeader>
           {
-            titles.map((title, i) => (
+            names.map((name, i) => (
               <TabItem
-                key={ title }
+                key={ name }
                 selected={ i === index }
                 onClick={ () => this.handleTabChange(i) }
               >
-                { title }
+                { name }
               </TabItem>
             ))
           }

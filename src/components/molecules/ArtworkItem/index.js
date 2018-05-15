@@ -84,6 +84,10 @@ const Tag = styled.div`
   white-space: nowrap;
 `
 
+const TypeTag = styled(Tag)`
+  background-color: ${palette('yellow.default')};
+`
+
 const Image = styled.img`
   height: 5.75rem;
   margin: -1rem;
@@ -95,6 +99,7 @@ const ArtworkItem = ({
     code,
     artist,
     title,
+    type,
     tags,
     imageUrl,
   },
@@ -110,6 +115,7 @@ const ArtworkItem = ({
     <InfoArea>
       <Title level={ 5 } fontWeight={ 400 }>{ title }</Title>
       <TagArea>
+        <TypeTag>{ type }</TypeTag>
         { tags.map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
       </TagArea>
     </InfoArea>

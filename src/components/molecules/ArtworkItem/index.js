@@ -9,9 +9,15 @@ const Wrapper = styled.div`
   padding: 1rem;
   border: 0.0625rem solid ${palette('gray.30')};
   background-color: ${palette('white.default')};
+  cursor: pointer;
+  transition: background-color 0.2s;
 
   @media(max-width: 639px) {
     flex-direction: column;
+  }
+
+  &:hover {
+    background-color: ${palette('gray.0')};
   }
 `
 

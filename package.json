@@ -9,8 +9,7 @@
     "tdd": "jest --watchAll",
     "test": "jest",
     "storybook": "start-storybook -p 3002 -c config/storybook",
-    "build-storybook": "build-storybook",
-    "mobile": "react-native start"
+    "build-storybook": "build-storybook"
   },
   "license": "MIT",
   "jest": {
@@ -53,10 +52,8 @@
     "react": "16.3.1",
     "react-dom": "^16.3.1",
     "react-helmet": "^5.2.0",
-    "react-native": "^0.55.3",
     "react-redux": "^5.0.7",
     "react-router-dom": "^4.2.2",
-    "react-router-native": "^4.2.0",
     "react-router-redux": "^5.0.0-alpha.9",
     "recompose": "^0.27.0",
     "redux": "^3.7.2",
@@ -87,10 +84,9 @@
     "babel-plugin-styled-components-named": "^0.1.1",
     "babel-plugin-transform-es2015-modules-commonjs": "^6.26.0",
     "babel-plugin-transform-react-remove-prop-types": "^0.4.13",
-    "babel-preset-env": "^1.6.1",
+    "babel-preset-env": "^1.7.0",
     "babel-preset-react": "^6.24.1",
-    "babel-preset-react-native": "4.0.0",
-    "babel-preset-stage-0": "^6.24.1",
+    "babel-preset-stage-2": "^6.24.1",
     "babel-runtime": "^6.26.0",
     "css-loader": "^0.28.11",
     "enzyme": "^3.3.0",
@@ -112,6 +108,7 @@
     "style-loader": "^0.20.3",
     "webpack": "^4.6.0",
     "webpack-cli": "^2.0.15",
-    "webpack-dev-server": "^3.1.1"
+    "webpack-dev-server": "^3.1.1",
+    "webpack-node-externals": "^1.7.2"
   }
 }

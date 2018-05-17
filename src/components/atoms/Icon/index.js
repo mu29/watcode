@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { color, size } from 'services/style'
 
 const Wrapper = styled.div`
-  display: inline-block;
+  display: contents;
   color: ${color};
   font-size: ${size};
 `

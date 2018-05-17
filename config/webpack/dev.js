@@ -1,5 +1,6 @@
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const nodeExternals = require('webpack-node-externals')
 
 const rootPath = path.resolve(__dirname, '../../')
 const assetsPath = path.resolve(rootPath, 'static')
@@ -69,4 +70,5 @@ module.exports = [{
     ],
   },
   target: 'node',
+  externals: [nodeExternals()],
 }]

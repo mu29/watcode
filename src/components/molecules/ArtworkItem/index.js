@@ -10,7 +10,7 @@ const Wrapper = styled.div`
   border: 0.0625rem solid ${palette('gray.30')};
   background-color: ${palette('white.default')};
   cursor: pointer;
-  transition: background-color 0.2s;
+  transition: background-color 0.2s, box-shadow 0.2s;
 
   @media(max-width: 639px) {
     flex-direction: column;
@@ -18,6 +18,7 @@ const Wrapper = styled.div`
 
   &:hover {
     background-color: ${palette('gray.0')};
+    box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
   }
 `
 

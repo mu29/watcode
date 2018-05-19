@@ -11,22 +11,16 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
 >
   <TabHeader>
     <TabItem
-      key="title1"
       onClick={[Function]}
       selected={true}
-    >
-      title1
-    </TabItem>
+    />
     <TabItem
-      key="title2"
       onClick={[Function]}
       selected={false}
-    >
-      title2
-    </TabItem>
+    />
   </TabHeader>
   <TabDivider
-    borderColor="gray.20"
+    borderColor="gray.30"
   />
   <TabPage
     title="title1"
@@ -47,22 +41,16 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
 >
   <TabHeader>
     <TabItem
-      key="title1"
       onClick={[Function]}
       selected={false}
-    >
-      title1
-    </TabItem>
+    />
     <TabItem
-      key="title2"
       onClick={[Function]}
       selected={true}
-    >
-      title2
-    </TabItem>
+    />
   </TabHeader>
   <TabDivider
-    borderColor="gray.20"
+    borderColor="gray.30"
   />
   <TabPage
     title="title2"
@@ -83,22 +71,16 @@ exports[`<Tab /> 정상적으로 렌더링된다 1`] = `
 >
   <TabHeader>
     <TabItem
-      key="title1"
       onClick={[Function]}
       selected={true}
-    >
-      title1
-    </TabItem>
+    />
     <TabItem
-      key="title2"
       onClick={[Function]}
       selected={false}
-    >
-      title2
-    </TabItem>
+    />
   </TabHeader>
   <TabDivider
-    borderColor="gray.20"
+    borderColor="gray.30"
   />
   <TabPage
     title="title1"

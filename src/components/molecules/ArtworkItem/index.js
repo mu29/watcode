@@ -1,13 +1,13 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
 import styled from 'styled-components'
-import { Heading, Text } from 'components'
+import { Heading, Tag, Text } from 'components'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
   display: flex;
   padding: 1rem;
-  border: 0.0625rem solid ${palette('gray.30')};
+  border: 0.0625rem solid ${palette('gray.40')};
   background-color: ${palette('white.default')};
   cursor: pointer;
   transition: background-color 0.2s, box-shadow 0.2s;
@@ -17,7 +17,7 @@ const Wrapper = styled.div`
   }
 
   &:hover {
-    background-color: ${palette('gray.0')};
+    background-color: ${palette('gray.10')};
     box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1);
   }
 `
@@ -45,7 +45,7 @@ const InfoArea = styled.div`
 const Divider = styled.div`
   width: 0.0625rem;
   margin: 0 1rem;
-  background-color: ${palette('gray.20')};
+  background-color: ${palette('gray.30')};
 
   @media(max-width: 639px) {
     width: 100%;
@@ -81,17 +81,7 @@ const TagArea = styled.div`
   }
 `
 
-const Tag = styled.div`
-  margin-right: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  color: ${palette('white.default')};
-  background-color: ${palette('gray.90')};
-  border-radius: 0.25rem;
-  white-space: nowrap;
-`
-
-const TypeTag = styled(Tag)`
+const StyledTag = styled(props => <Tag { ...props } />)`
   background-color: ${palette('yellow.default')};
 `
 
@@ -116,13 +106,13 @@ const ArtworkItem = ({
   <Wrapper { ...props }>
     <HeadingArea>
       <Heading level={ 3 }>#{ code }</Heading>
-      <Text color="gray.40" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
+      <Text color="gray.50" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
     </HeadingArea>
     <Divider />
     <InfoArea>
       <Title level={ 5 } fontWeight={ 400 }>{ title }</Title>
       <TagArea>
-        <TypeTag>{ type }</TypeTag>
+        <StyledTag>{ type }</StyledTag>
         { tags.map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
       </TagArea>
     </InfoArea>

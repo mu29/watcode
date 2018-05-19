@@ -71,7 +71,7 @@ Input.propTypes = {
 Input.defaultProps = {
   type: 'text',
   width: undefined,
-  border: 'gray.30',
+  border: 'gray.40',
   block: false,
   font: 'default',
   fontSize: 16,

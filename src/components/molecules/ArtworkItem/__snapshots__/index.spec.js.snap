@@ -13,6 +13,14 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
   margin: 0;
 }
 
+.c9 {
+  margin-right: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}
+
 .c3 {
   font-size: 0.75rem;
   font-weight: 200;
@@ -26,6 +34,14 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
   padding: 1rem;
   border: 0.0625rem solid #E0E0E0;
   background-color: #FFF;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,box-shadow 0.2s;
+}
+
+.c0:hover {
+  background-color: #FAFAFA;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0,0,0,0.1);
 }
 
 .c1 {
@@ -95,14 +111,6 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
   height: 0;
 }
 
-.c9 {
-  margin-right: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 0.25rem;
-  white-space: nowrap;
-}
-
 .c10 {
   height: 5.75rem;
   margin: -1rem;
@@ -162,12 +170,12 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
       },
       "palette": Object {
         "gray": Object {
-          "0": "#FAFAFA",
-          "10": "#F5F5F5",
+          "10": "#FAFAFA",
           "100": "#212121",
-          "20": "#EEEEEE",
-          "30": "#E0E0E0",
-          "40": "#BDBDBD",
+          "20": "#F5F5F5",
+          "30": "#EEEEEE",
+          "40": "#E0E0E0",
+          "50": "#BDBDBD",
           "60": "#9E9E9E",
           "70": "#757575",
           "80": "#616161",
@@ -199,12 +207,12 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
         },
         "palette": Object {
           "gray": Object {
-            "0": "#FAFAFA",
-            "10": "#F5F5F5",
+            "10": "#FAFAFA",
             "100": "#212121",
-            "20": "#EEEEEE",
-            "30": "#E0E0E0",
-            "40": "#BDBDBD",
+            "20": "#F5F5F5",
+            "30": "#EEEEEE",
+            "40": "#E0E0E0",
+            "50": "#BDBDBD",
             "60": "#9E9E9E",
             "70": "#757575",
             "80": "#616161",
@@ -256,21 +264,21 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
             </Component>
           </Heading>
           <Text
-            color="gray.40"
+            color="gray.50"
             font="default"
             fontSize={12}
             fontWeight={200}
             small={true}
           >
             <SmallText
-              color="gray.40"
+              color="gray.50"
               font="default"
               fontSize={12}
               fontWeight={200}
             >
               <small
                 className="c3"
-                color="gray.40"
+                color="gray.50"
                 fontSize={12}
                 fontWeight={200}
               >
@@ -320,6 +328,19 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
             <div
               className="c8"
             >
+              <StyledTag>
+                <Component
+                  className=""
+                >
+                  <Tag
+                    className=""
+                  >
+                    <div
+                      className="c9"
+                    />
+                  </Tag>
+                </Component>
+              </StyledTag>
               <Tag
                 key="rebirth"
               >
@@ -388,6 +409,14 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
   margin: 0;
 }
 
+.c9 {
+  margin-right: 0.25rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.75rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}
+
 .c3 {
   font-size: 0.75rem;
   font-weight: 200;
@@ -401,6 +430,14 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
   padding: 1rem;
   border: 0.0625rem solid #E0E0E0;
   background-color: #FFF;
+  cursor: pointer;
+  -webkit-transition: background-color 0.2s,box-shadow 0.2s;
+  transition: background-color 0.2s,box-shadow 0.2s;
+}
+
+.c0:hover {
+  background-color: #FAFAFA;
+  box-shadow: 0 0.125rem 0.125rem 0 rgba(0,0,0,0.1);
 }
 
 .c1 {
@@ -470,14 +507,6 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
   height: 0;
 }
 
-.c9 {
-  margin-right: 0.25rem;
-  padding: 0.25rem 0.5rem;
-  font-size: 0.75rem;
-  border-radius: 0.25rem;
-  white-space: nowrap;
-}
-
 @media (max-width:639px) {
   .c0 {
     -webkit-flex-direction: column;
@@ -531,12 +560,12 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
       },
       "palette": Object {
         "gray": Object {
-          "0": "#FAFAFA",
-          "10": "#F5F5F5",
+          "10": "#FAFAFA",
           "100": "#212121",
-          "20": "#EEEEEE",
-          "30": "#E0E0E0",
-          "40": "#BDBDBD",
+          "20": "#F5F5F5",
+          "30": "#EEEEEE",
+          "40": "#E0E0E0",
+          "50": "#BDBDBD",
           "60": "#9E9E9E",
           "70": "#757575",
           "80": "#616161",
@@ -568,12 +597,12 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
         },
         "palette": Object {
           "gray": Object {
-            "0": "#FAFAFA",
-            "10": "#F5F5F5",
+            "10": "#FAFAFA",
             "100": "#212121",
-            "20": "#EEEEEE",
-            "30": "#E0E0E0",
-            "40": "#BDBDBD",
+            "20": "#F5F5F5",
+            "30": "#EEEEEE",
+            "40": "#E0E0E0",
+            "50": "#BDBDBD",
             "60": "#9E9E9E",
             "70": "#757575",
             "80": "#616161",
@@ -625,21 +654,21 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
             </Component>
           </Heading>
           <Text
-            color="gray.40"
+            color="gray.50"
             font="default"
             fontSize={12}
             fontWeight={200}
             small={true}
           >
             <SmallText
-              color="gray.40"
+              color="gray.50"
               font="default"
               fontSize={12}
               fontWeight={200}
             >
               <small
                 className="c3"
-                color="gray.40"
+                color="gray.50"
                 fontSize={12}
                 fontWeight={200}
               >
@@ -689,6 +718,19 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
             <div
               className="c8"
             >
+              <StyledTag>
+                <Component
+                  className=""
+                >
+                  <Tag
+                    className=""
+                  >
+                    <div
+                      className="c9"
+                    />
+                  </Tag>
+                </Component>
+              </StyledTag>
               <Tag
                 key="rebirth"
               >

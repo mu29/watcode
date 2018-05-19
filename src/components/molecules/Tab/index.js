@@ -6,9 +6,6 @@ import { palette, borderColor } from 'services/style'
 
 const getWeight = ({ selected }) => (selected ? 600 : 400)
 
-const getSelectedColor = ({ selected, theme }) =>
-  palette(selected ? 'gray.90' : 'gray.90')({ theme })
-
 const getSelectedBorder = ({ selected, theme }) =>
   (selected ? `0.1875rem solid ${palette('yellow.default')({ theme })}` : 'none')
 
@@ -33,13 +30,13 @@ const TabItem = styled(Button)`
   height: 2.5rem;
   padding: 0rem 0.75rem;
   font-weight: ${getWeight};
-  color: ${getSelectedColor};
+  color: ${palette('gray.90')};
   background-color: transparent;
   border-radius: 0;
   border-bottom: ${getSelectedBorder};
 
   &:hover {
-    color: ${getSelectedColor};
+    color: ${palette('gray.90')};
   }
 `
 
@@ -83,7 +80,7 @@ Tab.propTypes = {
 }
 
 Tab.defaultProps = {
-  borderColor: 'gray.20',
+  borderColor: 'gray.30',
 }
 
 export default Tab

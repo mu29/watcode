@@ -56,6 +56,7 @@ const Divider = styled.div`
 
 const Title = styled(Heading)`
   width: 100%;
+  margin-bottom: 0.5rem;
   overflow: scroll;
   white-space: nowrap;
 
@@ -71,8 +72,8 @@ const Title = styled(Heading)`
 `
 
 const TagArea = styled.div`
-  display: flex;
   width: 100%;
+  white-space: nowrap;
   overflow: scroll;
 
   ::-webkit-scrollbar {
@@ -81,8 +82,10 @@ const TagArea = styled.div`
   }
 `
 
-const StyledTag = styled(props => <Tag { ...props } />)`
-  background-color: ${palette('yellow.default')};
+const TypeTag = styled(Tag)`
+  font-weight: 400;
+  color: ${palette('white.default')};
+  background-color: ${palette('gray.90')};
 `
 
 const Image = styled.img`
@@ -112,7 +115,7 @@ const ArtworkItem = ({
     <InfoArea>
       <Title level={ 5 } fontWeight={ 400 }>{ title }</Title>
       <TagArea>
-        <StyledTag>{ type }</StyledTag>
+        <TypeTag>{ type }</TypeTag>
         { tags.map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
       </TagArea>
     </InfoArea>

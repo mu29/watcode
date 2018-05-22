@@ -15,6 +15,7 @@ const styles = css`
   background: transparent;
   padding: 0.75rem;
   transition: border 0.3s;
+  resize: none;
 
   &:hover {
     outline: none;

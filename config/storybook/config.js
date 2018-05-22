@@ -5,7 +5,6 @@ import { BrowserRouter } from 'react-router-dom'
 import { injectGlobal, ThemeProvider } from 'styled-components'
 import createHistory from 'history/createBrowserHistory'
 
-import '@storybook/addon-console'
 import { configure, addDecorator } from '@storybook/react'
 import { withNotes } from '@storybook/addon-notes'
 import { configureViewport } from '@storybook/addon-viewport'

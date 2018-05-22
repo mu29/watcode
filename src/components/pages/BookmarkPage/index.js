@@ -4,7 +4,7 @@ import { Header, Tab, TabPage, GenericTemplate } from 'components'
 import { ArtworkList } from 'containers'
 
 const StyledTab = styled(Tab)`
-  width: 48rem;
+  width: 44rem;
   margin: 4rem 0;
 
   @media(max-width: 1024px) {

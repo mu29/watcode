@@ -1,11 +1,19 @@
-import * as auth from './auth/selectors'
-import * as entity from './entity/selectors'
-import * as loading from './loading/selectors'
-import * as post from './post/selectors'
+import upperFirst from 'lodash/upperFirst'
 
-const selectors = [auth, entity, loading, post]
-  .reduce((a, c) => ({ ...a, ...c }), {})
+const req = require.context('.', true, /\.\/.+\/selectors\.js$/)
 
-Object.keys(selectors).forEach((name) => {
-  module.exports[name] = selectors[name]
+req.keys().forEach((key) => {
+  const storeName = key.replace(/\.\/(.+)\/.+$/, '$1')
+  const fromName = `from${upperFirst(storeName)}`
+  const selectors = req(key)
+  const getState = (state = {}) => state[storeName] || {}
+
+  module.exports[fromName] = {}
+
+  Object.keys(selectors).forEach((name) => {
+    const selector = selectors[name]
+    if (typeof selector === 'function') {
+      module.exports[fromName][name] = (state, ...args) => selector(getState(state), ...args)
+    }
+  })
 })

@@ -52,7 +52,7 @@ app.use(express.static(path.resolve('static')))
 app.use((req, res) => {
   const cookies = new Cookies(req.headers.cookie)
   const token = cookies.get('token')
-  const matches = routes.filter(route => matchPath(req.url, route))
+  const matches = routes.filter(route => matchPath(req.url.replace(/\?.*/, ''), route))
   if (matches.length === 0) {
     renderToNodeStream(<Error />).pipe(res)
     return
@@ -95,6 +95,7 @@ app.use((req, res) => {
 })
 
 app.listen(port, (error) => {
+  console.log(`위잉.. ${port} 포트에서 서버 시작!`)
   if (error) {
     console.error(error)
   }

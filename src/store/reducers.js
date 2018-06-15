@@ -1,19 +1,16 @@
+import camelCase from 'lodash/camelCase'
 import { combineReducers } from 'redux'
-import { reducer as formReducer } from 'redux-form'
-import { routerReducer } from 'react-router-redux'
-
-import auth from './auth/reducer'
-import entity from './entity/reducer'
-import loading from './loading/reducer'
-import post from './post/reducer'
+import { reducer as form } from 'redux-form'
 
 const reducers = {
-  form: formReducer,
-  router: routerReducer,
-  auth,
-  entity,
-  loading,
-  post,
+  form,
 }
+
+const req = require.context('.', true, /\.\/.+\/reducer\.js$/)
+
+req.keys().forEach((key) => {
+  const storeName = camelCase(key.replace(/\.\/(.+)\/.+$/, '$1'))
+  reducers[storeName] = req(key).default
+})
 
 export default combineReducers(reducers)

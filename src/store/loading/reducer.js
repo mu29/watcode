@@ -1,6 +1,10 @@
 import { initialState } from './selectors'
 
 export default (state = initialState, action) => {
+  if (!action.type) {
+    return state
+  }
+
   switch (true) {
     case action.type.endsWith('_REQUEST'):
       return {

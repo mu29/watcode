@@ -11,19 +11,26 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
 >
   <TabHeader>
     <TabItem
+      key="title1"
       onClick={[Function]}
       selected={true}
-    />
+    >
+      title1
+    </TabItem>
     <TabItem
+      key="title2"
       onClick={[Function]}
       selected={false}
-    />
+    >
+      title2
+    </TabItem>
   </TabHeader>
   <TabDivider
     borderColor="gray.30"
   />
   <TabPage
-    title="title1"
+    key="title1"
+    name="title1"
   >
     탭 페이지 1
   </TabPage>
@@ -41,19 +48,26 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
 >
   <TabHeader>
     <TabItem
+      key="title1"
       onClick={[Function]}
       selected={false}
-    />
+    >
+      title1
+    </TabItem>
     <TabItem
+      key="title2"
       onClick={[Function]}
       selected={true}
-    />
+    >
+      title2
+    </TabItem>
   </TabHeader>
   <TabDivider
     borderColor="gray.30"
   />
   <TabPage
-    title="title2"
+    key="title2"
+    name="title2"
   >
     탭 페이지 2
   </TabPage>
@@ -66,26 +80,37 @@ exports[`<Tab /> 정상적으로 렌더링된다 1`] = `
   height: 100%;
 }
 
+.c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.c2 {
+  height: 0.125rem;
+  margin-top: -0.125rem;
+  z-index: -1;
+}
+
 <div
-  className="c0"
+  class="c0"
 >
-  <TabHeader>
-    <TabItem
-      onClick={[Function]}
-      selected={true}
-    />
-    <TabItem
-      onClick={[Function]}
-      selected={false}
-    />
-  </TabHeader>
-  <TabDivider
-    borderColor="gray.30"
-  />
-  <TabPage
-    title="title1"
+  <div
+    class="c1"
   >
+    <span>
+      title1
+    </span>
+    <span>
+      title2
+    </span>
+  </div>
+  <div
+    class="c2"
+  />
+  <span>
     탭 페이지 1
-  </TabPage>
+  </span>
 </div>
 `;

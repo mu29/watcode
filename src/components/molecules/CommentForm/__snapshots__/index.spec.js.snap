@@ -1,0 +1,22 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentForm /> 정상적으로 렌더링된다 1`] = `
+<Form
+  onSubmit={[MockFunction]}
+>
+  <Field
+    component={[Function]}
+    name="content"
+    placeholder="이 작품은 어땠나요?"
+    type="textarea"
+  />
+  <Button
+    disabled={false}
+    height={74}
+    type="submit"
+    width={96}
+  >
+    작성
+  </Button>
+</Form>
+`;

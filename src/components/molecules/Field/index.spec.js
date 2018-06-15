@@ -1,14 +1,12 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { basicTheme } from 'components/themes'
-import 'jest-styled-components'
 import Field from '.'
 
-const wrap = (props = {}) => shallow(<Field theme={ basicTheme } name="name" { ...props } />).dive()
+const component = (props = {}) => withTheme(<Field name="name" { ...props } />)
+const wrap = (props = {}) => shallow(component(props)).dive()
 
 describe('<Field />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap()
+    const wrapper = render(component())
     expect(wrapper).toMatchSnapshot()
   })
 

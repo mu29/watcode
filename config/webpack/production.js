@@ -1,6 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const nodeExternals = require('webpack-node-externals')
 
 const rootPath = path.resolve(__dirname, '../../')
@@ -8,49 +7,38 @@ const assetsPath = path.resolve(rootPath, 'static')
 
 module.exports = [{
   entry: {
-    client: [
-      './src/client.js',
-      './src/styles/main.scss',
-    ],
+    client: ['./src/client.js'],
   },
   output: {
     path: assetsPath,
     publicPath: '/',
     filename: '[name].js',
   },
-  mode: 'development',
-  devServer: {
-    hot: true,
-    port: 3001,
-    historyApiFallback: true,
-    watchOptions: {
-      aggregateTimeout: 300,
-      poll: 1000,
-    },
-    contentBase: './static/',
-  },
-  devtool: 'source-map',
+  mode: 'production',
   resolve: {
     extensions: ['.js', '.jsx', '.json'],
     modules: ['node_modules'],
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
+      { test: /\.jsx?$/, exclude: /node_modules|.*\.(spec|stories)\.js/, use: 'babel-loader' },
       { enforce: 'pre', test: /\.js$/, use: 'source-map-loader' },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-        }),
-      },
     ],
   },
   plugins: [
+    new webpack.DefinePlugin({
+      'process.env': {
+        NODE_ENV: '"production"',
+      },
+    }),
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new ExtractTextPlugin('style.css'),
   ],
+  optimization: {
+    splitChunks: {
+      chunks: 'all',
+    },
+    concatenateModules: true,
+  },
 }, {
   entry: {
     server: './src/server.js',
@@ -60,7 +48,7 @@ module.exports = [{
     publicPath: '/',
     filename: '[name].js',
   },
-  mode: 'development',
+  mode: 'production',
   devtool: 'source-map',
   resolve: {
     extensions: ['.js', '.jsx', '.json'],

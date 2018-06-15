@@ -186,10 +186,14 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
   <div
     class="c1"
   >
-    <span>
+    <span
+      componentname="Heading"
+    >
       #112047
     </span>
-    <span>
+    <span
+      componentname="Text"
+    >
       by nagatsuki taffee
     </span>
   </div>
@@ -199,23 +203,35 @@ exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
   <div
     class="c3"
   >
-    <span>
+    <span
+      componentname="Heading"
+    >
       Re: 제로부터 시작하는 이세계 생활
     </span>
     <div
       class="c4"
     >
-      <span />
-      <span>
+      <span
+        componentname="Tag"
+      />
+      <span
+        componentname="Tag"
+      >
         rebirth
       </span>
-      <span>
+      <span
+        componentname="Tag"
+      >
         loop
       </span>
-      <span>
+      <span
+        componentname="Tag"
+      >
         harem
       </span>
-      <span>
+      <span
+        componentname="Tag"
+      >
         this is a long tag
       </span>
     </div>

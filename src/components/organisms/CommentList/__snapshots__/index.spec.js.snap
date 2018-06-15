@@ -1,0 +1,26 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<CommentList /> 3개의 아이템을 그려준다 1`] = `
+<span
+  componentname="CommentForm"
+/>
+`;
+
+exports[`<CommentList /> 정상적으로 렌더링된다 1`] = `
+<div
+  class=""
+>
+  <span
+    componentname="CommentForm"
+  />
+  <span
+    componentname="CommentItem"
+  />
+  <span
+    componentname="CommentItem"
+  />
+  <span
+    componentname="CommentItem"
+  />
+</div>
+`;

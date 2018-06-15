@@ -1,7 +1,4 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { basicTheme } from 'components/themes'
-import 'jest-styled-components'
 import ArtworkList from '.'
 
 const artworks = [{
@@ -24,24 +21,19 @@ const artworks = [{
   imageUrl: 'https://cdn.namuwikiusercontent.com/s/6d15a8c566a72ec6dc9788bb5e412aa491780d82053d9c4f5b196ce0e9c71c4a8b65286f09ac8e5fe8d18e3d108a3376dae42976008b9c3eb9e495e03baa2c502f6918b821109112150921d94cade965?e=1530728304&k=NMvJ79h92uY0MlHZJgdJyg',
 }]
 
-const wrap = (props = {}) => shallow((
-  <ArtworkList
-    theme={ basicTheme }
-    list={ artworks }
-    { ...props }
-  />
-)).dive()
+const component = (props = {}) => withTheme(<ArtworkList list={ artworks } { ...props } />)
+const wrap = (props = {}) => shallow(component(props)).dive()
 
 describe('<ArtworkList />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap()
+    const wrapper = render(component())
     expect(wrapper).toMatchSnapshot()
   })
 
   it('3개의 아이템을 그려준다', () => {
     const wrapper = wrap()
     expect(wrapper.find('StyledArtworkItem')).toHaveLength(3)
-    const firstMenu = wrapper.childAt(0).dive().dive()
-    expect(firstMenu).toMatchSnapshot()
+    const firstItem = wrapper.childAt(0).dive().dive()
+    expect(firstItem).toMatchSnapshot()
   })
 })

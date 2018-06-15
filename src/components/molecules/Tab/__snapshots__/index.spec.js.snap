@@ -99,17 +99,23 @@ exports[`<Tab /> 정상적으로 렌더링된다 1`] = `
   <div
     class="c1"
   >
-    <span>
+    <span
+      componentname="Button"
+    >
       title1
     </span>
-    <span>
+    <span
+      componentname="Button"
+    >
       title2
     </span>
   </div>
   <div
     class="c2"
   />
-  <span>
+  <span
+    componentname="TabPage"
+  >
     탭 페이지 1
   </span>
 </div>

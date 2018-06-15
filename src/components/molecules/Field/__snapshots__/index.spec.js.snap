@@ -146,6 +146,8 @@ exports[`<Field /> 정상적으로 렌더링된다 1`] = `
 <div
   class="c0"
 >
-  <span />
+  <span
+    componentname="Input"
+  />
 </div>
 `;

@@ -4,7 +4,41 @@ exports[`<ReduxField /> 정상적으로 렌더링된다 1`] = `
 <Field
   error=""
   name="test"
+  theme={
+    Object {
+      "fonts": Object {
+        "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
+        "monospace": "'Monaco', 'Consolas'",
+      },
+      "palette": Object {
+        "gray": Object {
+          "10": "#FAFAFA",
+          "100": "#212121",
+          "20": "#F5F5F5",
+          "30": "#EEEEEE",
+          "40": "#E0E0E0",
+          "50": "#BDBDBD",
+          "60": "#9E9E9E",
+          "70": "#757575",
+          "80": "#616161",
+          "90": "#424242",
+        },
+        "red": Object {
+          "default": "#FF8787",
+        },
+        "transparent": Object {
+          "default": "transparent",
+        },
+        "white": Object {
+          "default": "#FFF",
+        },
+        "yellow": Object {
+          "default": "#F9D14C",
+        },
+      },
+      "sizes": Object {},
+    }
+  }
   touched={false}
-  type="text"
 />
 `;

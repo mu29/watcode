@@ -11,6 +11,13 @@
     "browser": true,
     "jest/globals": true
   },
+  "globals": {
+    "shallow": false,
+    "mount": false,
+    "render": false,
+    "withTheme": false,
+    "withStore": false
+  },
   "rules": {
     "semi": [2, "never"],
     "semi-style": [2, "first"],

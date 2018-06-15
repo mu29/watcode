@@ -3,7 +3,7 @@
 exports[`<TabPage /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
 <div
   className=""
-  title="title"
+  name="title"
 >
   test
 </div>
@@ -11,7 +11,7 @@ exports[`<TabPage /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = 
 
 exports[`<TabPage /> 정상적으로 렌더링된다 1`] = `
 <div
-  className=""
-  title="title"
+  class=""
+  name="title"
 />
 `;

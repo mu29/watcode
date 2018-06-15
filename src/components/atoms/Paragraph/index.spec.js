@@ -1,14 +1,12 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { basicTheme } from 'components/themes'
-import 'jest-styled-components'
 import Paragraph from '.'
 
-const wrap = (props = {}) => shallow(<Paragraph theme={ basicTheme } { ...props } />).dive()
+const component = (props = {}) => withTheme(<Paragraph { ...props } />)
+const wrap = (props = {}) => shallow(component(props)).dive()
 
 describe('<Paragraph />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap()
+    const wrapper = render(component())
     expect(wrapper).toMatchSnapshot()
   })
 

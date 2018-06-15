@@ -7,6 +7,7 @@ const NormalText = styled.span`
   color: ${color};
   font-family: ${fontFamily};
   font-size: ${fontSize};
+  font-weight: ${fontWeight};
 `
 
 const SmallText = styled.small`

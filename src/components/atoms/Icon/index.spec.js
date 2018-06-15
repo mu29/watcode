@@ -1,14 +1,11 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { basicTheme } from 'components/themes'
-import 'jest-styled-components'
 import Icon from '.'
 
-const wrap = (props = {}) => shallow(<Icon theme={ basicTheme } { ...props } />).dive()
+const component = (props = {}) => withTheme(<Icon { ...props } />)
 
 describe('<Icon />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap({ icon: 'user' })
+    const wrapper = render(component({ icon: 'user' }))
     expect(wrapper).toMatchSnapshot()
   })
 })

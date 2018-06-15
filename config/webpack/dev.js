@@ -1,5 +1,7 @@
+const webpack = require('webpack')
 const path = require('path')
 const ExtractTextPlugin = require('extract-text-webpack-plugin')
+const nodeExternals = require('webpack-node-externals')
 
 const rootPath = path.resolve(__dirname, '../../')
 const assetsPath = path.resolve(rootPath, 'static')
@@ -25,6 +27,7 @@ module.exports = [{
       aggregateTimeout: 300,
       poll: 1000,
     },
+    contentBase: './static/',
   },
   devtool: 'source-map',
   resolve: {
@@ -33,7 +36,7 @@ module.exports = [{
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules|src\/mobile/, use: 'babel-loader' },
+      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
       { enforce: 'pre', test: /\.js$/, use: 'source-map-loader' },
       {
         test: /\.scss$/,
@@ -45,6 +48,7 @@ module.exports = [{
     ],
   },
   plugins: [
+    new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
     new ExtractTextPlugin('style.css'),
   ],
 }, {
@@ -64,9 +68,10 @@ module.exports = [{
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules|src\/mobile/, use: 'babel-loader' },
+      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
       { enforce: 'pre', test: /\.js$/, use: 'source-map-loader' },
     ],
   },
   target: 'node',
+  externals: [nodeExternals()],
 }]

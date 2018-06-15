@@ -1,14 +1,12 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { basicTheme } from 'components/themes'
-import 'jest-styled-components'
 import Heading from '.'
 
-const wrap = (props = {}) => shallow(<Heading theme={ basicTheme } { ...props } />).dive()
+const component = (props = {}) => withTheme(<Heading { ...props } />)
+const wrap = (props = {}) => shallow(component(props)).dive()
 
 describe('<Heading />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap()
+    const wrapper = render(component())
     expect(wrapper).toMatchSnapshot()
   })
 

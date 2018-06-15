@@ -1,5 +1,5 @@
 import React from 'react'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled, { css } from 'styled-components'
 import { width, border, color, primaryColor, fontFamily, fontSize, palette } from 'services/style'
 
@@ -15,6 +15,7 @@ const styles = css`
   background: transparent;
   padding: 0.75rem;
   transition: border 0.3s;
+  resize: none;
 
   &:hover {
     outline: none;
@@ -43,7 +44,7 @@ const StyledInput = styled.input`
   border: ${errorColor};
 
   &:active, &:focus {
-  border: ${errorColor};
+    border: ${errorColor};
   }
 `
 const StyledTextArea = styled.textarea`${styles}`
@@ -51,14 +52,15 @@ const StyledTextArea = styled.textarea`${styles}`
 const Input = (props) => {
   switch (props.type) {
     case 'textarea':
-      return <StyledTextArea { ...props } />
+      return <StyledTextArea innerRef={ props.inputRef } { ...props } />
     default:
-      return <StyledInput { ...props } />
+      return <StyledInput innerRef={ props.inputRef } { ...props } />
   }
 }
 
 Input.propTypes = {
   type: PropTypes.string,
+  inputRef: PropTypes.shape({}),
   width: PropTypes.number,
   border: PropTypes.string,
   block: PropTypes.bool,
@@ -70,8 +72,9 @@ Input.propTypes = {
 
 Input.defaultProps = {
   type: 'text',
+  inputRef: undefined,
   width: undefined,
-  border: 'gray.30',
+  border: 'gray.40',
   block: false,
   font: 'default',
   fontSize: 16,

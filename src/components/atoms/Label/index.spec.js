@@ -1,14 +1,12 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { basicTheme } from 'components/themes'
-import 'jest-styled-components'
 import Label from '.'
 
-const wrap = (props = {}) => shallow(<Label theme={ basicTheme } { ...props } />)
+const component = (props = {}) => withTheme(<Label { ...props } />)
+const wrap = (props = {}) => shallow(component(props))
 
 describe('<Label />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap()
+    const wrapper = render(component())
     expect(wrapper).toMatchSnapshot()
   })
 

@@ -1,10 +1,8 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import { basicTheme } from 'components/themes'
-import 'jest-styled-components'
 import Link from '.'
 
-const wrap = (props = { to: '/' }) => shallow(<Link theme={ basicTheme } { ...props } />).dive()
+const component = (props = {}) => withTheme(<Link { ...props } />)
+const wrap = (props = { to: '/' }) => shallow(component(props)).dive()
 
 describe('<Link />', () => {
   it('정상적으로 렌더링된다', () => {

@@ -1,19 +1,18 @@
 import React from 'react'
-import { shallow } from 'enzyme'
 import { TabPage } from 'components'
-import 'jest-styled-components'
 import Tab from '.'
 
-const wrap = (props = {}) => shallow((
+const component = (props = {}) => withTheme((
   <Tab { ...props }>
-    <TabPage title="title1">탭 페이지 1</TabPage>
-    <TabPage title="title2">탭 페이지 2</TabPage>
+    <TabPage name="title1" key="title1">탭 페이지 1</TabPage>
+    <TabPage name="title2" key="title2">탭 페이지 2</TabPage>
   </Tab>
 ))
+const wrap = (props = {}) => shallow(component(props))
 
 describe('<Tab />', () => {
   it('정상적으로 렌더링된다', () => {
-    const wrapper = wrap().dive()
+    const wrapper = render(component())
     expect(wrapper).toMatchSnapshot()
   })
 

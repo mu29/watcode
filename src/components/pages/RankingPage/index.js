@@ -4,7 +4,7 @@ import { Header, Tab, TabPage, GenericTemplate } from 'components'
 import { ArtworkList } from 'containers'
 
 const StyledTab = styled(Tab)`
-  width: 48rem;
+  width: 44rem;
   margin: 4rem 0;
 
   @media(max-width: 1024px) {
@@ -15,13 +15,13 @@ const StyledTab = styled(Tab)`
 const RankingPage = () => (
   <GenericTemplate header={ <Header location="/ranking" /> }>
     <StyledTab>
-      <TabPage title="오늘">
+      <TabPage name="오늘">
         <ArtworkList />
       </TabPage>
-      <TabPage title="주간">
+      <TabPage name="주간">
         <ArtworkList />
       </TabPage>
-      <TabPage title="월간">
+      <TabPage name="월간">
         <ArtworkList />
       </TabPage>
     </StyledTab>

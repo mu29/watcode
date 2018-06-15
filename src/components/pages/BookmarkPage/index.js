@@ -4,7 +4,7 @@ import { Header, Tab, TabPage, GenericTemplate } from 'components'
 import { ArtworkList } from 'containers'
 
 const StyledTab = styled(Tab)`
-  width: 48rem;
+  width: 44rem;
   margin: 4rem 0;
 
   @media(max-width: 1024px) {
@@ -20,10 +20,10 @@ const Message = styled.div`
 const BookmarkPage = () => (
   <GenericTemplate header={ <Header location="/bookmarks" /> }>
     <StyledTab>
-      <TabPage title="즐겨찾기">
+      <TabPage name="즐겨찾기">
         <ArtworkList />
       </TabPage>
-      <TabPage title="추천 작품">
+      <TabPage name="추천 작품">
         <Message>준비중입니다 :)</Message>
       </TabPage>
     </StyledTab>

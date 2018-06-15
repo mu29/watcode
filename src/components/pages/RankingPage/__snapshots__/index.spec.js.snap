@@ -10,19 +10,19 @@ exports[`<RankingPage /> 정상적으로 렌더링된다 1`] = `
 >
   <StyledTab>
     <TabPage
-      title="오늘"
+      name="오늘"
     >
-      <Connect(ArtworkListContainer) />
+      <ArtworkList />
     </TabPage>
     <TabPage
-      title="주간"
+      name="주간"
     >
-      <Connect(ArtworkListContainer) />
+      <ArtworkList />
     </TabPage>
     <TabPage
-      title="월간"
+      name="월간"
     >
-      <Connect(ArtworkListContainer) />
+      <ArtworkList />
     </TabPage>
   </StyledTab>
 </GenericTemplate>

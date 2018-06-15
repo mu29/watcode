@@ -1,13 +1,10 @@
 import React, { Component } from 'react'
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Button } from 'components'
 import { palette, borderColor } from 'services/style'
 
 const getWeight = ({ selected }) => (selected ? 600 : 400)
-
-const getSelectedColor = ({ selected, theme }) =>
-  palette(selected ? 'gray.90' : 'gray.90')({ theme })
 
 const getSelectedBorder = ({ selected, theme }) =>
   (selected ? `0.1875rem solid ${palette('yellow.default')({ theme })}` : 'none')
@@ -33,13 +30,13 @@ const TabItem = styled(Button)`
   height: 2.5rem;
   padding: 0rem 0.75rem;
   font-weight: ${getWeight};
-  color: ${getSelectedColor};
+  color: ${palette('gray.90')};
   background-color: transparent;
   border-radius: 0;
   border-bottom: ${getSelectedBorder};
 
   &:hover {
-    color: ${getSelectedColor};
+    color: ${palette('gray.90')};
   }
 `
 
@@ -53,19 +50,19 @@ class Tab extends Component {
   render() {
     const { children } = this.props
     const { index } = this.state
-    const titles = children.map(c => c.props.title)
+    const names = children.map(c => c.props.name)
 
     return (
       <TabContainer { ...this.props }>
         <TabHeader>
           {
-            titles.map((title, i) => (
+            names.map((name, i) => (
               <TabItem
-                key={ title }
+                key={ name }
                 selected={ i === index }
                 onClick={ () => this.handleTabChange(i) }
               >
-                { title }
+                { name }
               </TabItem>
             ))
           }
@@ -83,7 +80,7 @@ Tab.propTypes = {
 }
 
 Tab.defaultProps = {
-  borderColor: 'gray.20',
+  borderColor: 'gray.30',
 }
 
 export default Tab

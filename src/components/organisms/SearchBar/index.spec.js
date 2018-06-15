@@ -1,6 +1,4 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import 'jest-styled-components'
 import SearchBar from '.'
 
 const wrap = (props = {}) => shallow(<SearchBar { ...props } />)

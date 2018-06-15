@@ -1,0 +1,39 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Tag /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
+.c0 {
+  display: inline-block;
+  margin-right: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #9E9E9E;
+  background-color: #F5F5F5;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}
+
+<div
+  class="c0"
+>
+  test
+</div>
+`;
+
+exports[`<Tag /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  display: inline-block;
+  margin-right: 0.375rem;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 200;
+  color: #9E9E9E;
+  background-color: #F5F5F5;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+}
+
+<div
+  class="c0"
+/>
+`;

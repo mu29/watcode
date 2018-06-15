@@ -18,7 +18,7 @@ export const actionCreatorFactory = (prefix) => {
       return action
     }, {
       type: fullType,
-      toString: () => type,
+      toString: () => fullType,
     })
   }
 

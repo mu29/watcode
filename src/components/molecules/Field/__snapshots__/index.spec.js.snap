@@ -17,23 +17,14 @@ exports[`<Field /> label 속성이 들어오면 그려준다 1`] = `
 >
   <LabelArea>
     <Label
-      color="gray.90"
-      font="default"
-      fontSize={12}
       htmlFor="name"
     >
       foo label
     </Label>
   </LabelArea>
   <Input
-    block={false}
-    border="gray.30"
-    color="gray.90"
-    font="default"
-    fontSize={16}
     id="name"
     name="name"
-    primaryColor="yellow.default"
     theme={
       Object {
         "fonts": Object {
@@ -42,12 +33,12 @@ exports[`<Field /> label 속성이 들어오면 그려준다 1`] = `
         },
         "palette": Object {
           "gray": Object {
-            "0": "#FAFAFA",
-            "10": "#F5F5F5",
+            "10": "#FAFAFA",
             "100": "#212121",
-            "20": "#EEEEEE",
-            "30": "#E0E0E0",
-            "40": "#BDBDBD",
+            "20": "#F5F5F5",
+            "30": "#EEEEEE",
+            "40": "#E0E0E0",
+            "50": "#BDBDBD",
             "60": "#9E9E9E",
             "70": "#757575",
             "80": "#616161",
@@ -96,15 +87,9 @@ exports[`<Field /> 오류 메시지를 표시한다 1`] = `
     </Error>
   </LabelArea>
   <Input
-    block={false}
-    border="gray.30"
-    color="gray.90"
     error="foo error"
-    font="default"
-    fontSize={16}
     id="name"
     name="name"
-    primaryColor="yellow.default"
     theme={
       Object {
         "fonts": Object {
@@ -113,12 +98,12 @@ exports[`<Field /> 오류 메시지를 표시한다 1`] = `
         },
         "palette": Object {
           "gray": Object {
-            "0": "#FAFAFA",
-            "10": "#F5F5F5",
+            "10": "#FAFAFA",
             "100": "#212121",
-            "20": "#EEEEEE",
-            "30": "#E0E0E0",
-            "40": "#BDBDBD",
+            "20": "#F5F5F5",
+            "30": "#EEEEEE",
+            "40": "#E0E0E0",
+            "50": "#BDBDBD",
             "60": "#9E9E9E",
             "70": "#757575",
             "80": "#616161",
@@ -159,54 +144,10 @@ exports[`<Field /> 정상적으로 렌더링된다 1`] = `
 }
 
 <div
-  className="c0"
+  class="c0"
 >
-  <Input
-    block={false}
-    border="gray.30"
-    color="gray.90"
-    font="default"
-    fontSize={16}
-    id="name"
-    name="name"
-    primaryColor="yellow.default"
-    theme={
-      Object {
-        "fonts": Object {
-          "default": "'Spoqa Han Sans', 'Sans-serif', 'Helvetica Neue', 'Nanum Gothic'",
-          "monospace": "'Monaco', 'Consolas'",
-        },
-        "palette": Object {
-          "gray": Object {
-            "0": "#FAFAFA",
-            "10": "#F5F5F5",
-            "100": "#212121",
-            "20": "#EEEEEE",
-            "30": "#E0E0E0",
-            "40": "#BDBDBD",
-            "60": "#9E9E9E",
-            "70": "#757575",
-            "80": "#616161",
-            "90": "#424242",
-          },
-          "red": Object {
-            "default": "#FF8787",
-          },
-          "transparent": Object {
-            "default": "transparent",
-          },
-          "white": Object {
-            "default": "#FFF",
-          },
-          "yellow": Object {
-            "default": "#F9D14C",
-          },
-        },
-        "sizes": Object {},
-      }
-    }
-    touched={false}
-    type="text"
+  <span
+    componentname="Input"
   />
 </div>
 `;

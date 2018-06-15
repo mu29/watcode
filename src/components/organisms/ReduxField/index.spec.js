@@ -1,6 +1,4 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import 'jest-styled-components'
 import ReduxField from '.'
 
 const meta = {
@@ -10,7 +8,9 @@ const meta = {
 const input = {
   name: 'test',
 }
-const wrap = (props = {}) => shallow(<ReduxField { ...{ meta, input, ...props } } />)
+
+const component = (props = {}) => withTheme(<ReduxField { ...{ meta, input, ...props } } />)
+const wrap = (props = {}) => shallow(component(props))
 
 describe('<ReduxField />', () => {
   it('정상적으로 렌더링된다', () => {

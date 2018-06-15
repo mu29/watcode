@@ -3,7 +3,7 @@ const config = {
     env: process.env.NODE_ENV || 'development',
     isDev: process.env.NODE_ENV !== 'production',
     host: process.env.HOST || 'localhost',
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 3000,
     isBrowser: typeof window !== 'undefined',
     isServer: typeof window === 'undefined',
     apiUrl: {
@@ -13,12 +13,12 @@ const config = {
   test: {},
   development: {
     host: process.env.HOST || 'localhost',
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 3000,
   },
   staging: {},
   production: {
     host: process.env.HOST || 'localhost',
-    port: process.env.PORT || 8080,
+    port: process.env.PORT || 3000,
     apiUrl: {
       v1: 'https://api.watcode.net',
     },

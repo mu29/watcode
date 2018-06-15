@@ -1,11 +1,11 @@
-import { PropTypes } from 'prop-types'
+import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
 const TabPage = styled.div`
 `
 
 TabPage.propTypes = {
-  title: PropTypes.string.isRequired,
+  name: PropTypes.string.isRequired,
   children: PropTypes.node,
 }
 

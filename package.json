@@ -37,8 +37,16 @@
     ],
     "setupTestFrameworkScriptFile": "<rootDir>/config/jest/framework.js",
     "moduleDirectories": [
+      "src",
       "node_modules"
     ],
+    "moduleNameMapper": {
+      "^(components|containers)$": "<rootDir>/config/jest/componentsMock.js",
+      "^(store|\\.\\.)\\/selectors$": "<rootDir>/config/jest/selectorsMock.js",
+      "^(store|\\.\\.)\\/actions$": "<rootDir>/config/jest/actionsMock.js",
+      "^(store|\\.\\.)\\/reducers$": "<rootDir>/config/jest/reducersMock.js",
+      "^(store|\\.\\.)\\/sagas$": "<rootDir>/config/jest/sagasMock.js"
+    },
     "snapshotSerializers": [
       "enzyme-to-json/serializer"
     ]

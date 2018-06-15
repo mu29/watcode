@@ -2,18 +2,17 @@
 
 exports[`<Icon /> 정상적으로 렌더링된다 1`] = `
 .c0 {
-  display: contents;
   color: #424242;
   font-size: 1rem;
 }
 
 <div
-  className="c0"
+  class="c0"
   color="gray.90"
-  size={16}
+  size="16"
 >
   <i
-    className="fas fa-user"
+    class="far fa-user"
   />
 </div>
 `;

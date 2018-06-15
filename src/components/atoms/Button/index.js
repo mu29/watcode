@@ -42,21 +42,13 @@ const styles = css`
 
 /* eslint-disable no-shadow */
 const StyledLink = styled(({
-  width,
-  height,
-  block,
-  padding,
-  fontFamily,
-  fontSize,
-  color,
-  backgroundColor,
-  primaryColor,
-  border,
-  borderRadius,
-  ...props
-}) => <Link { ...props } />)`${styles}`
+  to, ...props
+}) => <Link to={ to } { ...props } />)`${styles}`
 
-const Anchor = styled.a`${styles}`
+const Anchor = styled.a`
+  ${styles}
+  text-decoration: none;
+`
 
 const StyledButton = styled.button`${styles}`
 
@@ -74,6 +66,7 @@ const Button = ({
 Button.propTypes = {
   to: PropTypes.string,
   href: PropTypes.string,
+  type: PropTypes.string,
   width: PropTypes.number,
   height: PropTypes.number,
   padding: PropTypes.oneOfType([
@@ -93,6 +86,7 @@ Button.propTypes = {
 Button.defaultProps = {
   to: undefined,
   href: undefined,
+  type: 'button',
   width: undefined,
   height: 48,
   padding: '0 24',

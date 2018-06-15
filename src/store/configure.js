@@ -7,8 +7,6 @@ import { isDev, isBrowser } from 'config'
 import reducer from 'store/reducers'
 import sagas from 'store/sagas'
 
-import { logoutAction } from './auth/actions'
-
 const loggerMiddleware = isDev && isBrowser ? createLogger() : () => fn => fn
 export const sagaMiddleware = createSagaMiddleware()
 
@@ -22,15 +20,7 @@ const configureStore = (initialState, history, services = {}) => {
     ),
   ]
 
-  const composeEnhancers = isDev && isBrowser && window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ ?
-    window.__REDUX_DEVTOOLS_EXTENSION_COMPOSE__ : compose
-
-  const rootReducer = (state, action) => reducer(
-    action.type === logoutAction.type ? undefined : state,
-    action,
-  )
-
-  const store = createStore(rootReducer, initialState, composeEnhancers(...enhancers))
+  const store = createStore(reducer, initialState, compose(...enhancers))
   let sagaTask = sagaMiddleware.run(sagas, services)
 
   if (module.hot) {

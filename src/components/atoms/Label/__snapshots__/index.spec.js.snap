@@ -9,8 +9,8 @@ exports[`<Label /> 정상적으로 렌더링된다 1`] = `
 }
 
 <label
-  className="c0"
+  class="c0"
   color="gray.90"
-  fontSize={12}
+  font-size="12"
 />
 `;

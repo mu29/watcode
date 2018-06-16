@@ -25,7 +25,7 @@ const Error = styled.span`
 `
 
 const Field = ({
-  type, name, label, error, ...props
+  type, name, label, error, className, ...props
 }) => {
   const inputProps = {
     id: name,
@@ -35,7 +35,7 @@ const Field = ({
   }
 
   return (
-    <Wrapper error={ error }>
+    <Wrapper className={ className } error={ error }>
       {
         (label || error) &&
         <LabelArea>
@@ -54,6 +54,7 @@ Field.propTypes = {
   label: PropTypes.string,
   error: PropTypes.string,
   touched: PropTypes.bool,
+  className: PropTypes.string,
 }
 
 Field.defaultProps = {
@@ -61,6 +62,7 @@ Field.defaultProps = {
   label: undefined,
   error: undefined,
   touched: false,
+  className: undefined,
 }
 
 export default Field

@@ -4,7 +4,8 @@ exports[`<CommentItem /> 정상적으로 렌더링된다 1`] = `
 .c0 {
   padding: 0.5rem 0.75rem;
   border-radius: 1rem;
-  border: 0.0625rem solid;
+  border: 0.0625rem solid #FFF;
+  background-color: #FFF;
 }
 
 <div

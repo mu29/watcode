@@ -24,8 +24,9 @@ const CommentItem = ({
       name,
     },
   },
+  ...props
 }) => (
-  <Wrapper>
+  <Wrapper { ...props }>
     <Name>{ name }</Name>
     <Text>{ content }</Text>
   </Wrapper>

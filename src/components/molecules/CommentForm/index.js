@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Field } from 'redux-form'
 import styled from 'styled-components'
+import { Field } from 'redux-form'
 import { Button, ReduxField } from 'components'
 
 const Form = styled.form`

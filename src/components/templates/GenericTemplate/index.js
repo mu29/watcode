@@ -4,10 +4,16 @@ import styled from 'styled-components'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
+  background-color: ${palette('gray.20')};
+`
+
+const Container = styled.div`
   display: flex;
   flex-direction: column;
   min-height: 100vh;
-  background-color: ${palette('white.default')};
+  max-width: 64rem;
+  width: 100%;
+  margin: auto;
 `
 
 const Header = styled.header``
@@ -17,13 +23,14 @@ const Content = styled.section`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 `
 
 const GenericTemplate = ({ header, children, ...props }) => (
   <Wrapper { ...props }>
-    <Header>{ header }</Header>
-    <Content>{ children }</Content>
+    <Container>
+      <Header>{ header }</Header>
+      <Content>{ children }</Content>
+    </Container>
   </Wrapper>
 )
 

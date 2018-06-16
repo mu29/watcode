@@ -9,6 +9,7 @@ const styles = css`
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: bold;
+  text-decoration: none;
 `
 
 const Anchor = styled.a`${styles}`

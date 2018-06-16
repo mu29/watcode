@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Heading, Tag, Text } from 'components'
+import { Heading, Tag, Text, Link } from 'components'
 import { palette } from 'services/style'
 
-const Wrapper = styled.div`
+const Wrapper = styled(Link)`
   display: flex;
   padding: 1rem;
   border: 0.0625rem solid ${palette('gray.40')};
@@ -106,7 +106,7 @@ const ArtworkItem = ({
   showImage,
   ...props
 }) => (
-  <Wrapper { ...props }>
+  <Wrapper to={ `artworks/${code}` } { ...props }>
     <HeadingArea>
       <Heading level={ 3 }>#{ code }</Heading>
       <Text color="gray.50" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>

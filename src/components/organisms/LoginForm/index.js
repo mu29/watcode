@@ -6,6 +6,7 @@ import { Button, ReduxField } from 'components'
 import { palette } from 'services/style'
 
 const Form = styled.form`
+  width: 30rem;
   margin: auto;
   padding: 1rem;
   border: 0.0625rem solid ${palette('gray.30')};

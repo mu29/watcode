@@ -1,6 +1,4 @@
 import React from 'react'
-import { shallow } from 'enzyme'
-import 'jest-styled-components'
 import ArtworkPage from '.'
 
 const wrap = (props = {}) => shallow(<ArtworkPage match={{ params: { id: 1 } }} { ...props } />)

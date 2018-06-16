@@ -3,6 +3,7 @@ import {
   RankingPage,
   BookmarkPage,
   ArtworkPage,
+  AuthPage,
 } from 'components'
 
 const routes = [{
@@ -21,6 +22,10 @@ const routes = [{
   path: '/artworks/:id',
   exact: true,
   component: ArtworkPage,
+}, {
+  path: '/auth',
+  exact: true,
+  component: AuthPage,
 }]
 
 export default routes

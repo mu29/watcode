@@ -1,16 +1,15 @@
 import React from 'react'
-import styled from 'styled-components'
-import { Header, GenericTemplate } from 'components'
-import { SearchBar } from 'containers'
-
-const StyledSearchBar = styled(SearchBar)`
-  margin: auto;
-`
+import { Header, SearchBanner, GenericTemplate } from 'components'
 
 const HomePage = () => (
-  <GenericTemplate header={ <Header location="/" /> }>
-    <StyledSearchBar />
-  </GenericTemplate>
+  <GenericTemplate
+    header={
+      <React.Fragment>
+        <Header location="/" />
+        <SearchBanner />
+      </React.Fragment>
+    }
+  />
 )
 
 export default HomePage

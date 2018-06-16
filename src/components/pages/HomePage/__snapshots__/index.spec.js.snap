@@ -3,11 +3,12 @@
 exports[`<HomePage /> 정상적으로 렌더링된다 1`] = `
 <GenericTemplate
   header={
-    <Header
-      location="/"
-    />
+    <UNDEFINED>
+      <Header
+        location="/"
+      />
+      <SearchBanner />
+    </UNDEFINED>
   }
->
-  <StyledSearchBar />
-</GenericTemplate>
+/>
 `;

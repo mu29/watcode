@@ -8,11 +8,21 @@ const color = ({ to, location, theme }) => palette(to === location ? 'yellow.def
 const borderColor = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'transparent.default')({ theme })
 
 const Wrapper = styled.div`
+  background-color: ${palette('gray.100')};
+`
+
+const Container = styled.div`
   display: flex;
   align-items: center;
-  margin: 1rem;
-  background-color: ${palette('gray.100')};
-  box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.08);
+  max-width: 64rem;
+  width: 100%;
+  margin: auto;
+`
+
+const Image = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+  margin: 0 1rem 0 2rem;
 `
 
 const StyledIconButton = styled(props => <IconButton { ...props } />)`
@@ -21,11 +31,8 @@ const StyledIconButton = styled(props => <IconButton { ...props } />)`
   margin: 0 1rem;
   color: ${color};
   border-bottom: 0.25rem solid ${borderColor};
+  border-radius: 0;
   background-color: transparent;
-
-  &:first-child {
-    margin-left: 2rem;
-  }
 
   &:last-child {
     margin-left: auto;
@@ -33,7 +40,7 @@ const StyledIconButton = styled(props => <IconButton { ...props } />)`
   }
 `
 
-const Text = styled.span`
+const Menu = styled.span`
   margin-left: 0.4rem;
 
   @media(max-width: 639px) {
@@ -45,16 +52,19 @@ const Header = ({
   location,
 }) => (
   <Wrapper>
-    <StyledIconButton icon="home" to="/" location={ location }>
-      <Text>홈</Text>
-    </StyledIconButton>
-    <StyledIconButton icon="star" to="/bookmarks" location={ location }>
-      <Text>즐겨찾기</Text>
-    </StyledIconButton>
-    <StyledIconButton icon="comment" to="/community" location={ location }>
-      <Text>커뮤니티</Text>
-    </StyledIconButton>
-    <StyledIconButton icon="user" to="/auth" location={ location } />
+    <Container>
+      <Image src="/resources/logo.svg" />
+      <StyledIconButton icon="home" to="/" location={ location }>
+        <Menu>홈</Menu>
+      </StyledIconButton>
+      <StyledIconButton icon="star" to="/bookmarks" location={ location }>
+        <Menu>즐겨찾기</Menu>
+      </StyledIconButton>
+      <StyledIconButton icon="comment" to="/community" location={ location }>
+        <Menu>커뮤니티</Menu>
+      </StyledIconButton>
+      <StyledIconButton icon="user" to="/auth" location={ location } />
+    </Container>
   </Wrapper>
 )
 

@@ -2,13 +2,11 @@
 
 exports[`<GenericTemplate /> 정상적으로 렌더링된다 1`] = `
 <Wrapper>
-  <Container>
-    <Header>
-      header
-    </Header>
-    <Content>
-      test
-    </Content>
-  </Container>
+  <Header>
+    header
+  </Header>
+  <Content>
+    test
+  </Content>
 </Wrapper>
 `;

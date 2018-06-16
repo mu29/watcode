@@ -2,8 +2,7 @@
 
 exports[`<SearchBar /> 정상적으로 렌더링된다 1`] = `
 <Wrapper>
-  <StyledField
-    component={[Function]}
+  <StyledInput
     name="query"
     placeholder="무엇을 찾으세요? (번호, 제목, 작가, 태그)"
   />

@@ -12,7 +12,7 @@ const styles = css`
   font-size: ${fontSize};
   border: ${border};
   border-radius: 0.0625rem;
-  background: transparent;
+  background: ${palette('white.default')};
   padding: 0.75rem;
   transition: border 0.3s;
   resize: none;

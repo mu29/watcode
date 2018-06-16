@@ -2,13 +2,19 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Heading, Tag, Text, IconButton } from 'components'
+import { CommentList } from 'containers'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
   display: flex;
+  flex-direction: column;
   width: 44rem;
   margin: 4rem 0;
   background-color: ${palette('white.default')};
+`
+
+const ArtworkArea = styled.div`
+  display: flex;
 `
 
 const ImageArea = styled.div`
@@ -87,23 +93,26 @@ const ArtworkView = ({
   ...props
 }) => (
   <Wrapper { ...props }>
-    <ImageArea>
-      <Image src={ imageUrl } />
-      <CodeArea>
-        <Heading level={ 3 }>#{ code }</Heading>
-        <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
-      </CodeArea>
-    </ImageArea>
-    <InfoArea>
-      <Title level={ 3 }>{ title }</Title>
-      <TagArea>
-        <TypeTag>{ type }</TypeTag>
-        { tags.map(tag => (<StyledTag key={ tag }>{ tag }</StyledTag>)) }
-      </TagArea>
-      <StyledIconButton icon="star">
-        <StyledText color={ null }>1293</StyledText>
-      </StyledIconButton>
-    </InfoArea>
+    <ArtworkArea>
+      <ImageArea>
+        <Image src={ imageUrl } />
+        <CodeArea>
+          <Heading level={ 3 }>#{ code }</Heading>
+          <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
+        </CodeArea>
+      </ImageArea>
+      <InfoArea>
+        <Title level={ 3 }>{ title }</Title>
+        <TagArea>
+          <TypeTag>{ type }</TypeTag>
+          { tags.map(tag => (<StyledTag key={ tag }>{ tag }</StyledTag>)) }
+        </TagArea>
+        <StyledIconButton icon="star">
+          <StyledText color={ null }>1293</StyledText>
+        </StyledIconButton>
+      </InfoArea>
+    </ArtworkArea>
+    <CommentList />
   </Wrapper>
 )
 

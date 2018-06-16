@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArtworkPage /> 정상적으로 렌더링된다 1`] = `
+<GenericTemplate
+  header={
+    <Header
+      location="/artworks/1"
+    />
+  }
+>
+  <ArtworkView
+    id={1}
+  />
+</GenericTemplate>
+`;

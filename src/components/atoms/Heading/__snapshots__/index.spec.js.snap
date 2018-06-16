@@ -22,7 +22,7 @@ exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준�
       "palette": Object {
         "gray": Object {
           "10": "#FAFAFA",
-          "100": "#212121",
+          "100": "#2D2D2D",
           "20": "#F5F5F5",
           "30": "#EEEEEE",
           "40": "#E0E0E0",
@@ -42,7 +42,7 @@ exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준�
           "default": "#FFF",
         },
         "yellow": Object {
-          "default": "#F9D14C",
+          "default": "#FBC02D",
         },
       },
       "sizes": Object {},
@@ -72,7 +72,7 @@ exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = 
       "palette": Object {
         "gray": Object {
           "10": "#FAFAFA",
-          "100": "#212121",
+          "100": "#2D2D2D",
           "20": "#F5F5F5",
           "30": "#EEEEEE",
           "40": "#E0E0E0",
@@ -92,7 +92,7 @@ exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = 
           "default": "#FFF",
         },
         "yellow": Object {
-          "default": "#F9D14C",
+          "default": "#FBC02D",
         },
       },
       "sizes": Object {},

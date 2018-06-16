@@ -38,7 +38,7 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
       "palette": Object {
         "gray": Object {
           "10": "#FAFAFA",
-          "100": "#212121",
+          "100": "#2D2D2D",
           "20": "#F5F5F5",
           "30": "#EEEEEE",
           "40": "#E0E0E0",
@@ -58,7 +58,7 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
           "default": "#FFF",
         },
         "yellow": Object {
-          "default": "#F9D14C",
+          "default": "#FBC02D",
         },
       },
       "sizes": Object {},

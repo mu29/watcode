@@ -7,7 +7,7 @@ const theme = {
       default: '#FFF',
     },
     gray: {
-      100: '#212121',
+      100: '#2D2D2D',
       90: '#424242',
       80: '#616161',
       70: '#757575',
@@ -19,7 +19,7 @@ const theme = {
       10: '#FAFAFA',
     },
     yellow: {
-      default: '#F9D14C',
+      default: '#FBC02D',
     },
     red: {
       default: '#FF8787',

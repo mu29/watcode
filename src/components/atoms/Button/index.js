@@ -30,6 +30,7 @@ const styles = css`
   border-radius: ${borderRadius};
   cursor: pointer;
   transition: color 0.2s;
+  text-decoration: none;
 
   &:hover {
     color: ${primaryColor};
@@ -45,10 +46,7 @@ const StyledLink = styled(({
   to, ...props
 }) => <Link to={ to } { ...props } />)`${styles}`
 
-const Anchor = styled.a`
-  ${styles}
-  text-decoration: none;
-`
+const Anchor = styled.a`${styles}`
 
 const StyledButton = styled.button`${styles}`
 

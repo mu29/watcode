@@ -12,7 +12,7 @@ exports[`<Icon /> 정상적으로 렌더링된다 1`] = `
   size="16"
 >
   <i
-    class="far fa-user"
+    class="fas fa-user"
   />
 </div>
 `;

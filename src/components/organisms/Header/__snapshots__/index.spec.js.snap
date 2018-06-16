@@ -46,40 +46,57 @@ exports[`<Header /> 정상적으로 렌더링된다 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0 -0.0625rem;
-  border-bottom: 0.0625rem solid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.2),0 0 0 0 rgba(0,0,0,0.08);
+}
+
+.c1 {
+  margin-left: 0.4rem;
+}
+
+@media (max-width:639px) {
+  .c1 {
+    display: none;
+  }
 }
 
 <div
   class="c0"
 >
-  <div
-    class=""
+  <span
+    componentname="IconButton"
   >
     <span
-      componentname="IconButton"
-    />
-    <span
-      componentname="IconButton"
-    />
-    <span
-      componentname="IconButton"
-    />
-    <span
-      componentname="IconButton"
-    />
-  </div>
-  <div
-    class=""
+      class="c1"
+    >
+      홈
+    </span>
+  </span>
+  <span
+    componentname="IconButton"
   >
     <span
-      componentname="IconButton"
-    />
-  </div>
+      class="c1"
+    >
+      즐겨찾기
+    </span>
+  </span>
+  <span
+    componentname="IconButton"
+  >
+    <span
+      class="c1"
+    >
+      커뮤니티
+    </span>
+  </span>
+  <span
+    componentname="IconButton"
+  />
 </div>
 `;
 
@@ -89,45 +106,48 @@ exports[`<Header /> 커뮤니티 메뉴가 선택되어 있다 1`] = `
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: justify;
-  -webkit-justify-content: space-between;
-  -ms-flex-pack: justify;
-  justify-content: space-between;
-  margin: 0 -0.0625rem;
-  border-bottom: 0.0625rem solid;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  margin: 1rem;
+  box-shadow: 0 0.125rem 0.5rem 0 rgba(0,0,0,0.2),0 0 0 0 rgba(0,0,0,0.08);
 }
 
 <div
   className="c0"
 >
-  <LeftMenu>
-    <StyledIconButton
-      icon="home"
-      location="/community"
-      to="/"
-    />
-    <StyledIconButton
-      icon="trophy"
-      location="/community"
-      to="/ranking"
-    />
-    <StyledIconButton
-      icon="star"
-      location="/community"
-      to="/bookmarks"
-    />
-    <StyledIconButton
-      icon="comments"
-      location="/community"
-      to="/community"
-    />
-  </LeftMenu>
-  <RightMenu>
-    <StyledIconButton
-      icon="user"
-      location="/community"
-      to="/auth"
-    />
-  </RightMenu>
+  <StyledIconButton
+    icon="home"
+    location="/community"
+    to="/"
+  >
+    <Text>
+      홈
+    </Text>
+  </StyledIconButton>
+  <StyledIconButton
+    icon="star"
+    location="/community"
+    to="/bookmarks"
+  >
+    <Text>
+      즐겨찾기
+    </Text>
+  </StyledIconButton>
+  <StyledIconButton
+    icon="comment"
+    location="/community"
+    to="/community"
+  >
+    <Text>
+      커뮤니티
+    </Text>
+  </StyledIconButton>
+  <StyledIconButton
+    icon="user"
+    location="/community"
+    to="/auth"
+  />
 </div>
 `;

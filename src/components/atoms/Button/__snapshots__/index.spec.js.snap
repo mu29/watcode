@@ -30,7 +30,7 @@ exports[`<Button /> href 속성이 들어온 경우 anchor 태그를 그려준�
 }
 
 .c0:hover {
-  color: #F9D14C;
+  color: #FBC02D;
 }
 
 .c0:active,
@@ -74,10 +74,12 @@ exports[`<Button /> 기본적으로 button 태그를 그려준다 1`] = `
   cursor: pointer;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:hover {
-  color: #F9D14C;
+  color: #FBC02D;
 }
 
 .c0:active,
@@ -120,10 +122,12 @@ exports[`<Button /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = `
   cursor: pointer;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:hover {
-  color: #F9D14C;
+  color: #FBC02D;
 }
 
 .c0:active,
@@ -168,10 +172,12 @@ exports[`<Button /> 정상적으로 렌더링된다 1`] = `
   cursor: pointer;
   -webkit-transition: color 0.2s;
   transition: color 0.2s;
+  -webkit-text-decoration: none;
+  text-decoration: none;
 }
 
 .c0:hover {
-  color: #F9D14C;
+  color: #FBC02D;
 }
 
 .c0:active,

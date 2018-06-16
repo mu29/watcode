@@ -22,7 +22,7 @@ exports[`<Input /> 오류 메시지를 표시한다 1`] = `
 .c0:active,
 .c0:focus {
   outline: none;
-  border: 0.0625rem solid #F9D14C;
+  border: 0.0625rem solid #FBC02D;
 }
 
 .c0::-webkit-input-placeholder {
@@ -87,7 +87,7 @@ exports[`<Input /> 정상적으로 렌더링된다 1`] = `
 .c0:active,
 .c0:focus {
   outline: none;
-  border: 0.0625rem solid #F9D14C;
+  border: 0.0625rem solid #FBC02D;
 }
 
 .c0::-webkit-input-placeholder {

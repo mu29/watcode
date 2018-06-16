@@ -4,50 +4,57 @@ import styled from 'styled-components'
 import { IconButton } from 'components'
 import { palette } from 'services/style'
 
-const color = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'gray.90')({ theme })
-const background = ({ to, location, theme }) => palette(to === location ? 'white.default' : 'gray.20')({ theme })
-const borderBottom = ({ to, location, theme }) => palette(to === location ? 'white.default' : 'gray.40')({ theme })
+const color = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'gray.30')({ theme })
+const borderColor = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'transparent.default')({ theme })
 
 const Wrapper = styled.div`
   display: flex;
-  justify-content: space-between;
-  margin: 0 -0.0625rem;
-  background-color: ${palette('gray.20')};
-  border-bottom: 0.0625rem solid ${palette('gray.40')};
+  align-items: center;
+  margin: 1rem;
+  background-color: ${palette('gray.100')};
+  box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.08);
 `
 
 const StyledIconButton = styled(props => <IconButton { ...props } />)`
-  margin-bottom: -0.0625rem;
+  height: 4rem;
+  padding: 0.25rem 0.5rem 0 0.5rem;
+  margin: 0 1rem;
   color: ${color};
-  background-color: ${background};
-  border-right: 0.0625rem solid ${palette('gray.40')};
-  border-bottom: 0.0625rem solid ${borderBottom};
-  border-radius: 0;
+  border-bottom: 0.25rem solid ${borderColor};
+  background-color: transparent;
 
   &:first-child {
-    border-left: 0.0625rem solid ${palette('gray.40')};
+    margin-left: 2rem;
+  }
+
+  &:last-child {
+    margin-left: auto;
+    margin-right: 2rem;
   }
 `
 
-const LeftMenu = styled.div`
-`
+const Text = styled.span`
+  margin-left: 0.4rem;
 
-const RightMenu = styled.div`
+  @media(max-width: 639px) {
+    display: none;
+  }
 `
 
 const Header = ({
   location,
 }) => (
   <Wrapper>
-    <LeftMenu>
-      <StyledIconButton icon="home" to="/" location={ location } />
-      <StyledIconButton icon="trophy" to="/ranking" location={ location } />
-      <StyledIconButton icon="star" to="/bookmarks" location={ location } />
-      <StyledIconButton icon="comments" to="/community" location={ location } />
-    </LeftMenu>
-    <RightMenu>
-      <StyledIconButton icon="user" to="/auth" location={ location } />
-    </RightMenu>
+    <StyledIconButton icon="home" to="/" location={ location }>
+      <Text>홈</Text>
+    </StyledIconButton>
+    <StyledIconButton icon="star" to="/bookmarks" location={ location }>
+      <Text>즐겨찾기</Text>
+    </StyledIconButton>
+    <StyledIconButton icon="comment" to="/community" location={ location }>
+      <Text>커뮤니티</Text>
+    </StyledIconButton>
+    <StyledIconButton icon="user" to="/auth" location={ location } />
   </Wrapper>
 )
 

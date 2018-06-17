@@ -5,18 +5,20 @@ import { IconButton } from 'components'
 import { SearchBar } from 'containers'
 import { palette } from 'services/style'
 
-const color = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'gray.30')({ theme })
-const borderColor = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'transparent.default')({ theme })
+const applyColor = (selected, basic) =>
+  ({ to, location, theme }) => palette(to === location ? selected : basic)({ theme })
+const color = applyColor('yellow.default', 'gray.20')
+const borderColor = applyColor('yellow.default', 'transparent.default')
 
 const Wrapper = styled.div``
 
 const TopArea = styled.div`
-  background-color: ${palette('gray.100')};
+  background-color: ${palette('gray.90')};
   padding: 1rem 0;
 `
 
 const BottomArea = styled.div`
-  background-color: ${palette('gray.90')};
+  background-color: ${palette('gray.100')};
 `
 
 const Container = styled.div`

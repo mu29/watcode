@@ -58,6 +58,7 @@ exports[`<ArtworkItem /> 이미지를 표시한다 1`] = `
           "default": "#FFF",
         },
         "yellow": Object {
+          "dark": "#C49000",
           "default": "#FBC02D",
         },
       },

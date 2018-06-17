@@ -10,9 +10,7 @@ const Wrapper = styled.div`
   background-color: ${palette('gray.20')};
 `
 
-const Header = styled.header`
-  box-shadow: 0 0.125rem 0.5rem 0 rgba(0, 0, 0, 0.2), 0 0 0 0 rgba(0, 0, 0, 0.08);
-`
+const Header = styled.header``
 
 const Content = styled.section`
   flex: 1;

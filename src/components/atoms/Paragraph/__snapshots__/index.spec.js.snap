@@ -42,6 +42,7 @@ exports[`<Paragraph /> 자식 컴포넌트가 들어온 경우 그려준다 1`] 
           "default": "#FFF",
         },
         "yellow": Object {
+          "dark": "#C49000",
           "default": "#FBC02D",
         },
       },

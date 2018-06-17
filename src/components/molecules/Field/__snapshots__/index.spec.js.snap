@@ -54,6 +54,7 @@ exports[`<Field /> label 속성이 들어오면 그려준다 1`] = `
             "default": "#FFF",
           },
           "yellow": Object {
+            "dark": "#C49000",
             "default": "#FBC02D",
           },
         },
@@ -119,6 +120,7 @@ exports[`<Field /> 오류 메시지를 표시한다 1`] = `
             "default": "#FFF",
           },
           "yellow": Object {
+            "dark": "#C49000",
             "default": "#FBC02D",
           },
         },

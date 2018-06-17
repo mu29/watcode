@@ -1,30 +1,24 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Input, IconButton } from 'components'
-import { palette } from 'services/style'
 
 const Wrapper = styled.div`
   display: flex;
-  align-items: flex-end;
-  width: 60%;
-  padding: 0.25rem;
-  box-shadow: 0 0.125rem 0.125rem 0 rgba(0, 0, 0, 0.1), 0 0 0 0.0625rem rgba(0, 0, 0, 0.08);
-  transition: box-shadow 0.2s;
-  background-color: ${palette('white.default')};
-
-  &:focus-within {
-    box-shadow: 0 0.25rem 0.25rem 0 rgba(0, 0, 0, 0.1), 0 0 0 0.0625rem rgba(0, 0, 0, 0.08);
-  }
+  width: 50%;
+  margin-right: auto;
+  border-radius: 0.125rem;
 
   @media(max-width: 639px) {
-    width: 90%;
+    flex: 1;
   }
 `
 
 const StyledInput = styled(props => <Input { ...props } />)`
   width: 100%;
+  padding: 0.375rem 0 0.375rem 0.5rem;
+  font-size: 0.875rem;
   border: none;
-  border-radius: 0;
+  border-radius: 0.125rem 0 0 0.125rem;
   margin-bottom: 0;
 
   &:active, &:focus {
@@ -33,8 +27,9 @@ const StyledInput = styled(props => <Input { ...props } />)`
 `
 
 const StyledIconButton = styled(props => <IconButton { ...props } />)`
+  height: 2rem;
   padding: 0 1rem;
-  border-radius: 0;
+  border-radius: 0 0.125rem 0.125rem 0;
 `
 
 const SearchBar = props => (

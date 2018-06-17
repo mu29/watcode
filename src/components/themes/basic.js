@@ -20,6 +20,7 @@ const theme = {
     },
     yellow: {
       default: '#FBC02D',
+      dark: '#C49000',
     },
     red: {
       default: '#FF8787',

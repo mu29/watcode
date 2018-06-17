@@ -42,6 +42,7 @@ exports[`<Heading /> fontSize 속성이 들어오면 해당 크기로 그려준�
           "default": "#FFF",
         },
         "yellow": Object {
+          "dark": "#C49000",
           "default": "#FBC02D",
         },
       },
@@ -92,6 +93,7 @@ exports[`<Heading /> 자식 컴포넌트가 들어온 경우 그려준다 1`] = 
           "default": "#FFF",
         },
         "yellow": Object {
+          "dark": "#C49000",
           "default": "#FBC02D",
         },
       },

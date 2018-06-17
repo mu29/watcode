@@ -1,6 +1,5 @@
 const webpack = require('webpack')
 const path = require('path')
-const ExtractTextPlugin = require('extract-text-webpack-plugin')
 const nodeExternals = require('webpack-node-externals')
 
 const rootPath = path.resolve(__dirname, '../../')
@@ -8,10 +7,7 @@ const assetsPath = path.resolve(rootPath, 'static')
 
 module.exports = [{
   entry: {
-    client: [
-      './src/client.js',
-      './src/styles/main.scss',
-    ],
+    client: ['./src/client.js'],
   },
   output: {
     path: assetsPath,
@@ -36,20 +32,12 @@ module.exports = [{
   },
   module: {
     rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
+      { test: /\.jsx?$/, exclude: /node_modules|.*\.(spec|stories)\.js/, use: 'babel-loader' },
       { enforce: 'pre', test: /\.js$/, use: 'source-map-loader' },
-      {
-        test: /\.scss$/,
-        use: ExtractTextPlugin.extract({
-          fallback: 'style-loader',
-          use: ['css-loader', 'sass-loader'],
-        }),
-      },
     ],
   },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
-    new ExtractTextPlugin('style.css'),
   ],
 }, {
   entry: {

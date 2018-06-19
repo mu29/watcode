@@ -5,13 +5,9 @@ import { ArtworkItem } from 'components'
 
 const Wrapper = styled.div``
 
-const StyledArtworkItem = styled(props => <ArtworkItem { ...props } />)`
-  margin-top: 1rem;
-`
-
 const ArtworkList = ({ list }) => (
   <Wrapper>
-    { list.map(item => (<StyledArtworkItem key={ item.code } artwork={ item } />)) }
+    { list.map(item => (<ArtworkItem key={ item.code } artwork={ item } />)) }
   </Wrapper>
 )
 

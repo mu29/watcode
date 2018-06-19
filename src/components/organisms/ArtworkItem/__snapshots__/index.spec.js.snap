@@ -1,0 +1,80 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<ArtworkItem /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  padding: 1rem;
+  background-color: #FFF;
+  border-bottom: 0.0625rem solid #EEEEEE;
+}
+
+.c1 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
+  height: 7rem;
+  overflow: hidden;
+}
+
+.c2 {
+  height: 3.5rem;
+  overflow: scroll;
+  margin-top: 0.3125rem;
+}
+
+<div
+  class="c0"
+>
+  <span
+    componentname="ArtworkImage"
+  />
+  <div
+    class="c1"
+  >
+    <span
+      componentname="Link"
+    >
+      <span
+        componentname="Heading"
+      >
+        Re: 제로부터 시작하는 이세계 생활
+      </span>
+    </span>
+    <span
+      componentname="Text"
+    >
+      by nagatsuki taffee
+    </span>
+    <div
+      class="c2"
+    >
+      <span
+        componentname="Tag"
+      />
+      <span
+        componentname="Tag"
+      >
+        rebirth
+      </span>
+      <span
+        componentname="Tag"
+      >
+        loop
+      </span>
+      <span
+        componentname="Tag"
+      >
+        harem
+      </span>
+      <span
+        componentname="Tag"
+      >
+        this is a long tag
+      </span>
+    </div>
+  </div>
+</div>
+`;

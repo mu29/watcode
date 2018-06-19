@@ -32,8 +32,8 @@ describe('<ArtworkList />', () => {
 
   it('3개의 아이템을 그려준다', () => {
     const wrapper = wrap()
-    expect(wrapper.find('StyledArtworkItem')).toHaveLength(3)
-    const firstItem = wrapper.childAt(0).dive().dive()
+    expect(wrapper.find('ArtworkItem')).toHaveLength(3)
+    const firstItem = wrapper.childAt(0).dive()
     expect(firstItem).toMatchSnapshot()
   })
 })

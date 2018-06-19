@@ -4,6 +4,7 @@ import { Input, IconButton } from 'components'
 
 const Wrapper = styled.div`
   display: flex;
+  align-items: center;
   width: 50%;
   margin-right: auto;
   border-radius: 0.125rem;
@@ -15,11 +16,11 @@ const Wrapper = styled.div`
 
 const StyledInput = styled(props => <Input { ...props } />)`
   width: 100%;
+  margin: 0;
   padding: 0.375rem 0 0.375rem 0.5rem;
   font-size: 0.875rem;
   border: none;
   border-radius: 0.125rem 0 0 0.125rem;
-  margin-bottom: 0;
 
   &:active, &:focus {
     border: none;
@@ -28,6 +29,7 @@ const StyledInput = styled(props => <Input { ...props } />)`
 
 const StyledIconButton = styled(props => <IconButton { ...props } />)`
   height: 2rem;
+  margin: 0;
   padding: 0 1rem;
   border-radius: 0 0.125rem 0.125rem 0;
 `

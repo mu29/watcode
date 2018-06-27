@@ -10,16 +10,20 @@ const Wrapper = styled.div`
   background-color: ${palette('gray.20')};
 `
 
-const Header = styled.header``
+const Header = styled.header`
+  height: 5.25rem;
+
+  @media(max-width: 768px) {
+    padding-bottom: 7.5rem;
+  }
+`
 
 const Content = styled.section`
   flex: 1;
   display: flex;
-  justify-content: center;
-  align-items: center;
-  max-width: 64rem;
+  max-width: 48rem;
   width: 100%;
-  margin: auto;
+  margin: 0 auto;
 `
 
 const GenericTemplate = ({ header, children, ...props }) => (

@@ -7,9 +7,9 @@ import { palette } from 'services/style'
 const Wrapper = styled(Link)`
   flex-shrink: 0;
   position: relative;
-  width: 5.25rem;
-  height: 7rem;
-  margin-right: 1rem;
+  width: 4.5rem;
+  height: 6rem;
+  margin-right: 0.5rem;
   overflow: hidden;
   border: 0.0625rem solid ${palette('gray.30')};
 `
@@ -41,8 +41,7 @@ const ArtworkImage = ({
   <Wrapper to={ `/artworks/${code}` } { ...props }>
     <Image src={ url } />
     <CodeArea>
-      <Text color="gray.30" fontSize={ 14 } fontWeight={ 600 } small>#</Text>
-      <Text color="gray.30" fontSize={ 14 } small>{ code }</Text>
+      <Text color="gray.30" fontSize={ 12 } small>#{ code }</Text>
     </CodeArea>
   </Wrapper>
 )

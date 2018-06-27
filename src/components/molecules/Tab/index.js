@@ -18,10 +18,12 @@ const TabHeader = styled.div`
 
 const TabItem = styled(Button)`
   flex: 1;
-  height: 3rem;
+  height: 2.5rem;
   padding: 0;
+  margin: 0;
   border-radius: 0;
   color: ${palette('gray.90')};
+  font-size: 0.875rem;
   font-weight: ${getWeight};
   background-color: ${getSelectedBackground};
 

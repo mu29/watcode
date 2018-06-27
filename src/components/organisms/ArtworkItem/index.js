@@ -6,24 +6,25 @@ import { palette } from 'services/style'
 
 const Wrapper = styled.div`
   display: flex;
-  padding: 1rem;
+  padding: 0.75rem;
   background-color: ${palette('white.default')};
   border-bottom: 0.0625rem solid ${palette('gray.30')};
 `
 
 const InfoArea = styled.div`
   flex: 1;
-  height: 7rem;
+  height: 6rem;
   overflow: hidden;
 `
 
 const TagArea = styled.div`
-  height: 3.5rem;
+  height: 3.2rem;
   overflow: scroll;
-  margin-top: 0.3125rem;
+  margin-top: 0.25rem;
 `
 
 const StyledHeading = styled(Heading)`
+  font-weight: 400;
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
@@ -45,7 +46,7 @@ const ArtworkItem = ({
     <ArtworkImage code={ code } url={ imageUrl } />
     <InfoArea>
       <Link to={ `/artworks/${code}` }>
-        <StyledHeading level={ 5 }>{ title }</StyledHeading>
+        <StyledHeading level={ 6 }>{ title }</StyledHeading>
       </Link>
       <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
       <TagArea>

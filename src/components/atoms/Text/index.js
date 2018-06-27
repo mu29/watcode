@@ -1,21 +1,19 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 import { color, fontFamily, fontSize, fontWeight } from 'services/style'
 
-const NormalText = styled.span`
+const styles = css`
   color: ${color};
   font-family: ${fontFamily};
   font-size: ${fontSize};
   font-weight: ${fontWeight};
+  line-height: 1;
 `
 
-const SmallText = styled.small`
-  color: ${color};
-  font-family: ${fontFamily};
-  font-size: ${fontSize};
-  font-weight: ${fontWeight};
-`
+const NormalText = styled.span`${styles}`
+
+const SmallText = styled.small`${styles}`
 
 const Text = ({ small, ...props }) =>
   (small ? <SmallText { ...props } /> : <NormalText { ...props } />)

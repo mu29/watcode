@@ -20,7 +20,6 @@ const Header = styled.header`
 
 const Content = styled.section`
   flex: 1;
-  display: flex;
   max-width: 48rem;
   width: 100%;
   margin: 0 auto;

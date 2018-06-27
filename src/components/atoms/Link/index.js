@@ -10,6 +10,10 @@ const styles = css`
   font-size: ${fontSize};
   font-weight: bold;
   text-decoration: none;
+
+  &:hover {
+    text-decoration: underline;
+  }
 `
 
 const Anchor = styled.a`${styles}`

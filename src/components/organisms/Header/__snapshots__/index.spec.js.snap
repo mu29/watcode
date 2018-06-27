@@ -42,10 +42,29 @@ exports[`<Header /> 5개의 메뉴를 가진다 2`] = `
 
 exports[`<Header /> 정상적으로 렌더링된다 1`] = `
 .c0 {
-  padding: 1rem 0;
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  padding: 0.75rem 0;
+  border-bottom: 0.25rem solid;
 }
 
 .c1 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  max-width: 48rem;
+  width: 100%;
+  margin: auto;
+}
+
+.c2 {
+  -webkit-flex: 1;
+  -ms-flex: 1;
+  flex: 1;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -54,127 +73,136 @@ exports[`<Header /> 정상적으로 렌더링된다 1`] = `
   -webkit-box-align: center;
   -ms-flex-align: center;
   align-items: center;
-  max-width: 64rem;
-  width: 100%;
-  margin: auto;
+  padding: 0 1rem 0 0.5rem;
 }
 
-.c2 {
-  width: 2.5rem;
-  height: 2.5rem;
-  margin: 0 1rem;
+.c4 {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
 }
 
 .c3 {
-  margin-left: 0.4rem;
+  width: 3rem;
+  height: 3rem;
+  margin-right: 1rem;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    padding-bottom: 0;
+  }
+}
+
+@media (max-width:768px) {
+  .c1 {
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+}
+
+@media (max-width:768px) {
+  .c3 {
+    margin-right: 0.5rem;
+  }
 }
 
 <div
-  class=""
+  class="c0"
 >
   <div
-    class="c0"
+    class="c1"
   >
     <div
-      class="c1"
+      class="c2"
     >
       <img
-        class="c2"
+        class="c3"
         src="/resources/logo.svg"
       />
       <span
         componentname="SearchBar"
       />
-      <span
-        componentname="IconButton"
-      />
     </div>
-  </div>
-  <div
-    class=""
-  >
     <div
-      class="c1"
+      class="c4"
     >
       <span
         componentname="IconButton"
-      >
-        <span
-          class="c3"
-        >
-          홈
-        </span>
-      </span>
+      />
       <span
         componentname="IconButton"
-      >
-        <span
-          class="c3"
-        >
-          즐겨찾기
-        </span>
-      </span>
+      />
       <span
         componentname="IconButton"
-      >
-        <span
-          class="c3"
-        >
-          커뮤니티
-        </span>
-      </span>
+      />
+      <span
+        componentname="IconButton"
+      />
     </div>
   </div>
 </div>
 `;
 
 exports[`<Header /> 커뮤니티 메뉴가 선택되어 있다 1`] = `
+.c0 {
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  padding: 0.75rem 0;
+  border-bottom: 0.25rem solid;
+}
+
+@media (max-width:768px) {
+  .c0 {
+    padding-bottom: 0;
+  }
+}
+
 <div
-  className=""
+  className="c0"
 >
-  <TopArea>
-    <Container>
+  <Container>
+    <SearchArea>
       <Image
         src="/resources/logo.svg"
       />
       <SearchBar />
+    </SearchArea>
+    <ButtonArea>
+      <StyledIconButton
+        icon="trophy"
+        location="/community"
+        to="/"
+      />
+      <StyledIconButton
+        icon="star"
+        location="/community"
+        to="/bookmarks"
+      />
+      <StyledIconButton
+        icon="comment"
+        location="/community"
+        to="/community"
+      />
       <StyledIconButton
         icon="user"
         location="/community"
         to="/auth"
       />
-    </Container>
-  </TopArea>
-  <BottomArea>
-    <Container>
-      <StyledIconButton
-        icon="home"
-        location="/community"
-        to="/"
-      >
-        <Menu>
-          홈
-        </Menu>
-      </StyledIconButton>
-      <StyledIconButton
-        icon="star"
-        location="/community"
-        to="/bookmarks"
-      >
-        <Menu>
-          즐겨찾기
-        </Menu>
-      </StyledIconButton>
-      <StyledIconButton
-        icon="comment"
-        location="/community"
-        to="/community"
-      >
-        <Menu>
-          커뮤니티
-        </Menu>
-      </StyledIconButton>
-    </Container>
-  </BottomArea>
+    </ButtonArea>
+  </Container>
 </div>
 `;

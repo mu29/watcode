@@ -7,17 +7,15 @@ exports[`<ArtworkList /> 3개의 아이템을 그려준다 1`] = `
 `;
 
 exports[`<ArtworkList /> 정상적으로 렌더링된다 1`] = `
-<div
-  class=""
->
+Array [
   <span
     componentname="ArtworkItem"
-  />
+  />,
   <span
     componentname="ArtworkItem"
-  />
+  />,
   <span
     componentname="ArtworkItem"
-  />
-</div>
+  />,
+]
 `;

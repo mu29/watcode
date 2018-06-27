@@ -41,8 +41,8 @@ const ArtworkImage = ({
   <Wrapper to={ `/artworks/${code}` } { ...props }>
     <Image src={ url } />
     <CodeArea>
-      <Text color="yellow.default" fontSize={ 14 } fontWeight={ 600 } small>#</Text>
-      <Text color="yellow.default" fontSize={ 14 } small>{ code }</Text>
+      <Text color="gray.30" fontSize={ 14 } fontWeight={ 600 } small>#</Text>
+      <Text color="gray.30" fontSize={ 14 } small>{ code }</Text>
     </CodeArea>
   </Wrapper>
 )

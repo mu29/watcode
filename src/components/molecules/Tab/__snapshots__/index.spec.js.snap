@@ -25,9 +25,6 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
       title2
     </TabItem>
   </TabHeader>
-  <TabDivider
-    borderColor="gray.30"
-  />
   <TabPage
     key="title1"
     name="title1"
@@ -62,9 +59,6 @@ exports[`<Tab /> 선택되지 않은 탭을 누르면 해당 탭 페이지를 �
       title2
     </TabItem>
   </TabHeader>
-  <TabDivider
-    borderColor="gray.30"
-  />
   <TabPage
     key="title2"
     name="title2"
@@ -87,12 +81,6 @@ exports[`<Tab /> 정상적으로 렌더링된다 1`] = `
   display: flex;
 }
 
-.c2 {
-  height: 0.125rem;
-  margin-top: -0.125rem;
-  z-index: -1;
-}
-
 <div
   class="c0"
 >
@@ -110,9 +98,6 @@ exports[`<Tab /> 정상적으로 렌더링된다 1`] = `
       title2
     </span>
   </div>
-  <div
-    class="c2"
-  />
   <span
     componentname="TabPage"
   >

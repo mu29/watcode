@@ -11,10 +11,10 @@ const Wrapper = styled.div`
 `
 
 const Header = styled.header`
-  height: 5.25rem;
+  height: 3.5rem;
 
   @media(max-width: 768px) {
-    padding-bottom: 7.5rem;
+    height: 6.25rem;
   }
 `
 

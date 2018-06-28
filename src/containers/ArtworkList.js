@@ -12,6 +12,9 @@ const mapStateToProps = () => ({
     type: 'Light Novel',
     tags: ['rebirth', 'loop', 'harem', 'this is a long tag'],
     imageUrl: 'https://laftelimage.blob.core.windows.net/items/thumbs/large/395db1d0-ead8-407f-a316-04aee1e668a7.jpg',
+    stars: 172,
+    comments: 13,
+    views: 8232,
   }, {
     code: 242040,
     artist: 'jihyung lee',
@@ -19,6 +22,9 @@ const mapStateToProps = () => ({
     type: 'Animation',
     tags: ['sword', 'art', 'online', 'progressive', 'light novel', 'sword art online progressive', 'sword', 'art', 'online', 'progressive', 'light novel', 'sword art online progressive'],
     imageUrl: 'https://laftelimage.blob.core.windows.net/items/thumbs/large/3390a970-59de-4d04-a705-6814d2f2446a.jpg',
+    stars: 17,
+    comments: 3,
+    views: 122,
   }, {
     code: 363342,
     artist: 'yunjae',
@@ -26,6 +32,9 @@ const mapStateToProps = () => ({
     type: 'Console Game',
     tags: ['hmm', 'there', 'are', 'a log', 'of', 'tags', 'isnt', 'it funny'],
     imageUrl: 'https://laftelimage.blob.core.windows.net/items/thumbs/large/4d3a4b53-ab3c-4314-9411-cb9e7e87f08c.jpg',
+    stars: 1732,
+    comments: 513,
+    views: 86232,
   }, {
     code: 412047,
     artist: 'nagatsuki taffee',
@@ -33,6 +42,9 @@ const mapStateToProps = () => ({
     type: 'Light Novel',
     tags: ['rebirth', 'loop', 'harem', 'this is a long tag'],
     imageUrl: 'https://laftelimage.blob.core.windows.net/items/thumbs/large/395db1d0-ead8-407f-a316-04aee1e668a7.jpg',
+    stars: 172,
+    comments: 13,
+    views: 8232,
   }, {
     code: 542040,
     artist: 'jihyung lee',
@@ -40,6 +52,9 @@ const mapStateToProps = () => ({
     type: 'Animation',
     tags: ['sword', 'art', 'online', 'progressive', 'light novel', 'sword art online progressive'],
     imageUrl: 'https://laftelimage.blob.core.windows.net/items/thumbs/large/3390a970-59de-4d04-a705-6814d2f2446a.jpg',
+    stars: 17,
+    comments: 3,
+    views: 122,
   }, {
     code: 663342,
     artist: 'yunjae',
@@ -47,6 +62,9 @@ const mapStateToProps = () => ({
     type: 'Console Game',
     tags: ['hmm', 'there', 'are', 'a log', 'of', 'tags', 'isnt', 'it funny'],
     imageUrl: 'https://laftelimage.blob.core.windows.net/items/thumbs/large/4d3a4b53-ab3c-4314-9411-cb9e7e87f08c.jpg',
+    stars: 1732,
+    comments: 513,
+    views: 86232,
   }, {
     code: 712047,
     artist: 'nagatsuki taffee',

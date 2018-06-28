@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Heading, Icon, Tag, Text, Link, ArtworkImage } from 'components'
+import { Heading, Tag, Text, Link, ArtworkImage, ArtworkReactions } from 'components'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
@@ -26,7 +26,7 @@ const ArtworkArea = styled.div`
   display: flex;
 `
 
-const ArtworkInfo = styled.div`
+const InfoArea = styled.div`
   flex: 1;
   height: 6rem;
   overflow: hidden;
@@ -50,37 +50,6 @@ const StyledHeading = styled(Heading)`
   white-space: nowrap;
 `
 
-const Divider = styled.div`
-  margin: 0.75rem 0 0.5rem 0;
-  height: 0.0625rem;
-  background-color: ${palette('gray.20')};
-`
-
-const InfoArea = styled.div`
-  display: flex;
-  align-items: center;
-  padding: 0.125rem 0.25rem;
-`
-
-const StyledIcon = styled(Icon)`
-  width: 0.75rem;
-  height: 0.75rem;
-  margin-right: 0.25rem;
-  font-size: 0.75rem;
-  color: ${palette('gray.70')};
-  line-height: 1;
-`
-
-const StyledText = styled(Text)`
-  font-size: 0.6875rem;
-  color: ${palette('gray.70')};
-  line-height: 1.1;
-
-  &:nth-child(odd) {
-    margin-left: auto;
-  }
-`
-
 const ArtworkItem = ({
   artwork: {
     code,
@@ -89,6 +58,9 @@ const ArtworkItem = ({
     type,
     tags,
     imageUrl,
+    stars,
+    comments,
+    views,
   },
   showImage,
   ...props
@@ -96,7 +68,7 @@ const ArtworkItem = ({
   <Wrapper { ...props }>
     <ArtworkArea>
       <ArtworkImage code={ code } url={ imageUrl } />
-      <ArtworkInfo>
+      <InfoArea>
         <Link to={ `/artworks/${code}` }>
           <StyledHeading level={ 6 }>{ title }</StyledHeading>
         </Link>
@@ -105,14 +77,9 @@ const ArtworkItem = ({
           <Tag type>{ type }</Tag>
           { tags.map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
         </TagArea>
-      </ArtworkInfo>
+      </InfoArea>
     </ArtworkArea>
-    <Divider />
-    <InfoArea>
-      <StyledIcon type="regular" icon="star" />
-      <StyledText small>172</StyledText>
-      <StyledText>댓글 18개 · 조회 3,281회</StyledText>
-    </InfoArea>
+    <ArtworkReactions stars={ stars } comments={ comments } views={ views } />
   </Wrapper>
 )
 

@@ -8,6 +8,27 @@ exports[`<HomePage /> 정상적으로 렌더링된다 1`] = `
     />
   }
 >
-  <StyledSearchBar />
+  <StyledTab>
+    <TabPage
+      name="일간"
+    >
+      <ArtworkList />
+    </TabPage>
+    <TabPage
+      name="주간"
+    >
+      <ArtworkList />
+    </TabPage>
+    <TabPage
+      name="월간"
+    >
+      <ArtworkList />
+    </TabPage>
+    <TabPage
+      name="신간"
+    >
+      <ArtworkList />
+    </TabPage>
+  </StyledTab>
 </GenericTemplate>
 `;

@@ -1,6 +1,5 @@
 import {
   HomePage,
-  RankingPage,
   BookmarkPage,
   ArtworkPage,
   AuthPage,
@@ -10,10 +9,6 @@ const routes = [{
   path: '/',
   exact: true,
   component: HomePage,
-}, {
-  path: '/ranking',
-  exact: true,
-  component: RankingPage,
 }, {
   path: '/bookmarks',
   exact: true,

@@ -2,13 +2,16 @@ import React from 'react'
 import styled from 'styled-components'
 import { Header, Tab, TabPage, GenericTemplate } from 'components'
 import { ArtworkList } from 'containers'
+import { palette } from 'services/style'
 
 const StyledTab = styled(Tab)`
-  width: 44rem;
-  margin: 4rem 0;
+  margin: 1rem 0;
+  border: 0.0625rem solid ${palette('gray.40')};
+  background-color: ${palette('white.default')};
 
-  @media(max-width: 1024px) {
-    width: 90%;
+  @media(max-width: 768px) {
+    margin: 0;
+    border: none;
   }
 `
 

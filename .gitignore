@@ -2,7 +2,9 @@
 
 node_modules
 dist
-static
+static/index.html
+static/*.js
+static/*.map
 
 coverage
 

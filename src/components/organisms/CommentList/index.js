@@ -7,11 +7,11 @@ import { palette } from 'services/style'
 
 const Wrapper = styled.div`
   padding: 1rem;
-  background-color: ${palette('gray.20')};
+  background-color: ${palette('white.default')};
 `
 
 const StyledCommentItem = styled(CommentItem)`
-  margin-top: 1rem;
+  margin-top: 0.75rem;
 `
 
 const CommentList = ({ list }) => (

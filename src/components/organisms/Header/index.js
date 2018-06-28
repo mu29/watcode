@@ -2,52 +2,92 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { IconButton } from 'components'
+import { SearchBar } from 'containers'
 import { palette } from 'services/style'
 
-const color = ({ to, location, theme }) => palette(to === location ? 'yellow.default' : 'gray.90')({ theme })
-const background = ({ to, location, theme }) => palette(to === location ? 'white.default' : 'gray.20')({ theme })
-const borderBottom = ({ to, location, theme }) => palette(to === location ? 'white.default' : 'gray.40')({ theme })
+const applyColor = (selected, basic) =>
+  ({ to, location, theme }) => palette(to === location ? selected : basic)({ theme })
+const color = applyColor('yellow.default', 'gray.20')
+const borderColor = applyColor('yellow.default', 'transparent.default')
 
 const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
-  margin: 0 -0.0625rem;
-  background-color: ${palette('gray.20')};
-  border-bottom: 0.0625rem solid ${palette('gray.40')};
-`
+  position: fixed;
+  left: 0;
+  right: 0;
+  top: 0;
+  z-index: 1;
+  background-color: ${palette('gray.100')};
 
-const StyledIconButton = styled(props => <IconButton { ...props } />)`
-  margin-bottom: -0.0625rem;
-  color: ${color};
-  background-color: ${background};
-  border-right: 0.0625rem solid ${palette('gray.40')};
-  border-bottom: 0.0625rem solid ${borderBottom};
-  border-radius: 0;
-
-  &:first-child {
-    border-left: 0.0625rem solid ${palette('gray.40')};
+  @media(max-width: 768px) {
+    padding-bottom: 0;
   }
 `
 
-const LeftMenu = styled.div`
+const Container = styled.div`
+  display: flex;
+  max-width: 48rem;
+  width: 100%;
+  margin: auto;
+
+  @media(max-width: 768px) {
+    flex-direction: column;
+    justify-content: center;
+  }
 `
 
-const RightMenu = styled.div`
+const SearchArea = styled.div`
+  flex: 1;
+  display: flex;
+  align-items: center;
+  padding: 0.5rem 0.875rem 0.5rem 0.5rem;
+
+  @media(max-width: 768px) {
+    padding-top: 0.75rem;
+    padding-bottom: 0;
+  }
+`
+
+const ButtonArea = styled.div`
+  display: flex;
+  align-items: center;
+`
+
+const Image = styled.img`
+  width: 2.5rem;
+  height: 2.5rem;
+  margin-right: 0.5rem;
+`
+
+const StyledIconButton = styled(props => <IconButton { ...props } />)`
+  flex: 1;
+  height: 3.5rem;
+  font-size: 1rem;
+  color: ${color};
+  border-bottom: 0.1875rem solid ${borderColor};
+  border-radius: 0;
+  background-color: transparent;
+
+  @media(max-width: 767px) {
+    height: 3rem;
+  }
 `
 
 const Header = ({
   location,
 }) => (
   <Wrapper>
-    <LeftMenu>
-      <StyledIconButton icon="home" to="/" location={ location } />
-      <StyledIconButton icon="trophy" to="/ranking" location={ location } />
-      <StyledIconButton icon="star" to="/bookmarks" location={ location } />
-      <StyledIconButton icon="comments" to="/community" location={ location } />
-    </LeftMenu>
-    <RightMenu>
-      <StyledIconButton icon="user" to="/auth" location={ location } />
-    </RightMenu>
+    <Container>
+      <SearchArea>
+        <Image src="/resources/logo.svg" />
+        <SearchBar />
+      </SearchArea>
+      <ButtonArea>
+        <StyledIconButton icon="trophy" to="/" location={ location } />
+        <StyledIconButton icon="star" to="/bookmarks" location={ location } />
+        <StyledIconButton icon="comment" to="/community" location={ location } />
+        <StyledIconButton icon="user" to="/auth" location={ location } />
+      </ButtonArea>
+    </Container>
   </Wrapper>
 )
 

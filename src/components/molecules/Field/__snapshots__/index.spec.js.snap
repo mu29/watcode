@@ -34,7 +34,7 @@ exports[`<Field /> label 속성이 들어오면 그려준다 1`] = `
         "palette": Object {
           "gray": Object {
             "10": "#FAFAFA",
-            "100": "#212121",
+            "100": "#2D2D2D",
             "20": "#F5F5F5",
             "30": "#EEEEEE",
             "40": "#E0E0E0",
@@ -54,7 +54,8 @@ exports[`<Field /> label 속성이 들어오면 그려준다 1`] = `
             "default": "#FFF",
           },
           "yellow": Object {
-            "default": "#F9D14C",
+            "dark": "#C49000",
+            "default": "#FBC02D",
           },
         },
         "sizes": Object {},
@@ -99,7 +100,7 @@ exports[`<Field /> 오류 메시지를 표시한다 1`] = `
         "palette": Object {
           "gray": Object {
             "10": "#FAFAFA",
-            "100": "#212121",
+            "100": "#2D2D2D",
             "20": "#F5F5F5",
             "30": "#EEEEEE",
             "40": "#E0E0E0",
@@ -119,7 +120,8 @@ exports[`<Field /> 오류 메시지를 표시한다 1`] = `
             "default": "#FFF",
           },
           "yellow": Object {
-            "default": "#F9D14C",
+            "dark": "#C49000",
+            "default": "#FBC02D",
           },
         },
         "sizes": Object {},

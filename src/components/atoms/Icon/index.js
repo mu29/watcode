@@ -22,7 +22,7 @@ Icon.propTypes = {
 }
 
 Icon.defaultProps = {
-  type: 'regular',
+  type: 'solid',
   size: 16,
   color: 'gray.90',
 }

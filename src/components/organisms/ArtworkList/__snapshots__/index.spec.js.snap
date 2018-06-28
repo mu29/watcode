@@ -9,13 +9,25 @@ exports[`<ArtworkList /> 3개의 아이템을 그려준다 1`] = `
 exports[`<ArtworkList /> 정상적으로 렌더링된다 1`] = `
 Array [
   <span
-    componentname="ArtworkItem"
-  />,
+    componentname="Link"
+  >
+    <span
+      componentname="ArtworkItem"
+    />
+  </span>,
   <span
-    componentname="ArtworkItem"
-  />,
+    componentname="Link"
+  >
+    <span
+      componentname="ArtworkItem"
+    />
+  </span>,
   <span
-    componentname="ArtworkItem"
-  />,
+    componentname="Link"
+  >
+    <span
+      componentname="ArtworkItem"
+    />
+  </span>,
 ]
 `;

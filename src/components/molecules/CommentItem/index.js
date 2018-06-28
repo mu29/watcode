@@ -5,10 +5,13 @@ import { Text } from 'components'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
-  padding: 0.5rem 0.75rem;
-  border-radius: 1rem;
-  border: 0.0625rem solid ${palette('white.default')};
-  background-color: ${palette('white.default')};
+  display: flex;
+`
+
+const Container = styled.div`
+  padding: 0.5rem;
+  border-radius: 0.5rem;
+  background-color: ${palette('gray.30')};
 `
 
 const Name = styled(Text)`
@@ -27,8 +30,10 @@ const CommentItem = ({
   ...props
 }) => (
   <Wrapper { ...props }>
-    <Name>{ name }</Name>
-    <Text>{ content }</Text>
+    <Container>
+      <Name fontSize={ 12 }>{ name }</Name>
+      <Text fontSize={ 12 }>{ content }</Text>
+    </Container>
   </Wrapper>
 )
 

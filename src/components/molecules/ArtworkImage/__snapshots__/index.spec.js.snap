@@ -42,12 +42,7 @@ exports[`<ArtworkImage /> 정상적으로 렌더링된다 1`] = `
     <span
       componentname="Text"
     >
-      #
-    </span>
-    <span
-      componentname="Text"
-    >
-      112047
+      #112047
     </span>
   </div>
 </span>

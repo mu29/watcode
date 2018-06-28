@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Heading, Tag, Text, Link, ArtworkImage, ArtworkReactions } from 'components'
+import { Heading, Tag, Text, ArtworkImage, ArtworkReactions } from 'components'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
@@ -11,11 +11,6 @@ const Wrapper = styled.div`
   padding-bottom: 0.5rem;
   background-color: ${palette('white.default')};
   border-bottom: 0.0625rem solid ${palette('gray.30')};
-
-  &:hover {
-    cursor: pointer;
-    background-color: ${palette('gray.10')};
-  }
 
   @media(max-width: 767px) {
     border-bottom: 0.0625rem solid ${palette('gray.40')};
@@ -69,9 +64,7 @@ const ArtworkItem = ({
     <ArtworkArea>
       <ArtworkImage code={ code } url={ imageUrl } />
       <InfoArea>
-        <Link to={ `/artworks/${code}` }>
-          <StyledHeading level={ 6 }>{ title }</StyledHeading>
-        </Link>
+        <StyledHeading level={ 6 }>{ title }</StyledHeading>
         <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
         <TagArea>
           <Tag type>{ type }</Tag>

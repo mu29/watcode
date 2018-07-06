@@ -2,10 +2,10 @@ import React from 'react'
 import { compose } from 'recompose'
 import { connect } from 'react-redux'
 import { reduxForm } from 'redux-form'
-import { LoginForm } from 'components'
+import { SignInForm } from 'components'
 import { getIsLoading } from 'store/selectors'
 
-const LoginFormContainer = props => <LoginForm { ...props } />
+const SignInFormContainer = props => <SignInForm { ...props } />
 
 const onSubmit = (data, dispatch) => {}
 
@@ -19,4 +19,4 @@ export default compose(
     form: 'comment',
     onSubmit,
   }),
-)(LoginFormContainer)
+)(SignInFormContainer)

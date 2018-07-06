@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tab, TabPage, Header, GenericTemplate } from 'components'
-import { LoginForm } from 'containers'
+import { SignInForm } from 'containers'
 import { palette } from 'services/style'
 
 const StyledTab = styled(Tab)`
@@ -19,10 +19,10 @@ const AuthPage = () => (
   <GenericTemplate header={ <Header location="/auth" /> }>
     <StyledTab>
       <TabPage name="로그인">
-        <LoginForm />
+        <SignInForm />
       </TabPage>
       <TabPage name="회원가입">
-        <LoginForm />
+        <SignInForm />
       </TabPage>
     </StyledTab>
   </GenericTemplate>

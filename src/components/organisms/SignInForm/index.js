@@ -13,7 +13,7 @@ const FieldWrapper = styled.div`
   margin-bottom: 1rem;
 `
 
-const LoginForm = ({
+const SignInForm = ({
   handleSubmit, isLoading,
 }) => (
   <Form onSubmit={ handleSubmit }>
@@ -27,9 +27,9 @@ const LoginForm = ({
   </Form>
 )
 
-LoginForm.propTypes = {
+SignInForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
 }
 
-export default LoginForm
+export default SignInForm

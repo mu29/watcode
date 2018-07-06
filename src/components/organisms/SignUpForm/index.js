@@ -13,12 +13,15 @@ const FieldWrapper = styled.div`
   margin-bottom: 1rem;
 `
 
-const SignInForm = ({
+const SignUpForm = ({
   handleSubmit, isLoading,
 }) => (
   <Form onSubmit={ handleSubmit }>
     <FieldWrapper>
       <Field label="메일 주소" name="email" placeholder="example@watcode.net" component={ ReduxField } />
+    </FieldWrapper>
+    <FieldWrapper>
+      <Field label="사용자명" name="name" placeholder="서비스에서 사용할 별칭입니다." component={ ReduxField } />
     </FieldWrapper>
     <FieldWrapper>
       <Field label="비밀번호" type="password" name="password" placeholder="4자 이상의 비밀번호를 입력해주세요." component={ ReduxField } />
@@ -27,9 +30,9 @@ const SignInForm = ({
   </Form>
 )
 
-SignInForm.propTypes = {
+SignUpForm.propTypes = {
   handleSubmit: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
 }
 
-export default SignInForm
+export default SignUpForm

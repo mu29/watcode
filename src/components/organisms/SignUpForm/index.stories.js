@@ -1,8 +1,8 @@
 import React from 'react'
 import { storiesOf } from '@storybook/react'
-import { SignInForm } from 'containers'
+import { SignUpForm } from 'containers'
 
-storiesOf('Organisms/SignInForm', module)
+storiesOf('Organisms/SignUpForm', module)
   .add('기본', () => (
-    <SignInForm />
+    <SignUpForm />
   ))

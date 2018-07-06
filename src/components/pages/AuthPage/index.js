@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tab, TabPage, Header, GenericTemplate } from 'components'
-import { SignInForm } from 'containers'
+import { SignInForm, SignUpForm } from 'containers'
 import { palette } from 'services/style'
 
 const StyledTab = styled(Tab)`
@@ -22,7 +22,7 @@ const AuthPage = () => (
         <SignInForm />
       </TabPage>
       <TabPage name="회원가입">
-        <SignInForm />
+        <SignUpForm />
       </TabPage>
     </StyledTab>
   </GenericTemplate>

@@ -1,6 +1,6 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`<SignInForm /> 정상적으로 렌더링된다 1`] = `
+exports[`<SignUpForm /> 정상적으로 렌더링된다 1`] = `
 <Form
   onSubmit={[MockFunction]}
 >
@@ -10,6 +10,14 @@ exports[`<SignInForm /> 정상적으로 렌더링된다 1`] = `
       label="메일 주소"
       name="email"
       placeholder="example@watcode.net"
+    />
+  </FieldWrapper>
+  <FieldWrapper>
+    <Field
+      component={[Function]}
+      label="사용자명"
+      name="name"
+      placeholder="서비스에서 사용할 별칭입니다."
     />
   </FieldWrapper>
   <FieldWrapper>

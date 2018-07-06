@@ -12,7 +12,8 @@ import createHistory from 'history/createMemoryHistory'
 import Cookies from 'universal-cookie'
 
 import { port } from 'config'
-import { Client } from 'services/api'
+import { api } from 'services/api'
+import * as firebase from 'services/firebase'
 import configureStore from 'store/configure'
 import rootSaga from 'store/sagas'
 import routes from 'routes'
@@ -62,11 +63,10 @@ app.use((req, res) => {
   if (context.url) {
     res.redirect(context.url)
   } else {
-    const api = new Client()
     api.setToken(token)
 
     const history = createHistory(req.path)
-    const store = configureStore({}, history, { api })
+    const store = configureStore({}, history, { api, firebase })
     const location = req.url
     const sheet = new ServerStyleSheet()
 

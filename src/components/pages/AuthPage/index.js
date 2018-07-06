@@ -1,10 +1,30 @@
 import React from 'react'
-import { Header, GenericTemplate } from 'components'
+import styled from 'styled-components'
+import { Tab, TabPage, Header, GenericTemplate } from 'components'
 import { LoginForm } from 'containers'
+import { palette } from 'services/style'
+
+const StyledTab = styled(Tab)`
+  margin: 1rem 0;
+  border: 0.0625rem solid ${palette('gray.40')};
+  background-color: ${palette('white.default')};
+
+  @media(max-width: 768px) {
+    margin: 0;
+    border: none;
+  }
+`
 
 const AuthPage = () => (
   <GenericTemplate header={ <Header location="/auth" /> }>
-    <LoginForm />
+    <StyledTab>
+      <TabPage name="로그인">
+        <LoginForm />
+      </TabPage>
+      <TabPage name="회원가입">
+        <LoginForm />
+      </TabPage>
+    </StyledTab>
   </GenericTemplate>
 )
 

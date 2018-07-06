@@ -16,6 +16,6 @@ if (!firebase.apps.length) {
 
 export const auth = firebase.auth()
 
-export const signUp = auth.createUserWithEmailAndPassword
+export const signUp = (email, password) => auth.createUserWithEmailAndPassword(email, password)
 
-export const signIn = auth.signInWithEmailAndPassword
+export const signIn = (email, password) => auth.signInWithEmailAndPassword(email, password)

@@ -2,7 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectGlobal, ThemeProvider } from 'styled-components'
-import { autoLoginActions } from 'store/actions'
+import { authorizeAction } from 'store/actions'
+import { auth } from 'services/firebase'
 import { basicTheme } from './themes'
 import Router from './Router'
 
@@ -22,25 +23,16 @@ export default class App extends React.Component {
       dispatch: PropTypes.func,
       getState: PropTypes.func,
     }).isRequired,
-    token: PropTypes.string,
-  }
-
-  static defaultProps = {
-    token: undefined,
   }
 
   componentWillMount() {
-    this.autoLogin()
-  }
-
-  autoLogin = () => {
-    const { token, store } = this.props
-    store.dispatch(autoLoginActions.request({ token }))
+    const { store } = this.props
+    auth.onAuthStateChanged(user => store.dispatch(authorizeAction({ user })))
   }
 
   render() {
     const state = this.props.store.getState()
-    const isLoggedIn = !(!state.auth.user.token)
+    const isLoggedIn = state.auth.user !== null
     return (
       <React.Fragment>
         <Helmet titleTemplate="watcode">

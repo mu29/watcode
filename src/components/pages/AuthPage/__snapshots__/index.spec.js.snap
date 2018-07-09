@@ -8,17 +8,6 @@ exports[`<AuthPage /> 정상적으로 렌더링된다 1`] = `
     />
   }
 >
-  <StyledTab>
-    <TabPage
-      name="로그인"
-    >
-      <SignInForm />
-    </TabPage>
-    <TabPage
-      name="회원가입"
-    >
-      <SignUpForm />
-    </TabPage>
-  </StyledTab>
+  <AuthForm />
 </GenericTemplate>
 `;

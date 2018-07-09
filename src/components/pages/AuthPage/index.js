@@ -1,9 +1,10 @@
 import React from 'react'
-import { Header, AuthForm, GenericTemplate } from 'components'
+import { Header, GenericTemplate } from 'components'
+import { Profile } from 'containers'
 
 const AuthPage = () => (
   <GenericTemplate header={ <Header location="/auth" /> }>
-    <AuthForm />
+    <Profile />
   </GenericTemplate>
 )
 

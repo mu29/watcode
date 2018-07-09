@@ -8,13 +8,14 @@ import Cookies from 'universal-cookie'
 
 import App from 'components/App'
 import { api } from 'services/api'
+import * as firebase from 'services/firebase'
 import configureStore from 'store/configure'
 
 const history = createHistory()
 const cookies = new Cookies()
 const token = cookies.get('token')
 const initialState = window.__INITIAL_STATE__ || { auth: { user: { token } } }
-const store = configureStore(initialState, history, { api })
+const store = configureStore(initialState, history, { api, firebase })
 
 const renderApp = () => (
   <Provider store={ store }>

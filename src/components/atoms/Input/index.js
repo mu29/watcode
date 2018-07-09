@@ -13,7 +13,7 @@ const styles = css`
   border: ${border};
   border-radius: 0.0625rem;
   background: ${palette('white.default')};
-  padding: 0.75rem;
+  padding: 0.5rem;
   transition: border 0.3s;
   resize: none;
 
@@ -77,7 +77,7 @@ Input.defaultProps = {
   border: 'gray.40',
   block: false,
   font: 'default',
-  fontSize: 16,
+  fontSize: 14,
   color: 'gray.90',
   primaryColor: 'yellow.default',
 }

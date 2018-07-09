@@ -20,7 +20,7 @@ const mapStateToProps = () => ({
     artist: 'jihyung lee',
     title: '소드 아트 온라인 프로그레시브',
     type: 'Animation',
-    tags: ['sword', 'art', 'online', 'progressive', 'light novel', 'sword art online progressive', 'sword', 'art', 'online', 'progressive', 'light novel', 'sword art online progressive'],
+    tags: ['sword', 'art', 'online', 'progressive', 'light novel', 'sword art online progressive'],
     imageUrl: 'https://laftelimage.blob.core.windows.net/items/thumbs/large/3390a970-59de-4d04-a705-6814d2f2446a.jpg',
     stars: 17,
     comments: 3,

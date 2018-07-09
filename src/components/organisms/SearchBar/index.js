@@ -15,7 +15,6 @@ const Wrapper = styled.div`
 const StyledInput = styled(props => <Input { ...props } />)`
   width: 100%;
   margin: 0;
-  font-size: 0.875rem;
   padding: 0.375rem 0.5rem;
   border: none;
   border-radius: 0.125rem 0 0 0.125rem;

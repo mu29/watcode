@@ -8,6 +8,6 @@ exports[`<AuthPage /> 정상적으로 렌더링된다 1`] = `
     />
   }
 >
-  <LoginForm />
+  <Profile />
 </GenericTemplate>
 `;

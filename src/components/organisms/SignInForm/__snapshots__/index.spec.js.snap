@@ -1,0 +1,34 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<SignInForm /> 정상적으로 렌더링된다 1`] = `
+<Form
+  onSubmit={[MockFunction]}
+>
+  <FieldWrapper>
+    <Field
+      component={[Function]}
+      label="메일 주소"
+      name="email"
+      placeholder="example@watcode.net"
+    />
+  </FieldWrapper>
+  <FieldWrapper>
+    <Field
+      component={[Function]}
+      label="비밀번호"
+      name="password"
+      placeholder="4자 이상의 비밀번호를 입력해주세요."
+      type="password"
+    />
+  </FieldWrapper>
+  <Button
+    block={true}
+    disabled={false}
+    fontSize={14}
+    height={40}
+    type="submit"
+  >
+    시작하기
+  </Button>
+</Form>
+`;

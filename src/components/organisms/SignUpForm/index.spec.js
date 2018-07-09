@@ -1,14 +1,14 @@
 import React from 'react'
-import LoginForm from '.'
+import SignUpForm from '.'
 
 const attributes = {
   isLoading: false,
   handleSubmit: jest.fn(),
 }
 
-const wrap = (props = attributes) => shallow(<LoginForm { ...props } />)
+const wrap = (props = attributes) => shallow(<SignUpForm { ...props } />)
 
-describe('<LoginForm />', () => {
+describe('<SignUpForm />', () => {
   it('정상적으로 렌더링된다', () => {
     const wrapper = wrap()
     expect(wrapper).toMatchSnapshot()

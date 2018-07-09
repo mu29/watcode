@@ -4,6 +4,7 @@ import { bindAsyncAction, formErrorHandler } from 'store/common'
 import {
   signInActions,
   signUpActions,
+  signOutActions,
 } from './actions'
 
 export const signInWorker = function* (services, { payload }) {
@@ -11,9 +12,14 @@ export const signInWorker = function* (services, { payload }) {
   return user
 }
 
-export const signUpWorker = function* (services, { payload }) {
-  const result = yield call(services.firebase.signUp, payload.email, payload.password)
+export const signUpWorker = function* ({ firebase }, { payload }) {
+  const result = yield call(firebase.signUp, payload.email, payload.password)
   return result.user
+}
+
+export const signOutWorker = function* ({ firebase }) {
+  yield call(firebase.signOut)
+  return null
 }
 
 export const signInExecutor = bindAsyncAction({
@@ -39,7 +45,14 @@ export const signUpExecutor = bindAsyncAction({
   }),
 })
 
+export const signOutExecutor = bindAsyncAction({
+  actions: signOutActions,
+  worker: signOutWorker,
+  onSuccess: () => put(push('/')),
+})
+
 export default function* (services) {
   yield takeLatest(signInActions.request.type, signInExecutor, services)
   yield takeLatest(signUpActions.request.type, signUpExecutor, services)
+  yield takeLatest(signOutActions.request.type, signOutExecutor, services)
 }

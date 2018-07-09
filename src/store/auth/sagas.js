@@ -7,9 +7,9 @@ import {
   signOutActions,
 } from './actions'
 
-export const signInWorker = function* (services, { payload }) {
-  const user = yield call(services.post, '/v4/me/login', { data: payload })
-  return user
+export const signInWorker = function* ({ firebase }, { payload }) {
+  const result = yield call(firebase.signIn, payload.email, payload.password)
+  return result.user
 }
 
 export const signUpWorker = function* ({ firebase }, { payload }) {
@@ -27,8 +27,11 @@ export const signInExecutor = bindAsyncAction({
   worker: signInWorker,
   onSuccess: ({ params }) => put(push(params.redirect || '/')),
   onError: formErrorHandler('signIn', {
-    email: '계정을 찾을 수 없습니다.',
-    password: '비밀번호가 일치하지 않습니다.',
+    email: 'There is no user record corresponding to this identifier. The user may have been deleted.',
+    password: 'The password is invalid or the user does not have a password.',
+  }, {
+    email: '사용자 정보를 찾을 수 없습니다.',
+    password: '비밀번호를 확인해주세요.',
   }),
 })
 

@@ -24,7 +24,7 @@ const SignUpForm = ({
       <Field label="사용자명" name="name" placeholder="서비스에서 사용할 별칭입니다." component={ ReduxField } />
     </FieldWrapper>
     <FieldWrapper>
-      <Field label="비밀번호" type="password" name="password" placeholder="4자 이상의 비밀번호를 입력해주세요." component={ ReduxField } />
+      <Field label="비밀번호" type="password" name="password" placeholder="6자 이상의 비밀번호를 입력해주세요." component={ ReduxField } />
     </FieldWrapper>
     <Button type="submit" height={ 40 } fontSize={ 14 } disabled={ isLoading } block>시작하기</Button>
   </Form>

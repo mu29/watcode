@@ -21,7 +21,7 @@ const SignInForm = ({
       <Field label="메일 주소" name="email" placeholder="example@watcode.net" component={ ReduxField } />
     </FieldWrapper>
     <FieldWrapper>
-      <Field label="비밀번호" type="password" name="password" placeholder="4자 이상의 비밀번호를 입력해주세요." component={ ReduxField } />
+      <Field label="비밀번호" type="password" name="password" placeholder="6자 이상의 비밀번호를 입력해주세요." component={ ReduxField } />
     </FieldWrapper>
     <Button type="submit" height={ 40 } fontSize={ 14 } disabled={ isLoading } block>시작하기</Button>
   </Form>

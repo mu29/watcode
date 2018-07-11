@@ -2,6 +2,18 @@
 
 exports[`<ArtworkImage /> 정상적으로 렌더링된다 1`] = `
 .c0 {
+  -webkit-flex-shrink: 0;
+  -ms-flex-negative: 0;
+  flex-shrink: 0;
+  position: relative;
+  width: 4.5rem;
+  height: 6rem;
+  margin-right: 0.5rem;
+  overflow: hidden;
+  border: 0.0625rem solid #EEEEEE;
+}
+
+.c1 {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -9,7 +21,7 @@ exports[`<ArtworkImage /> 정상적으로 렌더링된다 1`] = `
   filter: blur(0.1rem);
 }
 
-.c1 {
+.c2 {
   position: absolute;
   left: 0;
   right: 0;
@@ -29,15 +41,16 @@ exports[`<ArtworkImage /> 정상적으로 렌더링된다 1`] = `
   align-items: center;
 }
 
-<span
-  componentname="Link"
+<div
+  class="c0"
+  to="/artworks/112047"
 >
   <img
-    class="c0"
+    class="c1"
     src="https://laftelimage.blob.core.windows.net/items/thumbs/large/395db1d0-ead8-407f-a316-04aee1e668a7.jpg"
   />
   <div
-    class="c1"
+    class="c2"
   >
     <span
       componentname="Text"
@@ -45,5 +58,5 @@ exports[`<ArtworkImage /> 정상적으로 렌더링된다 1`] = `
       #112047
     </span>
   </div>
-</span>
+</div>
 `;

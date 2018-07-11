@@ -1,10 +1,10 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Link, Text } from 'components'
+import { Text } from 'components'
 import { palette } from 'services/style'
 
-const Wrapper = styled(Link)`
+const Wrapper = styled.div`
   flex-shrink: 0;
   position: relative;
   width: 4.5rem;

@@ -42,9 +42,19 @@ const styles = css`
 `
 
 /* eslint-disable no-shadow */
+const LinkWrapper = ({
+  to, className, children,
+}) => <Link to={ to } className={ className }>{ children }</Link>
+
+LinkWrapper.propTypes = {
+  to: PropTypes.string.isRequired,
+  className: PropTypes.string.isRequired,
+  children: PropTypes.node.isRequired,
+}
+
 const StyledLink = styled(({
   to, ...props
-}) => <Link to={ to } { ...props } />)`${styles}`
+}) => <LinkWrapper to={ to } { ...props } />)`${styles}`
 
 const Anchor = styled.a`${styles}`
 

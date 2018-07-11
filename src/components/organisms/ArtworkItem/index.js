@@ -67,7 +67,7 @@ const ArtworkItem = ({
         <StyledHeading level={ 6 }>{ title }</StyledHeading>
         <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
         <TagArea>
-          <Tag type>{ type }</Tag>
+          <Tag category>{ type }</Tag>
           { tags.map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
         </TagArea>
       </InfoArea>

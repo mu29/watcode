@@ -56,7 +56,6 @@ export const bindAsyncAction = ({
 }
 
 export const formErrorHandler = (form, messages, displayMessages) => ({ error }) => {
-  console.log(error)
   const key = Object.entries(messages).find(i => i[1] === error.message)
   const messageKey = key ? key[0] : '_error'
   const message = displayMessages && messageKey ? displayMessages[messageKey] : error.message

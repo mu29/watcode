@@ -3,8 +3,7 @@ import { stringify } from 'query-string'
 import { apiUrl } from 'config'
 
 export const parseEndpoint = (endpoint, params) => {
-  const version = endpoint.replace(/^\/(v\d)\/.*$/, '$1')
-  const url = endpoint.startsWith('http') ? endpoint : apiUrl[version] + endpoint
+  const url = endpoint.startsWith('http') ? endpoint : apiUrl + endpoint
   const querystring = params ? `?${stringify(params)}` : ''
   return `${url}${querystring}`
 }

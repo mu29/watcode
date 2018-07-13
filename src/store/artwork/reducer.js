@@ -10,13 +10,13 @@ export default (state = initialState, action) => {
     case readArtworksActions.success.type:
       return {
         ...state,
-        recent: uniq([...state.recent, ...action.payload.map(a => a.code)]),
+        recent: uniq([...state.recent, ...action.payload.map(a => a.id)]),
       }
     case readPopularArtworksActions.success.type: {
-      const { period } = action.payload.params
+      const { period } = action.meta.params
       return {
         ...state,
-        [period]: uniq([...state[period], action.payload.map(a => a.code)]),
+        [period]: uniq([...state[period], ...action.payload.map(a => a.id)]),
       }
     }
     default:

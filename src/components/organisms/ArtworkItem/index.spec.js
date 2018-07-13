@@ -2,7 +2,7 @@ import React from 'react'
 import ArtworkItem from '.'
 
 const artwork = {
-  code: 112047,
+  id: 112047,
   artist: 'nagatsuki taffee',
   title: 'Re: 제로부터 시작하는 이세계 생활',
   tags: ['rebirth', 'loop', 'harem', 'this is a long tag'],

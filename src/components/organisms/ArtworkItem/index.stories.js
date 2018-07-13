@@ -3,7 +3,7 @@ import { storiesOf } from '@storybook/react'
 import ArtworkItem from '.'
 
 const artwork = {
-  code: 1120470,
+  id: 1120470,
   artist: 'nagatsuki taffee',
   title: 'Re: 제로부터 시작하는 이세계 생활',
   type: 'Light Novel',

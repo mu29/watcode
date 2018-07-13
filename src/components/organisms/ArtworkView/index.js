@@ -28,7 +28,7 @@ const ArtworkView = ({
 
 ArtworkView.propTypes = {
   artwork: PropTypes.shape({
-    code: PropTypes.number,
+    id: PropTypes.number,
     artist: PropTypes.string,
     title: PropTypes.string,
     tags: PropTypes.array,

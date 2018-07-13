@@ -10,24 +10,24 @@ exports[`<HomePage /> 정상적으로 렌더링된다 1`] = `
 >
   <StyledTab>
     <TabPage
+      name="신간"
+    >
+      <RecentArtworkList />
+    </TabPage>
+    <TabPage
       name="일간"
     >
-      <ArtworkList />
+      <DailyArtworkList />
     </TabPage>
     <TabPage
       name="주간"
     >
-      <ArtworkList />
+      <WeeklyArtworkList />
     </TabPage>
     <TabPage
       name="월간"
     >
-      <ArtworkList />
-    </TabPage>
-    <TabPage
-      name="신간"
-    >
-      <ArtworkList />
+      <MonthlyArtworkList />
     </TabPage>
   </StyledTab>
 </GenericTemplate>

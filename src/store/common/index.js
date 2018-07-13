@@ -4,13 +4,13 @@ import { stopSubmit } from 'redux-form'
 export const actionCreatorFactory = (prefix) => {
   const base = prefix ? `${prefix}/` : ''
 
-  const actionCreator = (type, meta, error = false) => {
+  const actionCreator = (type, defaultMeta, error = false) => {
     const fullType = base + type
-    return Object.assign((payload) => {
+    return Object.assign((payload, meta) => {
       const action = {
         type: fullType,
         payload,
-        meta,
+        meta: { ...defaultMeta, ...meta },
         error,
       }
 
@@ -39,7 +39,7 @@ export const bindAsyncAction = ({
 }) => function* (services, action) {
   try {
     const result = yield call(worker, services, action)
-    yield put(actions.success(result))
+    yield put(actions.success(result, { params: action.payload }))
     if (onSuccess) {
       yield onSuccess({ params: action.payload, result })
     }

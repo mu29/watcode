@@ -28,6 +28,11 @@ export const getDailyIds = state => state.artwork.daily.artworks
 export const getWeeklyIds = state => state.artwork.weekly.artworks
 export const getMonthlyIds = state => state.artwork.monthly.artworks
 
+export const getArtwork = createSelector(
+  [getEntity, (_, props) => props.id],
+  (entities, id) => denormalize(id, artworkSchema, entities),
+)
+
 export const getRecentArtworks = createSelector(
   [getEntity, getRecentIds],
   (entities, ids) => denormalize(ids, [artworkSchema], entities),

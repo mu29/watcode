@@ -7,12 +7,12 @@ import {
 
 export const readArtworksWorker = function* ({ api }, { payload }) {
   const result = yield call(api.get, '/artworks', { params: payload })
-  return result.artworks
+  return [result.artworks, { cursor: result.cursor }]
 }
 
 export const readPopularArtworksWorker = function* ({ api }, { payload }) {
   const result = yield call(api.get, '/artworks/popular', { params: payload })
-  return result.artworks
+  return [result.artworks, { cursor: result.cursor }]
 }
 
 export const readArtworksExecutor = bindAsyncAction({

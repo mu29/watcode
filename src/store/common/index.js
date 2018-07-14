@@ -38,8 +38,8 @@ export const bindAsyncAction = ({
   onError,
 }) => function* (services, action) {
   try {
-    const result = yield call(worker, services, action)
-    yield put(actions.success(result, { params: action.payload }))
+    const [result, meta] = yield call(worker, services, action)
+    yield put(actions.success(result, { params: action.payload, ...meta }))
     if (onSuccess) {
       yield onSuccess({ params: action.payload, result })
     }

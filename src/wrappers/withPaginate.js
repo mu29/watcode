@@ -10,14 +10,13 @@ const withPaginate = (canPaginate = defaultCanPaginate) => Component =>
     static propTypes = {
       onPaginate: PropTypes.func.isRequired,
       list: PropTypes.arrayOf(PropTypes.object).isRequired,
+      cursor: PropTypes.string.isRequired,
       isLoading: PropTypes.bool,
     }
 
     static defaultProps = {
       isLoading: false,
     }
-
-    state = { page: 1 }
 
     componentWillMount() {
       this.paginate()
@@ -38,8 +37,8 @@ const withPaginate = (canPaginate = defaultCanPaginate) => Component =>
     }
 
     paginate = () => {
-      this.props.onPaginate(this.state.page)
-      this.setState(({ page }) => ({ page: page + 1 }))
+      const { onPaginate, cursor } = this.props
+      onPaginate(cursor)
     }
 
     render() {

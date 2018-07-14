@@ -11,11 +11,12 @@ const ArtworkListContainer = props => <PaginableArtworkList { ...props } />
 
 const mapStateToProps = state => ({
   list: getRecentArtworks(state),
+  cursor: state.artwork.recent.cursor,
   isLoading: getIsLoading(state, readArtworksActions.type),
 })
 
 const mapDispatchToProps = dispatch => ({
-  onPaginate: page => dispatch(readArtworksActions.request({ page })),
+  onPaginate: cursor => dispatch(readArtworksActions.request({ cursor })),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArtworkListContainer)

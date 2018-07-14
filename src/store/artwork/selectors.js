@@ -4,17 +4,29 @@ import { getEntity } from '../entity/selectors'
 import { artworkSchema } from '../schemas'
 
 export const initialState = {
-  recent: [],
-  daily: [],
-  weekly: [],
-  monthly: [],
+  recent: {
+    artworks: [],
+    cursor: null,
+  },
+  daily: {
+    artworks: [],
+    cursor: null,
+  },
+  weekly: {
+    artworks: [],
+    cursor: null,
+  },
+  monthly: {
+    artworks: [],
+    cursor: null,
+  },
 }
 
 export const getArtworks = state => getEntity(state).artworks
-export const getRecentIds = state => state.artwork.recent
-export const getDailyIds = state => state.artwork.daily
-export const getWeeklyIds = state => state.artwork.weekly
-export const getMonthlyIds = state => state.artwork.monthly
+export const getRecentIds = state => state.artwork.recent.artworks
+export const getDailyIds = state => state.artwork.daily.artworks
+export const getWeeklyIds = state => state.artwork.weekly.artworks
+export const getMonthlyIds = state => state.artwork.monthly.artworks
 
 export const getRecentArtworks = createSelector(
   [getEntity, getRecentIds],

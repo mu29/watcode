@@ -11,11 +11,12 @@ const ArtworkListContainer = props => <PaginableArtworkList { ...props } />
 
 const mapStateToProps = state => ({
   list: getWeeklyArtworks(state),
+  cursor: state.artwork.weekly.cursor,
   isLoading: getIsLoading(state, readPopularArtworksActions.type),
 })
 
 const mapDispatchToProps = dispatch => ({
-  onPaginate: page => dispatch(readPopularArtworksActions.request({ page, period: 'weekly' })),
+  onPaginate: cursor => dispatch(readPopularArtworksActions.request({ cursor, period: 'weekly' })),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArtworkListContainer)

@@ -43,7 +43,6 @@ exports[`<ArtworkImage /> 정상적으로 렌더링된다 1`] = `
 
 <div
   class="c0"
-  to="/artworks/112047"
 >
   <img
     class="c1"

@@ -1,7 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Tab, TabPage, Header, GenericTemplate } from 'components'
-import { ArtworkList } from 'containers'
+import {
+  RecentArtworkList,
+  DailyArtworkList,
+  WeeklyArtworkList,
+  MonthlyArtworkList,
+} from 'containers'
 import { palette } from 'services/style'
 
 const StyledTab = styled(Tab)`
@@ -18,17 +23,17 @@ const StyledTab = styled(Tab)`
 const HomePage = () => (
   <GenericTemplate header={ <Header location="/" /> }>
     <StyledTab>
+      <TabPage name="신간">
+        <RecentArtworkList />
+      </TabPage>
       <TabPage name="일간">
-        <ArtworkList />
+        <DailyArtworkList />
       </TabPage>
       <TabPage name="주간">
-        <ArtworkList />
+        <WeeklyArtworkList />
       </TabPage>
       <TabPage name="월간">
-        <ArtworkList />
-      </TabPage>
-      <TabPage name="신간">
-        <ArtworkList />
+        <MonthlyArtworkList />
       </TabPage>
     </StyledTab>
   </GenericTemplate>

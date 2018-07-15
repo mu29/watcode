@@ -5,7 +5,7 @@ import { ArtworkView } from 'containers'
 
 const ArtworkPage = ({ match }) => (
   <GenericTemplate header={ <Header location={ `/artworks/${match.params.id}` } /> }>
-    <ArtworkView id={ match.params.id } />
+    <ArtworkView id={ parseInt(match.params.id, 10) } />
   </GenericTemplate>
 )
 

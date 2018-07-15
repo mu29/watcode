@@ -47,7 +47,7 @@ const StyledHeading = styled(Heading)`
 
 const ArtworkItem = ({
   artwork: {
-    code,
+    id,
     artist,
     title,
     type,
@@ -62,7 +62,7 @@ const ArtworkItem = ({
 }) => (
   <Wrapper { ...props }>
     <ArtworkArea>
-      <ArtworkImage code={ code } url={ imageUrl } />
+      <ArtworkImage id={ id } url={ imageUrl } />
       <InfoArea>
         <StyledHeading level={ 6 }>{ title }</StyledHeading>
         <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
@@ -78,7 +78,7 @@ const ArtworkItem = ({
 
 ArtworkItem.propTypes = {
   artwork: PropTypes.shape({
-    code: PropTypes.number,
+    id: PropTypes.number,
     artist: PropTypes.string,
     title: PropTypes.string,
     tags: PropTypes.array,

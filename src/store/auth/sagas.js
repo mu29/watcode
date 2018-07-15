@@ -9,12 +9,12 @@ import {
 
 export const signInWorker = function* ({ firebase }, { payload }) {
   const result = yield call(firebase.signIn, payload.email, payload.password)
-  return result.user
+  return [result.user]
 }
 
 export const signUpWorker = function* ({ firebase }, { payload }) {
   const result = yield call(firebase.signUp, payload.email, payload.password)
-  return result.user
+  return [result.user]
 }
 
 export const signOutWorker = function* ({ firebase }) {

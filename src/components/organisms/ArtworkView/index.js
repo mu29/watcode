@@ -1,7 +1,7 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { ArtworkItem } from 'components'
+import { Loading, ArtworkItem } from 'components'
 import { CommentList } from 'containers'
 import { palette } from 'services/style'
 
@@ -16,24 +16,38 @@ const Wrapper = styled.div`
   }
 `
 
-const ArtworkView = ({
-  artwork,
-  ...props
-}) => (
-  <Wrapper { ...props }>
-    <ArtworkItem artwork={ artwork } />
-    <CommentList />
-  </Wrapper>
-)
+export default class ArtworkView extends Component {
+  componentWillMount() {
+    const { id, readArtwork } = this.props
+    readArtwork(id)
+  }
+
+  render() {
+    const { artwork, isLoading } = this.props
+    return (
+      <Wrapper { ...this.props }>
+        <Loading isLoading={ isLoading && !artwork }>
+          { artwork && <ArtworkItem artwork={ artwork } /> }
+        </Loading>
+        <CommentList />
+      </Wrapper>
+    )
+  }
+}
 
 ArtworkView.propTypes = {
+  id: PropTypes.number.isRequired,
   artwork: PropTypes.shape({
-    code: PropTypes.number,
+    id: PropTypes.number,
     artist: PropTypes.string,
     title: PropTypes.string,
     tags: PropTypes.array,
     imageUrl: PropTypes.string,
-  }).isRequired,
+  }),
+  readArtwork: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 }
 
-export default ArtworkView
+ArtworkView.defaultProps = {
+  artwork: undefined,
+}

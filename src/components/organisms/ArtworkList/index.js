@@ -12,7 +12,7 @@ const StyledArtworkItem = styled(ArtworkItem)`
 `
 
 const ArtworkList = ({ list }) => list.map(item => (
-  <Link to={ `/artworks/${item.code}` } key={ item.code }>
+  <Link to={ `/artworks/${item.id}` } key={ item.id }>
     <StyledArtworkItem artwork={ item } />
   </Link>
 ))

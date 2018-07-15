@@ -34,20 +34,20 @@ const CodeArea = styled.div`
 `
 
 const ArtworkImage = ({
-  code,
+  id,
   url,
   ...props
 }) => (
-  <Wrapper to={ `/artworks/${code}` } { ...props }>
+  <Wrapper { ...props }>
     <Image src={ url } />
     <CodeArea>
-      <Text color="gray.30" fontSize={ 12 } small>#{ code }</Text>
+      <Text color="gray.30" fontSize={ 12 } small>#{ id }</Text>
     </CodeArea>
   </Wrapper>
 )
 
 ArtworkImage.propTypes = {
-  code: PropTypes.number.isRequired,
+  id: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
 }
 

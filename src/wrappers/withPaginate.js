@@ -1,5 +1,6 @@
 import React from 'react'
 import { PropTypes } from 'prop-types'
+import { Loading } from 'components'
 
 const defaultCanPaginate = props =>
   (window.innerHeight + window.scrollY) >= (document.body.offsetHeight - 500)
@@ -10,14 +11,14 @@ const withPaginate = (canPaginate = defaultCanPaginate) => Component =>
     static propTypes = {
       onPaginate: PropTypes.func.isRequired,
       list: PropTypes.arrayOf(PropTypes.object).isRequired,
+      cursor: PropTypes.string,
       isLoading: PropTypes.bool,
     }
 
     static defaultProps = {
       isLoading: false,
+      cursor: null,
     }
-
-    state = { page: 1 }
 
     componentWillMount() {
       this.paginate()
@@ -38,12 +39,17 @@ const withPaginate = (canPaginate = defaultCanPaginate) => Component =>
     }
 
     paginate = () => {
-      this.props.onPaginate(this.state.page)
-      this.setState(({ page }) => ({ page: page + 1 }))
+      const { onPaginate, cursor } = this.props
+      onPaginate(cursor)
     }
 
     render() {
-      return <Component { ...this.props } />
+      return (
+        <React.Fragment>
+          <Component { ...this.props } />
+          { this.props.isLoading && <Loading /> }
+        </React.Fragment>
+      )
     }
   }
 

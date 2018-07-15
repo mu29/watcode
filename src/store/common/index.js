@@ -4,13 +4,13 @@ import { stopSubmit } from 'redux-form'
 export const actionCreatorFactory = (prefix) => {
   const base = prefix ? `${prefix}/` : ''
 
-  const actionCreator = (type, meta, error = false) => {
+  const actionCreator = (type, defaultMeta, error = false) => {
     const fullType = base + type
-    return Object.assign((payload) => {
+    return Object.assign((payload, meta) => {
       const action = {
         type: fullType,
         payload,
-        meta,
+        meta: { ...defaultMeta, ...meta },
         error,
       }
 
@@ -38,8 +38,8 @@ export const bindAsyncAction = ({
   onError,
 }) => function* (services, action) {
   try {
-    const result = yield call(worker, services, action)
-    yield put(actions.success(result))
+    const [result, meta] = yield call(worker, services, action)
+    yield put(actions.success(result, { params: action.payload, ...meta }))
     if (onSuccess) {
       yield onSuccess({ params: action.payload, result })
     }
@@ -56,7 +56,6 @@ export const bindAsyncAction = ({
 }
 
 export const formErrorHandler = (form, messages, displayMessages) => ({ error }) => {
-  console.log(error)
   const key = Object.entries(messages).find(i => i[1] === error.message)
   const messageKey = key ? key[0] : '_error'
   const message = displayMessages && messageKey ? displayMessages[messageKey] : error.message

@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { ArtworkItem } from 'components'
+import { Loading, ArtworkItem } from 'components'
 import { CommentList } from 'containers'
 import { palette } from 'services/style'
 
@@ -23,10 +23,12 @@ export default class ArtworkView extends Component {
   }
 
   render() {
-    const { artwork } = this.props
+    const { artwork, isLoading } = this.props
     return (
       <Wrapper { ...this.props }>
-        { artwork && <ArtworkItem artwork={ artwork } /> }
+        <Loading isLoading={ isLoading && !artwork }>
+          { artwork && <ArtworkItem artwork={ artwork } /> }
+        </Loading>
         <CommentList />
       </Wrapper>
     )
@@ -41,7 +43,11 @@ ArtworkView.propTypes = {
     title: PropTypes.string,
     tags: PropTypes.array,
     imageUrl: PropTypes.string,
-  }).isRequired,
+  }),
   readArtwork: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
+}
+
+ArtworkView.defaultProps = {
+  artwork: undefined,
 }

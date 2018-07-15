@@ -14,6 +14,7 @@ export const signInWorker = function* ({ firebase }, { payload }) {
 
 export const signUpWorker = function* ({ firebase }, { payload }) {
   const result = yield call(firebase.signUp, payload.email, payload.password)
+  yield call(firebase.updateProfile, { displayName: payload.name })
   return [result.user]
 }
 

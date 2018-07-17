@@ -10,7 +10,7 @@ exports[`<CommentItem /> 정상적으로 렌더링된다 1`] = `
 
 .c1 {
   padding: 0.5rem;
-  border-radius: 0.5rem;
+  border-radius: 0.75rem;
 }
 
 <div
@@ -21,9 +21,7 @@ exports[`<CommentItem /> 정상적으로 렌더링된다 1`] = `
   >
     <span
       componentname="Text"
-    >
-      영화번역가 황석희
-    </span>
+    />
     <span
       componentname="Text"
     >

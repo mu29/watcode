@@ -1,0 +1,29 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Loading /> 정상적으로 렌더링된다 1`] = `
+.c0 {
+  margin: auto;
+  padding: 1rem;
+}
+
+.c1 {
+  width: 1.5rem;
+  height: 1.5rem;
+  margin: auto;
+  -webkit-animation: rotate 0.8s infinite linear;
+  animation: rotate 0.8s infinite linear;
+  border: 0.1875rem solid;
+  border-right-color: transparent;
+  border-radius: 50%;
+}
+
+<div
+  class="c0"
+>
+  <div
+    class="c1"
+    color="black"
+    size="24"
+  />
+</div>
+`;

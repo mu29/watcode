@@ -1,0 +1,19 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<LoadingButton /> 로딩 중이 아니라면 자식 컴포넌트를 표시한다 1`] = `
+<span
+  componentname="Button"
+>
+  확인
+</span>
+`;
+
+exports[`<LoadingButton /> 정상적으로 렌더링된다 1`] = `
+<span
+  componentname="Button"
+>
+  <span
+    componentname="Loading"
+  />
+</span>
+`;

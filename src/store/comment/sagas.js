@@ -1,4 +1,5 @@
-import { call, takeLatest } from 'redux-saga/effects'
+import { put, call, takeLatest } from 'redux-saga/effects'
+import { reset } from 'redux-form'
 import { bindAsyncAction } from 'store/common'
 import {
   createCommentActions,
@@ -24,6 +25,7 @@ export const deleteCommentWorker = function* ({ api }, { payload }) {
 export const createCommentExecutor = bindAsyncAction({
   actions: createCommentActions,
   worker: createCommentWorker,
+  onSuccess: () => put(reset('comment')),
 })
 
 export const readCommentsExecutor = bindAsyncAction({

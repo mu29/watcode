@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import Helmet from 'react-helmet'
 import { injectGlobal, ThemeProvider } from 'styled-components'
-import { authorizeAction } from 'store/actions'
+import { authorizeActions } from 'store/actions'
 import { auth } from 'services/firebase'
 import { basicTheme } from './themes'
 import Router from './Router'
@@ -27,7 +27,7 @@ export default class App extends React.Component {
 
   componentWillMount() {
     const { store } = this.props
-    auth.onAuthStateChanged(user => store.dispatch(authorizeAction({ user })))
+    auth.onAuthStateChanged(user => store.dispatch(authorizeActions.request({ user })))
   }
 
   render() {

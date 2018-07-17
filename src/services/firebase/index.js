@@ -23,3 +23,5 @@ export const signUp = (email, password) => auth.createUserWithEmailAndPassword(e
 export const signIn = (email, password) => auth.signInWithEmailAndPassword(email, password)
 
 export const signOut = () => auth.signOut()
+
+export const updateProfile = data => auth.currentUser.updateProfile(data)

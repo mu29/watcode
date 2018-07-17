@@ -14,14 +14,15 @@ const StyledCommentItem = styled(CommentItem)`
   margin-top: 0.75rem;
 `
 
-const CommentList = ({ list }) => (
+const CommentList = ({ id, list }) => (
   <Wrapper>
-    <CommentForm />
+    <CommentForm id={ id } />
     { list.map(item => <StyledCommentItem key={ item.id } comment={ item } />) }
   </Wrapper>
 )
 
 CommentList.propTypes = {
+  id: PropTypes.number.isRequired,
   list: PropTypes.arrayOf(PropTypes.object).isRequired,
 }
 

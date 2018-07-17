@@ -23,13 +23,13 @@ export default class ArtworkView extends Component {
   }
 
   render() {
-    const { artwork, isLoading } = this.props
+    const { id, artwork, isLoading } = this.props
     return (
       <Wrapper { ...this.props }>
         <Loading isLoading={ isLoading && !artwork }>
           { artwork && <ArtworkItem artwork={ artwork } /> }
         </Loading>
-        <CommentList />
+        <CommentList id={ id } />
       </Wrapper>
     )
   }

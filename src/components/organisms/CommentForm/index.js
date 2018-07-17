@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Field } from 'redux-form'
-import { Button, ReduxField } from 'components'
+import { LoadingButton, ReduxField } from 'components'
 
 const Form = styled.form`
   display: flex;
@@ -14,7 +14,7 @@ const StyledField = styled(Field)`
   border-radius: 0.125rem 0 0 0.125rem;
 `
 
-const StyledButton = styled(Button)`
+const StyledButton = styled(LoadingButton)`
   width: 4.5rem;
   height: 3.375rem;
   padding: 0;
@@ -23,11 +23,12 @@ const StyledButton = styled(Button)`
 `
 
 const CommentForm = ({
-  handleSubmit, isLoading,
+  handleSubmit,
+  isLoading,
 }) => (
   <Form onSubmit={ handleSubmit }>
     <StyledField type="textarea" name="content" placeholder="이 작품은 어땠나요?" component={ ReduxField } />
-    <StyledButton type="submit" disabled={ isLoading }>등록</StyledButton>
+    <StyledButton type="submit" isLoading={ isLoading } disabled={ isLoading }>등록</StyledButton>
   </Form>
 )
 

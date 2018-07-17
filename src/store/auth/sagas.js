@@ -5,6 +5,7 @@ import {
   signInActions,
   signUpActions,
   signOutActions,
+  authorizeActions,
 } from './actions'
 
 export const signInWorker = function* ({ firebase }, { payload }) {
@@ -21,6 +22,11 @@ export const signUpWorker = function* ({ firebase }, { payload }) {
 export const signOutWorker = function* ({ firebase }) {
   yield call(firebase.signOut)
   return null
+}
+
+export const authorizeWorker = function* ({ api }, { payload }) {
+  yield call(api.setToken, payload.user.uid)
+  return [payload]
 }
 
 export const signInExecutor = bindAsyncAction({
@@ -55,8 +61,14 @@ export const signOutExecutor = bindAsyncAction({
   onSuccess: () => put(push('/')),
 })
 
+export const authorizeExecutor = bindAsyncAction({
+  actions: authorizeActions,
+  worker: authorizeWorker,
+})
+
 export default function* (services) {
   yield takeLatest(signInActions.request.type, signInExecutor, services)
   yield takeLatest(signUpActions.request.type, signUpExecutor, services)
   yield takeLatest(signOutActions.request.type, signOutExecutor, services)
+  yield takeLatest(authorizeActions.request.type, authorizeExecutor, services)
 }

@@ -12,7 +12,7 @@ const ArtworkListContainer = props => <PaginableArtworkList { ...props } />
 const mapStateToProps = (state, props) => ({
   list: getSearchArtworks(state, props),
   cursor: state.artwork.search[props.type].cursor,
-  isLoading: getIsLoading(state, searchArtworksActions.type, 'type', props.type),
+  isLoading: getIsLoading(state, searchArtworksActions.type),
 })
 
 const mapDispatchToProps = (dispatch, { type, query }) => ({

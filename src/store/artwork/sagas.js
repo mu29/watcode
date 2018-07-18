@@ -8,7 +8,7 @@ import {
 
 export const readArtworkWorker = function* ({ api }, { payload }) {
   const result = yield call(api.get, `/artworks/${payload.id}`)
-  return [result.artwork]
+  return [result]
 }
 
 export const readArtworksWorker = function* ({ api }, { payload }) {

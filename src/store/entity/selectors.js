@@ -1,7 +1,6 @@
 export const initialState = {
   artworks: {},
   comments: {},
-  bookmarks: {},
   users: {},
 }
 

@@ -13,7 +13,7 @@ export const createBookmarkWorker = function* ({ api }, { payload }) {
 
 export const readBookmarksWorker = function* ({ api }) {
   const result = yield call(api.get, '/bookmarks')
-  return [result.bookmarks]
+  return [result.artworks]
 }
 
 export const deleteBookmarkWorker = function* ({ api }, { payload }) {

@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import { size, color } from 'services/style'
 
 const Wrapper = styled.div`
-  margin: auto;
+  margin: ${({ inline }) => (inline ? 'auto 0.25rem' : 'auto')};
   padding: ${({ compact }) => (compact ? 0 : '1rem')};
 `
 
@@ -29,12 +29,13 @@ const Progress = styled.div`
 
 const Loading = ({
   isLoading,
+  inline,
   compact,
   children,
   ...props
 }) => (
   isLoading ? (
-    <Wrapper compact={ compact }>
+    <Wrapper inline={ inline } compact={ compact }>
       <Progress { ...props } />
     </Wrapper>
   ) : children
@@ -46,6 +47,7 @@ Loading.propTypes = {
   color: PropTypes.string,
   size: PropTypes.number,
   compact: PropTypes.bool,
+  inline: PropTypes.bool,
 }
 
 Loading.defaultProps = {
@@ -54,6 +56,7 @@ Loading.defaultProps = {
   color: 'gray.100',
   size: 24,
   compact: false,
+  inline: false,
 }
 
 export default Loading

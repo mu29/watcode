@@ -39,7 +39,10 @@ const withPaginate = (canPaginate = defaultCanPaginate) => Component =>
     }
 
     paginate = () => {
-      const { onPaginate, cursor } = this.props
+      const { onPaginate, cursor, list } = this.props
+      if (cursor === null && list.length > 0) {
+        return
+      }
       onPaginate(cursor)
     }
 

@@ -1,20 +1,9 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
-import { Link, ArtworkItem } from 'components'
-import { palette } from 'services/style'
-
-const StyledArtworkItem = styled(ArtworkItem)`
-  &:hover {
-    cursor: pointer;
-    background-color: ${palette('gray.10')};
-  }
-`
+import { ArtworkItem } from 'components'
 
 const ArtworkList = ({ list }) => list.map(item => (
-  <Link to={ `/artworks/${item.id}` } key={ item.id }>
-    <StyledArtworkItem artwork={ item } />
-  </Link>
+  <ArtworkItem artwork={ item } key={ item.id } />
 ))
 
 ArtworkList.propTypes = {

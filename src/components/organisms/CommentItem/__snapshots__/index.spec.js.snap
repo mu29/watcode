@@ -1,23 +1,27 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<CommentItem /> 정상적으로 렌더링된다 1`] = `
-.c0 {
+.c1 {
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
 }
 
-.c1 {
+.c2 {
   padding: 0.5rem;
   border-radius: 0.75rem;
 }
 
+.c0:hover .eBJlmb {
+  display: block;
+}
+
 <div
-  class="c0"
+  class="c0 c1"
 >
   <div
-    class="c1"
+    class="c2"
   >
     <span
       componentname="Text"
@@ -28,5 +32,8 @@ exports[`<CommentItem /> 정상적으로 렌더링된다 1`] = `
       달인급 캐릭터 분량 조절의 기술. 이 긴 영화에 지루함 한 톨 없다. 너는 어른이 다 됐더라, 피터
     </span>
   </div>
+  <span
+    componentname="CommentTooltip"
+  />
 </div>
 `;

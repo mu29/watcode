@@ -12,7 +12,7 @@ exports[`<BookmarkPage /> 정상적으로 렌더링된다 1`] = `
     <TabPage
       name="즐겨찾기"
     >
-      <ArtworkList />
+      <BookmarkList />
     </TabPage>
     <TabPage
       name="추천 작품"

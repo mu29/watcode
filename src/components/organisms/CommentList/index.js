@@ -10,14 +10,14 @@ const Wrapper = styled.div`
   background-color: ${palette('white.default')};
 `
 
-const StyledCommentItem = styled(CommentItem)`
+const StyledCommentItem = styled(props => <CommentItem { ...props } />)`
   margin-top: 0.75rem;
 `
 
 const CommentList = ({ id, list }) => (
   <Wrapper>
     <CommentForm id={ id } />
-    { list.map(item => <StyledCommentItem key={ item.id } comment={ item } />) }
+    { list.map(item => <StyledCommentItem key={ item.id } comment={ item } artworkId={ id } />) }
   </Wrapper>
 )
 

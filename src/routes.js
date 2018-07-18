@@ -3,6 +3,7 @@ import {
   BookmarkPage,
   ArtworkPage,
   AuthPage,
+  SearchPage,
 } from 'components'
 
 const routes = [{
@@ -21,6 +22,9 @@ const routes = [{
   path: '/auth',
   exact: true,
   component: AuthPage,
+}, {
+  path: '/search',
+  component: SearchPage,
 }]
 
 export default routes

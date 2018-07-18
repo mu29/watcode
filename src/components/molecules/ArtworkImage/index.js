@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Text } from 'components'
 import { palette } from 'services/style'
 
-const Wrapper = styled.div`
+const textColor = ({ isBookmarked, theme }) =>
+  palette(isBookmarked ? 'yellow.default' : 'gray.30')({ theme })
+
+const Wrapper = styled.article`
   flex-shrink: 0;
   position: relative;
   width: 4.5rem;
@@ -12,6 +15,7 @@ const Wrapper = styled.div`
   margin-right: 0.5rem;
   overflow: hidden;
   border: 0.0625rem solid ${palette('gray.30')};
+  cursor: pointer;
 `
 
 const Image = styled.img`
@@ -26,29 +30,46 @@ const CodeArea = styled.div`
   left: 0;
   right: 0;
   bottom: 0;
-  padding: 0.25rem;
+  padding: 0.375rem;
   display: flex;
   justify-content: center;
   align-items: center;
   background-color: ${palette('gray.100')};
 `
 
-const ArtworkImage = ({
-  id,
-  url,
-  ...props
-}) => (
-  <Wrapper { ...props }>
-    <Image src={ url } />
-    <CodeArea>
-      <Text color="gray.30" fontSize={ 12 } small>#{ id }</Text>
-    </CodeArea>
-  </Wrapper>
-)
+const StyledText = styled(Text)`
+  color: ${textColor};
+  transition: color 0.2s;
+
+  ${Wrapper}:hover & {
+    color: ${palette('yellow.default')};
+  }
+`
+
+class ArtworkImage extends Component {
+  toggleBookmark = (event) => {
+    event.preventDefault()
+    this.props.toggleBookmark()
+  }
+
+  render() {
+    const { url, isBookmarked, id } = this.props
+    return (
+      <Wrapper { ...this.props } onClick={ this.toggleBookmark }>
+        <Image src={ url } />
+        <CodeArea>
+          <StyledText isBookmarked={ isBookmarked } fontSize={ 12 } small>#{ id }</StyledText>
+        </CodeArea>
+      </Wrapper>
+    )
+  }
+}
 
 ArtworkImage.propTypes = {
   id: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
+  isBookmarked: PropTypes.bool.isRequired,
+  toggleBookmark: PropTypes.func.isRequired,
 }
 
 export default ArtworkImage

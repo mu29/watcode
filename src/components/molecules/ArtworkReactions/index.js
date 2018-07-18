@@ -4,6 +4,9 @@ import styled from 'styled-components'
 import { Icon, Text } from 'components'
 import { palette } from 'services/style'
 
+const color = ({ isBookmarked, theme }) =>
+  palette(isBookmarked ? 'yellow.default' : 'gray.70')({ theme })
+
 const Wrapper = styled.div`
   display: flex;
   align-items: center;
@@ -17,13 +20,13 @@ const StyledIcon = styled(Icon)`
   height: 0.75rem;
   margin-right: 0.25rem;
   font-size: 0.75rem;
-  color: ${palette('gray.70')};
+  color: ${color};
   line-height: 1;
 `
 
 const StyledText = styled(Text)`
   font-size: 0.6875rem;
-  color: ${palette('gray.70')};
+  color: ${color};
   line-height: 1.1;
 
   &:nth-child(odd) {
@@ -31,22 +34,29 @@ const StyledText = styled(Text)`
   }
 `
 
-const ArtworkReactions = ({ stars, comments, views }) => (
+const ArtworkReactions = ({
+  isBookmarked,
+  bookmarks,
+  comments,
+  views,
+}) => (
   <Wrapper>
-    <StyledIcon type="regular" icon="star" />
-    <StyledText small>{ stars }명</StyledText>
+    <StyledIcon isBookmarked={ isBookmarked } type="regular" icon="star" />
+    <StyledText isBookmarked={ isBookmarked } small>{ bookmarks }명</StyledText>
     <StyledText>{ comments > 0 ? `댓글 ${comments}개 · ` : ''}조회 { views }회</StyledText>
   </Wrapper>
 )
 
 ArtworkReactions.propTypes = {
-  stars: PropTypes.number,
+  isBookmarked: PropTypes.bool,
+  bookmarks: PropTypes.number,
   comments: PropTypes.number,
   views: PropTypes.number,
 }
 
 ArtworkReactions.defaultProps = {
-  stars: 0,
+  isBookmarked: false,
+  bookmarks: 0,
   comments: 0,
   views: 0,
 }

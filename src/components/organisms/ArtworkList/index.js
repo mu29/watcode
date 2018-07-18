@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { ArtworkItem } from 'components'
 
-const ArtworkList = ({ list }) => list.map(item => (
+const ArtworkList = ({ list }) => list.filter(Boolean).map(item => (
   <ArtworkItem artwork={ item } key={ item.id } />
 ))
 

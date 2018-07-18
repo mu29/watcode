@@ -18,13 +18,11 @@ export default (state = initialState, action) => {
         ...state,
         bookmarks: uniq([...state.bookmarks, ...action.payload.map(b => b.id)]),
       }
-    case deleteBookmarkActions.success.type: {
-      const { id } = action.meta.params
+    case deleteBookmarkActions.success.type:
       return {
         ...state,
-        bookmarks: state.bookmarks.filter(c => c !== id),
+        bookmarks: state.bookmarks.filter(c => c !== action.payload.id),
       }
-    }
     default:
       return state
   }

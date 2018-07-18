@@ -48,8 +48,19 @@ const StyledText = styled(Text)`
 
 class ArtworkImage extends Component {
   toggleBookmark = (event) => {
+    const {
+      email,
+      isBookmarked,
+      createBookmark,
+      deleteBookmark,
+    } = this.props
     event.preventDefault()
-    this.props.toggleBookmark()
+
+    if (isBookmarked) {
+      deleteBookmark()
+    } else {
+      createBookmark(email)
+    }
   }
 
   render() {
@@ -68,8 +79,14 @@ class ArtworkImage extends Component {
 ArtworkImage.propTypes = {
   id: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
+  email: PropTypes.string,
   isBookmarked: PropTypes.bool.isRequired,
-  toggleBookmark: PropTypes.func.isRequired,
+  createBookmark: PropTypes.func.isRequired,
+  deleteBookmark: PropTypes.func.isRequired,
+}
+
+ArtworkImage.defaultProps = {
+  email: undefined,
 }
 
 export default ArtworkImage

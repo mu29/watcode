@@ -13,10 +13,9 @@ const mapStateToProps = (state, { id }) => ({
     || getIsLoading(state, deleteBookmarkActions.type),
 })
 
-const mapDispatchToProps = (dispatch, { id, email, isBookmarked }) => ({
-  toggleBookmark: () => dispatch(isBookmarked ?
-    deleteBookmarkActions.request({ id }) :
-    createBookmarkActions.request({ id, email })),
+const mapDispatchToProps = (dispatch, { id }) => ({
+  createBookmark: email => dispatch(createBookmarkActions.request({ id, email })),
+  deleteBookmark: () => dispatch(deleteBookmarkActions.request({ id })),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(ArtworkImageContainer)

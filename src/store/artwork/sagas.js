@@ -1,10 +1,12 @@
-import { call, takeLatest } from 'redux-saga/effects'
+import { put, call, takeLatest } from 'redux-saga/effects'
+import { replace } from 'react-router-redux'
 import { bindAsyncAction } from 'store/common'
 import {
   readArtworkActions,
   readArtworksActions,
   readPopularArtworksActions,
   searchArtworksActions,
+  prepareSearchActions,
 } from './actions'
 
 export const readArtworkWorker = function* ({ api }, { payload }) {
@@ -27,6 +29,11 @@ export const searchArtworksWorker = function* ({ api }, { payload }) {
   return [result.artworks, { cursor: result.cursor }]
 }
 
+export const prepareSearchWorker = function* (_, { payload }) {
+  yield put(replace(`/search?query=${payload.query}`))
+  return [payload]
+}
+
 export const readArtworkExecutor = bindAsyncAction({
   actions: readArtworkActions,
   worker: readArtworkWorker,
@@ -47,9 +54,15 @@ export const searchArtworksExecutor = bindAsyncAction({
   worker: searchArtworksWorker,
 })
 
+export const prepareSearchExecutor = bindAsyncAction({
+  actions: prepareSearchActions,
+  worker: prepareSearchWorker,
+})
+
 export default function* (services) {
   yield takeLatest(readArtworkActions.request.type, readArtworkExecutor, services)
   yield takeLatest(readArtworksActions.request.type, readArtworksExecutor, services)
   yield takeLatest(readPopularArtworksActions.request.type, readPopularArtworksExecutor, services)
   yield takeLatest(searchArtworksActions.request.type, searchArtworksExecutor, services)
+  yield takeLatest(prepareSearchActions.request.type, prepareSearchExecutor, services)
 }

@@ -7,3 +7,4 @@ export const readArtworkActions = factory.async('READ_ARTWORK', { schema: artwor
 export const readArtworksActions = factory.async('READ_ARTWORKS', { schema: artworkSchema })
 export const readPopularArtworksActions = factory.async('READ_POPULAR_ARTWORKS', { schema: artworkSchema })
 export const searchArtworksActions = factory.async('SEARCH_ARTWORKS', { schema: artworkSchema })
+export const prepareSearchActions = factory.async('PREPARE_SEARCH')

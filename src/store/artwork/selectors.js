@@ -37,6 +37,7 @@ export const initialState = {
       artworks: [],
       cursor: null,
     },
+    query: '',
   },
 }
 

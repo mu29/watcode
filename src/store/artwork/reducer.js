@@ -4,6 +4,7 @@ import {
   readArtworksActions,
   readPopularArtworksActions,
   searchArtworksActions,
+  prepareSearchActions,
 } from './actions'
 
 export default (state = initialState, action) => {
@@ -36,6 +37,15 @@ export default (state = initialState, action) => {
             artworks: uniq([...state.search[type].artworks, ...action.payload.map(a => a.id)]),
             cursor: action.meta.cursor,
           },
+        },
+      }
+    }
+    case prepareSearchActions.success.type: {
+      return {
+        ...state,
+        search: {
+          ...initialState.search,
+          query: action.payload.query,
         },
       }
     }

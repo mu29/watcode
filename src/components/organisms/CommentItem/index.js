@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Text } from 'components'
+import { CommentTooltip } from 'containers'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
@@ -20,8 +21,18 @@ const Name = styled(Text)`
   color: ${palette('gray.100')};
 `
 
+const SytledCommentTooltip = styled(CommentTooltip)`
+  display: none;
+
+  ${Wrapper}:hover & {
+    display: block;
+  }
+`
+
 const CommentItem = ({
+  artworkId,
   comment: {
+    id,
     author,
     content,
   },
@@ -32,10 +43,12 @@ const CommentItem = ({
       <Name fontSize={ 12 }>{ author }</Name>
       <Text fontSize={ 12 }>{ content }</Text>
     </Container>
+    <SytledCommentTooltip id={ id } artworkId={ artworkId } />
   </Wrapper>
 )
 
 CommentItem.propTypes = {
+  artworkId: PropTypes.number.isRequired,
   comment: PropTypes.shape({
     author: PropTypes.string,
     content: PropTypes.string,

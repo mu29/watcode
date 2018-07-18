@@ -1,7 +1,7 @@
 import React from 'react'
 import styled from 'styled-components'
 import { Header, Tab, TabPage, GenericTemplate } from 'components'
-import { ArtworkList } from 'containers'
+import { BookmarkList } from 'containers'
 import { palette } from 'services/style'
 
 const StyledTab = styled(Tab)`
@@ -24,7 +24,7 @@ const BookmarkPage = () => (
   <GenericTemplate header={ <Header location="/bookmarks" /> }>
     <StyledTab>
       <TabPage name="즐겨찾기">
-        <ArtworkList />
+        <BookmarkList />
       </TabPage>
       <TabPage name="추천 작품">
         <Message>준비중입니다 :)</Message>

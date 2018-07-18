@@ -20,6 +20,24 @@ export const initialState = {
     artworks: [],
     cursor: null,
   },
+  search: {
+    id: {
+      artworks: [],
+      cursor: null,
+    },
+    title: {
+      artworks: [],
+      cursor: null,
+    },
+    artist: {
+      artworks: [],
+      cursor: null,
+    },
+    tags: {
+      artworks: [],
+      cursor: null,
+    },
+  },
 }
 
 export const getArtworks = state => getEntity(state).artworks
@@ -27,6 +45,7 @@ export const getRecentIds = state => state.artwork.recent.artworks
 export const getDailyIds = state => state.artwork.daily.artworks
 export const getWeeklyIds = state => state.artwork.weekly.artworks
 export const getMonthlyIds = state => state.artwork.monthly.artworks
+export const getSearchIds = (state, props) => state.artwork.search[props.type].artworks
 
 export const getArtwork = createSelector(
   [getEntity, (_, props) => props.id],
@@ -50,5 +69,10 @@ export const getWeeklyArtworks = createSelector(
 
 export const getMonthlyArtworks = createSelector(
   [getEntity, getMonthlyIds],
+  (entities, ids) => denormalize(ids, [artworkSchema], entities),
+)
+
+export const getSearchArtworks = createSelector(
+  [getEntity, getSearchIds],
   (entities, ids) => denormalize(ids, [artworkSchema], entities),
 )

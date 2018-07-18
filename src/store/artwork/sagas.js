@@ -4,6 +4,7 @@ import {
   readArtworkActions,
   readArtworksActions,
   readPopularArtworksActions,
+  searchArtworksActions,
 } from './actions'
 
 export const readArtworkWorker = function* ({ api }, { payload }) {
@@ -18,6 +19,11 @@ export const readArtworksWorker = function* ({ api }, { payload }) {
 
 export const readPopularArtworksWorker = function* ({ api }, { payload }) {
   const result = yield call(api.get, '/artworks/popular', { params: payload })
+  return [result.artworks, { cursor: result.cursor }]
+}
+
+export const searchArtworksWorker = function* ({ api }, { payload }) {
+  const result = yield call(api.get, '/artworks/search', { params: payload })
   return [result.artworks, { cursor: result.cursor }]
 }
 
@@ -36,8 +42,14 @@ export const readPopularArtworksExecutor = bindAsyncAction({
   worker: readPopularArtworksWorker,
 })
 
+export const searchArtworksExecutor = bindAsyncAction({
+  actions: searchArtworksActions,
+  worker: searchArtworksWorker,
+})
+
 export default function* (services) {
   yield takeLatest(readArtworkActions.request.type, readArtworkExecutor, services)
   yield takeLatest(readArtworksActions.request.type, readArtworksExecutor, services)
   yield takeLatest(readPopularArtworksActions.request.type, readPopularArtworksExecutor, services)
+  yield takeLatest(searchArtworksActions.request.type, searchArtworksExecutor, services)
 }

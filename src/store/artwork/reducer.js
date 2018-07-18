@@ -3,6 +3,7 @@ import { initialState } from './selectors'
 import {
   readArtworksActions,
   readPopularArtworksActions,
+  searchArtworksActions,
 } from './actions'
 
 export default (state = initialState, action) => {
@@ -22,6 +23,19 @@ export default (state = initialState, action) => {
         [period]: {
           artworks: uniq([...state[period].artworks, ...action.payload.map(a => a.id)]),
           cursor: action.meta.cursor,
+        },
+      }
+    }
+    case searchArtworksActions.success.type: {
+      const { type } = action.meta.params
+      return {
+        ...state,
+        search: {
+          ...state.search,
+          [type]: {
+            artworks: uniq([...state.search[type].artworks, ...action.payload.map(a => a.id)]),
+            cursor: action.meta.cursor,
+          },
         },
       }
     }

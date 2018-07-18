@@ -1,7 +1,7 @@
 import React, { Component } from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Text } from 'components'
+import { Text, Loading } from 'components'
 import { palette } from 'services/style'
 
 const textColor = ({ isBookmarked, theme }) =>
@@ -64,12 +64,19 @@ class ArtworkImage extends Component {
   }
 
   render() {
-    const { url, isBookmarked, id } = this.props
+    const {
+      id,
+      url,
+      isLoading,
+      isBookmarked,
+    } = this.props
     return (
       <Wrapper { ...this.props } onClick={ this.toggleBookmark }>
         <Image src={ url } />
         <CodeArea>
-          <StyledText isBookmarked={ isBookmarked } fontSize={ 12 } small>#{ id }</StyledText>
+          <Loading isLoading={ isLoading } size={ 12 } color="white.default" compact>
+            <StyledText isBookmarked={ isBookmarked } fontSize={ 12 } small>#{ id }</StyledText>
+          </Loading>
         </CodeArea>
       </Wrapper>
     )
@@ -80,6 +87,7 @@ ArtworkImage.propTypes = {
   id: PropTypes.number.isRequired,
   url: PropTypes.string.isRequired,
   email: PropTypes.string,
+  isLoading: PropTypes.bool.isRequired,
   isBookmarked: PropTypes.bool.isRequired,
   createBookmark: PropTypes.func.isRequired,
   deleteBookmark: PropTypes.func.isRequired,

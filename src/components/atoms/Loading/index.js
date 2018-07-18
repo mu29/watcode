@@ -5,7 +5,7 @@ import { size, color } from 'services/style'
 
 const Wrapper = styled.div`
   margin: auto;
-  padding: 1rem;
+  padding: ${({ compact }) => (compact ? 0 : '1rem')};
 `
 
 const Progress = styled.div`
@@ -13,7 +13,7 @@ const Progress = styled.div`
   height: ${size};
   margin: auto;
   animation: rotate 0.8s infinite linear;
-  border: 0.1875rem solid ${color};
+  border: 0.125rem solid ${color};
   border-right-color: transparent;
   border-radius: 50%;
 
@@ -27,9 +27,14 @@ const Progress = styled.div`
   }
 `
 
-const Loading = ({ isLoading, children, ...props }) => (
+const Loading = ({
+  isLoading,
+  compact,
+  children,
+  ...props
+}) => (
   isLoading ? (
-    <Wrapper>
+    <Wrapper compact={ compact }>
       <Progress { ...props } />
     </Wrapper>
   ) : children
@@ -40,13 +45,15 @@ Loading.propTypes = {
   children: PropTypes.node,
   color: PropTypes.string,
   size: PropTypes.number,
+  compact: PropTypes.bool,
 }
 
 Loading.defaultProps = {
   isLoading: true,
   children: null,
-  color: 'black',
+  color: 'gray.100',
   size: 24,
+  compact: false,
 }
 
 export default Loading

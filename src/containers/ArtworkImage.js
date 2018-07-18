@@ -9,8 +9,8 @@ const ArtworkImageContainer = props => <ArtworkImage { ...props } />
 const mapStateToProps = (state, { id }) => ({
   email: state.auth.user.email,
   isBookmarked: state.bookmark.bookmarks.find(b => b === id) !== undefined,
-  isLoading: getIsLoading(state, createBookmarkActions.type)
-    || getIsLoading(state, deleteBookmarkActions.type),
+  isLoading: getIsLoading(state, createBookmarkActions.type, 'id', id)
+    || getIsLoading(state, deleteBookmarkActions.type, 'id', id),
 })
 
 const mapDispatchToProps = (dispatch, { id }) => ({

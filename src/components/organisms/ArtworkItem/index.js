@@ -1,7 +1,8 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Heading, Tag, Text, ArtworkImage, ArtworkReactions } from 'components'
+import { Link, Heading, Tag, Text } from 'components'
+import { ArtworkImage, ArtworkReactions } from 'containers'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
@@ -38,6 +39,12 @@ const TagArea = styled.div`
   }
 `
 
+const StyledLink = styled(Link)`
+  &:hover {
+    text-decoration: underline;
+  }
+`
+
 const StyledHeading = styled(Heading)`
   font-weight: 400;
   overflow: hidden;
@@ -53,7 +60,7 @@ const ArtworkItem = ({
     type,
     tags,
     imageUrl,
-    stars,
+    bookmarks,
     comments,
     views,
   },
@@ -64,7 +71,9 @@ const ArtworkItem = ({
     <ArtworkArea>
       <ArtworkImage id={ id } url={ imageUrl } />
       <InfoArea>
-        <StyledHeading level={ 6 }>{ title }</StyledHeading>
+        <StyledLink to={ `/artworks/${id}` } key={ id }>
+          <StyledHeading level={ 6 }>{ title }</StyledHeading>
+        </StyledLink>
         <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
         <TagArea>
           <Tag category>{ type }</Tag>
@@ -72,7 +81,7 @@ const ArtworkItem = ({
         </TagArea>
       </InfoArea>
     </ArtworkArea>
-    <ArtworkReactions stars={ stars } comments={ comments } views={ views } />
+    <ArtworkReactions id={ id } bookmarks={ bookmarks } comments={ comments } views={ views } />
   </Wrapper>
 )
 

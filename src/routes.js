@@ -1,6 +1,7 @@
 import {
   HomePage,
   BookmarkPage,
+  CommunityPage,
   ArtworkPage,
   AuthPage,
   SearchPage,
@@ -14,6 +15,10 @@ const routes = [{
   path: '/bookmarks',
   exact: true,
   component: BookmarkPage,
+}, {
+  path: '/community',
+  exact: true,
+  component: CommunityPage,
 }, {
   path: '/artworks/:id',
   exact: true,

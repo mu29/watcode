@@ -3,13 +3,15 @@
 exports[`<SearchBar /> 정상적으로 렌더링된다 1`] = `
 <Wrapper>
   <StyledInput
-    name="query"
+    onChange={[Function]}
+    onKeyPress={[Function]}
     placeholder="번호, 제목, 작가, 태그로 검색하세요"
   />
   <StyledIconButton
     backgroundColor="white.default"
     color="yellow.default"
     icon="search"
+    onClick={[Function]}
   />
 </Wrapper>
 `;

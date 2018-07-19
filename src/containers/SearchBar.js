@@ -1,12 +1,12 @@
 import React from 'react'
-import { reduxForm } from 'redux-form'
+import { connect } from 'react-redux'
 import { SearchBar } from 'components'
+import { prepareSearchActions } from 'store/actions'
 
 const SearchBarContainer = props => <SearchBar { ...props } />
 
-const onSubmit = (data, dispatch) => {}
+const mapDispatchToProps = dispatch => ({
+  onSubmit: query => dispatch(prepareSearchActions.request({ query })),
+})
 
-export default reduxForm({
-  form: 'search',
-  onSubmit,
-})(SearchBarContainer)
+export default connect(null, mapDispatchToProps)(SearchBarContainer)

@@ -18,7 +18,7 @@ export const readCommentsWorker = function* ({ api }, { payload }) {
 }
 
 export const deleteCommentWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.delete, `/comments/${payload.id}`)
+  const result = yield call(api.delete, `/comments/${payload.id}`, { params: payload })
   return [result]
 }
 

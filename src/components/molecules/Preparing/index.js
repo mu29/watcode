@@ -1,7 +1,5 @@
 import React from 'react'
-import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Button } from 'components'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
@@ -16,14 +14,15 @@ const Wrapper = styled.div`
   }
 `
 
-const Profile = ({ onSignOut }) => (
+const Message = styled.div`
+  padding: 4rem;
+  text-align: center;
+`
+
+const Preparing = () => (
   <Wrapper>
-    <Button onClick={ onSignOut }>로그아웃</Button>
+    <Message>준비중입니다 :)</Message>
   </Wrapper>
 )
 
-Profile.propTypes = {
-  onSignOut: PropTypes.func.isRequired,
-}
-
-export default Profile
+export default Preparing

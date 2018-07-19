@@ -1,9 +1,12 @@
-import { call, takeLatest } from 'redux-saga/effects'
+import { all, put, call, takeLatest, takeEvery } from 'redux-saga/effects'
+import { replace } from 'react-router-redux'
 import { bindAsyncAction } from 'store/common'
 import {
   readArtworkActions,
   readArtworksActions,
   readPopularArtworksActions,
+  searchArtworksActions,
+  prepareSearchActions,
 } from './actions'
 
 export const readArtworkWorker = function* ({ api }, { payload }) {
@@ -21,6 +24,22 @@ export const readPopularArtworksWorker = function* ({ api }, { payload }) {
   return [result.artworks, { cursor: result.cursor }]
 }
 
+export const searchArtworksWorker = function* ({ api }, { payload }) {
+  const result = yield call(api.get, '/artworks/search', { params: payload })
+  return [result.artworks, { cursor: result.cursor }]
+}
+
+export const prepareSearchWorker = function* (_, { payload }) {
+  yield put(replace(`/search?query=${payload.query}`))
+  yield all([
+    put(searchArtworksActions.request({ type: 'tags', query: payload.query })),
+    put(searchArtworksActions.request({ type: 'artist', query: payload.query })),
+    put(searchArtworksActions.request({ type: 'title', query: payload.query })),
+    put(searchArtworksActions.request({ type: 'id', query: payload.query })),
+  ])
+  return [payload]
+}
+
 export const readArtworkExecutor = bindAsyncAction({
   actions: readArtworkActions,
   worker: readArtworkWorker,
@@ -36,8 +55,20 @@ export const readPopularArtworksExecutor = bindAsyncAction({
   worker: readPopularArtworksWorker,
 })
 
+export const searchArtworksExecutor = bindAsyncAction({
+  actions: searchArtworksActions,
+  worker: searchArtworksWorker,
+})
+
+export const prepareSearchExecutor = bindAsyncAction({
+  actions: prepareSearchActions,
+  worker: prepareSearchWorker,
+})
+
 export default function* (services) {
   yield takeLatest(readArtworkActions.request.type, readArtworkExecutor, services)
   yield takeLatest(readArtworksActions.request.type, readArtworksExecutor, services)
   yield takeLatest(readPopularArtworksActions.request.type, readPopularArtworksExecutor, services)
+  yield takeEvery(searchArtworksActions.request.type, searchArtworksExecutor, services)
+  yield takeLatest(prepareSearchActions.request.type, prepareSearchExecutor, services)
 }

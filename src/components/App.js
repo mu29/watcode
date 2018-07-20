@@ -35,7 +35,7 @@ export default class App extends React.Component {
 
   render() {
     const state = this.props.store.getState()
-    const isLoggedIn = state.auth.user.email !== null
+    const isLoggedIn = state.auth.user.email !== undefined
     return (
       <React.Fragment>
         <Helmet titleTemplate="watcode">

@@ -8,17 +8,17 @@ import {
 } from './actions'
 
 export const createCommentWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.post, `/artworks/${payload.id}/comments`, { data: payload })
+  const result = yield call(api.post, `/api/artworks/${payload.id}/comments`, { data: payload })
   return [result]
 }
 
 export const readCommentsWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.get, `/artworks/${payload.id}/comments`)
+  const result = yield call(api.get, `/api/artworks/${payload.id}/comments`)
   return [result.comments, { cursor: result.cursor }]
 }
 
 export const deleteCommentWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.delete, `/comments/${payload.id}`, { params: payload })
+  const result = yield call(api.delete, `/api/comments/${payload.id}`, { params: payload })
   return [result]
 }
 

@@ -7,17 +7,17 @@ import {
 } from './actions'
 
 export const createBookmarkWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.post, `/artworks/${payload.id}/bookmarks`, { data: payload })
+  const result = yield call(api.post, `/api/artworks/${payload.id}/bookmarks`, { data: payload })
   return [result]
 }
 
 export const readBookmarksWorker = function* ({ api }) {
-  const result = yield call(api.get, '/bookmarks')
+  const result = yield call(api.get, '/api/bookmarks')
   return [result.artworks]
 }
 
 export const deleteBookmarkWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.delete, `/bookmarks/${payload.id}`)
+  const result = yield call(api.delete, `/api/bookmarks/${payload.id}`)
   return [result]
 }
 

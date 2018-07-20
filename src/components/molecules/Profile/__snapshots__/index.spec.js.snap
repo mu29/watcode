@@ -7,6 +7,13 @@ exports[`<Profile /> 정상적으로 렌더링된다 1`] = `
   border: 0.0625rem solid;
 }
 
+@media (max-width:768px) {
+  .c0 {
+    margin: 0;
+    border: none;
+  }
+}
+
 <div
   class="c0"
 >

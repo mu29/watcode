@@ -9,9 +9,9 @@ const PaginableArtworkList = withPaginate()(props => <ArtworkList { ...props } /
 
 const ArtworkListContainer = props => <PaginableArtworkList { ...props } />
 
-const mapStateToProps = (state, props) => ({
-  list: getSearchArtworks(state, props),
-  cursor: state.artwork.search[props.type].cursor,
+const mapStateToProps = state => ({
+  list: getSearchArtworks(state),
+  cursor: state.artwork.search.cursor,
   isLoading: getIsLoading(state, searchArtworksActions.type),
 })
 

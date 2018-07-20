@@ -1,4 +1,4 @@
-import { all, put, call, takeLatest, takeEvery } from 'redux-saga/effects'
+import { put, call, takeLatest, takeEvery } from 'redux-saga/effects'
 import { replace } from 'react-router-redux'
 import { bindAsyncAction } from 'store/common'
 import {
@@ -31,12 +31,7 @@ export const searchArtworksWorker = function* ({ api }, { payload }) {
 
 export const prepareSearchWorker = function* (_, { payload }) {
   yield put(replace(`/search?query=${payload.query}`))
-  yield all([
-    put(searchArtworksActions.request({ type: 'tags', query: payload.query })),
-    put(searchArtworksActions.request({ type: 'artist', query: payload.query })),
-    put(searchArtworksActions.request({ type: 'title', query: payload.query })),
-    put(searchArtworksActions.request({ type: 'id', query: payload.query })),
-  ])
+  yield put(searchArtworksActions.request({ query: payload.query }))
   return [payload]
 }
 

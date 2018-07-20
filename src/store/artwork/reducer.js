@@ -27,19 +27,15 @@ export default (state = initialState, action) => {
         },
       }
     }
-    case searchArtworksActions.success.type: {
-      const { type } = action.meta.params
+    case searchArtworksActions.success.type:
       return {
         ...state,
         search: {
           ...state.search,
-          [type]: {
-            artworks: uniq([...state.search[type].artworks, ...action.payload.map(a => a.id)]),
-            cursor: action.meta.cursor,
-          },
+          artworks: uniq([...state.search.artworks, ...action.payload.map(a => a.id)]),
+          cursor: action.meta.cursor,
         },
       }
-    }
     case prepareSearchActions.success.type: {
       return {
         ...state,

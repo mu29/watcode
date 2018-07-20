@@ -33,6 +33,10 @@ const StyledIconButton = styled(props => <IconButton { ...props } />)`
 `
 
 class SearchBar extends Component {
+  static getDerivedStateFromProps(props, state) {
+    return state !== props ? props : null
+  }
+
   state = { query: '' }
 
   onChange = ({ target }) => this.setState({ query: target.value })
@@ -43,6 +47,7 @@ class SearchBar extends Component {
     return (
       <Wrapper { ...this.props }>
         <StyledInput
+          value={ this.state.query }
           onChange={ this.onChange }
           onKeyPress={ ({ key }) => key === 'Enter' && this.onSubmit() }
           placeholder="번호, 제목, 작가, 태그로 검색하세요"
@@ -59,7 +64,12 @@ class SearchBar extends Component {
 }
 
 SearchBar.propTypes = {
+  query: PropTypes.string,
   onSubmit: PropTypes.func.isRequired,
+}
+
+SearchBar.defaultProps = {
+  query: '',
 }
 
 export default SearchBar

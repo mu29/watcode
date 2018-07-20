@@ -5,8 +5,12 @@ import { prepareSearchActions } from 'store/actions'
 
 const SearchBarContainer = props => <SearchBar { ...props } />
 
+const mapStateToProps = state => ({
+  query: state.artwork.search.query,
+})
+
 const mapDispatchToProps = dispatch => ({
   onSubmit: query => dispatch(prepareSearchActions.request({ query })),
 })
 
-export default connect(null, mapDispatchToProps)(SearchBarContainer)
+export default connect(mapStateToProps, mapDispatchToProps)(SearchBarContainer)

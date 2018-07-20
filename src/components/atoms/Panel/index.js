@@ -3,7 +3,6 @@ import { palette } from 'services/style'
 
 const Panel = styled.div`
   margin: 1rem 0;
-  padding: 1rem;
   border: 0.0625rem solid ${palette('gray.40')};
   background-color: ${palette('white.default')};
 

@@ -21,22 +21,8 @@ export const initialState = {
     cursor: null,
   },
   search: {
-    id: {
-      artworks: [],
-      cursor: null,
-    },
-    title: {
-      artworks: [],
-      cursor: null,
-    },
-    artist: {
-      artworks: [],
-      cursor: null,
-    },
-    tags: {
-      artworks: [],
-      cursor: null,
-    },
+    artworks: [],
+    cursor: null,
     query: '',
   },
 }
@@ -46,7 +32,7 @@ export const getRecentIds = state => state.artwork.recent.artworks
 export const getDailyIds = state => state.artwork.daily.artworks
 export const getWeeklyIds = state => state.artwork.weekly.artworks
 export const getMonthlyIds = state => state.artwork.monthly.artworks
-export const getSearchIds = (state, props) => state.artwork.search[props.type].artworks
+export const getSearchIds = state => state.artwork.search.artworks
 
 export const getArtwork = createSelector(
   [getEntity, (_, props) => props.id],

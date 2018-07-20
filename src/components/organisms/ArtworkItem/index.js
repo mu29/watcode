@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
+import uniq from 'lodash/uniq'
 import { Link, Heading, Tag, Text } from 'components'
 import { ArtworkImage, ArtworkReactions } from 'containers'
 import { palette } from 'services/style'
@@ -74,10 +75,10 @@ const ArtworkItem = ({
         <StyledLink to={ `/artworks/${id}` } key={ id }>
           <StyledHeading level={ 6 }>{ title }</StyledHeading>
         </StyledLink>
-        <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist }</Text>
+        <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist.join(', ') }</Text>
         <TagArea>
           <Tag category>{ type }</Tag>
-          { tags.map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
+          { uniq(tags).map(tag => (<Tag key={ tag }>{ tag }</Tag>)) }
         </TagArea>
       </InfoArea>
     </ArtworkArea>
@@ -88,7 +89,7 @@ const ArtworkItem = ({
 ArtworkItem.propTypes = {
   artwork: PropTypes.shape({
     id: PropTypes.number,
-    artist: PropTypes.string,
+    artist: PropTypes.array,
     title: PropTypes.string,
     tags: PropTypes.array,
     imageUrl: PropTypes.string,

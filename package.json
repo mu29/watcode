@@ -12,7 +12,8 @@
     "tdd": "jest --watchAll",
     "test": "jest",
     "storybook": "start-storybook -p 3002 -c config/storybook",
-    "build-storybook": "build-storybook"
+    "build-storybook": "build-storybook",
+    "deploy": "yarn build && firebase deploy"
   },
   "license": "MIT",
   "jest": {

@@ -17,7 +17,7 @@ const config = {
   production: {
     host: process.env.HOST || 'localhost',
     port: process.env.PORT || 3000,
-    apiUrl: 'https://api.watcode.net',
+    apiUrl: 'https://watcode-208609.firebaseapp.com',
   },
 }
 

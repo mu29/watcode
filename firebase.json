@@ -1,0 +1,51 @@
+{
+  "hosting": {
+    "public": "static",
+    "headers": [{
+      "source": "**",
+      "headers": [{
+        "key": "Access-Control-Allow-Origin",
+        "value": "*"
+      }, {
+        "key": "Access-Control-Allow-Headers",
+        "value": "*"
+      }, {
+        "key": "Access-Control-Allow-Methods",
+        "value": "*"
+      }, {
+        "key": "Content-Type",
+        "value": "*"
+      }]
+    }],
+    "rewrites": [{
+      "source": "/api/bookmarks",
+      "function": "bookmarks"
+    }, {
+      "source": "/api/bookmarks/**",
+      "function": "bookmarks"
+    }, {
+      "source": "/api/artworks/*/bookmarks",
+      "function": "bookmarks"
+    }, {
+      "source": "/api/artworks/*/comments",
+      "function": "comments"
+    }, {
+      "source": "/api/comments/**",
+      "function": "comments"
+    }, {
+      "source": "/api/artworks",
+      "function": "artworks"
+    }, {
+      "source": "/api/artworks/**",
+      "function": "artworks"
+    }, {
+      "source": "**",
+      "destination": "/index.html"
+    }],
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ]
+  }
+}

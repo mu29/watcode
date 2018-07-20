@@ -21,7 +21,7 @@ export const signUpWorker = function* ({ firebase }, { payload }) {
 
 export const signOutWorker = function* ({ firebase }) {
   yield call(firebase.signOut)
-  return null
+  return []
 }
 
 export const authorizeWorker = function* ({ api }, { payload }) {

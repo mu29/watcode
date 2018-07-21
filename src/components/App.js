@@ -28,7 +28,7 @@ export default class App extends React.Component {
   componentWillMount() {
     const { store } = this.props
     auth.onAuthStateChanged((user) => {
-      store.dispatch(authorizeActions.request({ user }))
+      store.dispatch(authorizeActions.request({ user: user || {} }))
       store.dispatch(readBookmarksActions.request())
     })
   }

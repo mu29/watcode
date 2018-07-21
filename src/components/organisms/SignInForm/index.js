@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Field } from 'redux-form'
-import { Button, ReduxField } from 'components'
+import { LoadingButton, ReduxField } from 'components'
 
 const Form = styled.form`
   padding: 1rem;
@@ -23,7 +23,17 @@ const SignInForm = ({
     <FieldWrapper>
       <Field label="비밀번호" type="password" name="password" placeholder="6자 이상의 비밀번호를 입력해주세요." component={ ReduxField } />
     </FieldWrapper>
-    <Button type="submit" height={ 40 } fontSize={ 14 } disabled={ isLoading } block>시작하기</Button>
+    <LoadingButton
+      type="submit"
+      height={ 40 }
+      fontSize={ 14 }
+      loadingSize={ 12 }
+      isLoading={ isLoading }
+      disabled={ isLoading }
+      block
+    >
+      시작하기
+    </LoadingButton>
   </Form>
 )
 

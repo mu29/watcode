@@ -1,7 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
-import { Button } from 'components'
+import { LoadingButton } from 'components'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
@@ -16,14 +16,21 @@ const Wrapper = styled.div`
   }
 `
 
-const Profile = ({ onSignOut }) => (
+const Profile = ({ onSignOut, isLoading }) => (
   <Wrapper>
-    <Button onClick={ onSignOut }>로그아웃</Button>
+    <LoadingButton
+      onClick={ onSignOut }
+      isLoading={ isLoading }
+      disabled={ isLoading }
+    >
+      로그아웃
+    </LoadingButton>
   </Wrapper>
 )
 
 Profile.propTypes = {
   onSignOut: PropTypes.func.isRequired,
+  isLoading: PropTypes.bool.isRequired,
 }
 
 export default Profile

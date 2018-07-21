@@ -39,7 +39,7 @@ export default class App extends React.Component {
     return (
       <React.Fragment>
         <Helmet titleTemplate="watcode">
-          <title>watcode</title>
+          <title>왓코드 - 오늘 볼 만화 추천해줘!</title>
           <meta charSet="UTF-8" />
           <meta name="description" content="" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />

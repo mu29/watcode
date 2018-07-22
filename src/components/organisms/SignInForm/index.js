@@ -18,7 +18,7 @@ const SignInForm = ({
 }) => (
   <Form onSubmit={ handleSubmit }>
     <FieldWrapper>
-      <Field label="메일 주소" name="email" placeholder="example@watcode.net" component={ ReduxField } />
+      <Field label="메일 주소" name="email" placeholder="메일 주소를 입력해주세요." component={ ReduxField } />
     </FieldWrapper>
     <FieldWrapper>
       <Field label="비밀번호" type="password" name="password" placeholder="6자 이상의 비밀번호를 입력해주세요." component={ ReduxField } />

@@ -72,7 +72,7 @@ class ArtworkImage extends Component {
     } = this.props
     return (
       <Wrapper { ...this.props } onClick={ this.toggleBookmark }>
-        <Image src={ url } />
+        <Image src={ `https://${url}` } />
         <CodeArea>
           <Loading isLoading={ isLoading } size={ 12 } color="white.default" compact>
             <StyledText isBookmarked={ isBookmarked } fontSize={ 12 } small>#{ id }</StyledText>

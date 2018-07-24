@@ -4,6 +4,7 @@ import {
   createBookmarkActions,
   readBookmarksActions,
   deleteBookmarkActions,
+  readRecommendationsActions,
 } from './actions'
 
 export const createBookmarkWorker = function* ({ api }, { payload }) {
@@ -21,6 +22,11 @@ export const deleteBookmarkWorker = function* ({ api }, { payload }) {
   return [result]
 }
 
+export const readRecommendationsWorker = function* ({ api }) {
+  const result = yield call(api.get, '/api/recommendations')
+  return [result.artworks]
+}
+
 export const createBookmarkExecutor = bindAsyncAction({
   actions: createBookmarkActions,
   worker: createBookmarkWorker,
@@ -36,8 +42,14 @@ export const deleteBookmarkExecutor = bindAsyncAction({
   worker: deleteBookmarkWorker,
 })
 
+export const readRecommendationsExecutor = bindAsyncAction({
+  actions: readRecommendationsActions,
+  worker: readRecommendationsWorker,
+})
+
 export default function* (services) {
   yield takeLatest(createBookmarkActions.request.type, createBookmarkExecutor, services)
   yield takeLatest(readBookmarksActions.request.type, readBookmarksExecutor, services)
   yield takeLatest(deleteBookmarkActions.request.type, deleteBookmarkExecutor, services)
+  yield takeLatest(readRecommendationsActions.request.type, readRecommendationsExecutor, services)
 }

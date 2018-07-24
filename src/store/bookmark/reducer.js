@@ -4,6 +4,7 @@ import {
   createBookmarkActions,
   readBookmarksActions,
   deleteBookmarkActions,
+  readRecommendationsActions,
 } from './actions'
 
 export default (state = initialState, action) => {
@@ -22,6 +23,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         bookmarks: state.bookmarks.filter(c => c !== action.payload.id),
+      }
+    case readRecommendationsActions.success.type:
+      return {
+        ...state,
+        recommendations: uniq([...state.recommendations, ...action.payload.map(r => r.id)]),
       }
     default:
       return state

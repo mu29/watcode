@@ -44,9 +44,13 @@ Profile.propTypes = {
   user: PropTypes.shape({
     displayName: PropTypes.string,
     email: PropTypes.string,
-  }).isRequired,
+  }),
   onSignOut: PropTypes.func.isRequired,
   isLoading: PropTypes.bool.isRequired,
+}
+
+Profile.defaultProps = {
+  user: {},
 }
 
 export default Profile

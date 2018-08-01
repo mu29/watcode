@@ -13,7 +13,7 @@ const withAuthorize = (Component) => {
   }
 
   const mapStateToProps = state => ({
-    isLoggedIn: state.auth.user !== null,
+    isLoggedIn: state.auth.user.email !== undefined,
   })
 
   return connect(mapStateToProps)(WithAuthorize)

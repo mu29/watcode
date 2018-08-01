@@ -14,7 +14,7 @@ import configureStore from 'store/configure'
 const history = createHistory()
 const cookies = new Cookies()
 const token = cookies.get('token')
-const initialState = window.__INITIAL_STATE__ || { auth: { user: { token } } }
+const initialState = window.__INITIAL_STATE__
 const store = configureStore(initialState, history, { api, firebase })
 
 const renderApp = () => (

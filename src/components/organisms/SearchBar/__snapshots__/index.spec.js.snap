@@ -1,11 +1,14 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`<SearchBar /> 정상적으로 렌더링된다 1`] = `
-<Wrapper>
+<Wrapper
+  query=""
+>
   <StyledInput
     onChange={[Function]}
     onKeyPress={[Function]}
     placeholder="번호, 제목, 작가, 태그로 검색하세요"
+    value=""
   />
   <StyledIconButton
     backgroundColor="white.default"

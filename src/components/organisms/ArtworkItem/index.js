@@ -73,7 +73,7 @@ const ArtworkItem = ({
       <ArtworkImage id={ id } url={ imageUrl } />
       <InfoArea>
         <StyledLink to={ `/artworks/${id}` } key={ id }>
-          <StyledHeading level={ 6 }>{ title }</StyledHeading>
+          <StyledHeading level={ 6 }>{ title || 'N/A' }</StyledHeading>
         </StyledLink>
         <Text color="gray.60" fontSize={ 12 } fontWeight={ 200 } small>by { artist.join(', ') }</Text>
         <TagArea>

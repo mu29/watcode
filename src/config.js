@@ -6,7 +6,7 @@ const config = {
     port: process.env.PORT || 3000,
     isBrowser: typeof window !== 'undefined',
     isServer: typeof window === 'undefined',
-    apiUrl: 'https://watcode-208609.firebaseapp.com',
+    apiUrl: 'https://watcode.net',
   },
   test: {},
   development: {
@@ -17,7 +17,7 @@ const config = {
   production: {
     host: process.env.HOST || 'localhost',
     port: process.env.PORT || 3000,
-    apiUrl: 'https://api.watcode.net',
+    apiUrl: 'https://watcode.net',
   },
 }
 

@@ -10,22 +10,22 @@ import {
 } from './actions'
 
 export const readArtworkWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.get, `/artworks/${payload.id}`)
+  const result = yield call(api.get, `/api/artworks/${payload.id}`)
   return [result]
 }
 
 export const readArtworksWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.get, '/artworks', { params: payload })
+  const result = yield call(api.get, '/api/artworks', { params: payload })
   return [result.artworks, { cursor: result.cursor }]
 }
 
 export const readPopularArtworksWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.get, '/artworks/popular', { params: payload })
+  const result = yield call(api.get, '/api/artworks/popular', { params: payload })
   return [result.artworks, { cursor: result.cursor }]
 }
 
 export const searchArtworksWorker = function* ({ api }, { payload }) {
-  const result = yield call(api.get, '/artworks/search', { params: payload })
+  const result = yield call(api.get, '/api/artworks/search', { params: payload })
   return [result.artworks, { cursor: result.cursor }]
 }
 

@@ -78,7 +78,7 @@ const Header = ({
   <Wrapper>
     <Container>
       <SearchArea>
-        <Image src="/resources/logo.svg" />
+        <Image src="/resources/logo.png" />
         <SearchBar />
       </SearchArea>
       <ButtonArea>

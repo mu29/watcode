@@ -28,18 +28,18 @@ export default class App extends React.Component {
   componentWillMount() {
     const { store } = this.props
     auth.onAuthStateChanged((user) => {
-      store.dispatch(authorizeActions.request({ user }))
+      store.dispatch(authorizeActions.request({ user: user || {} }))
       store.dispatch(readBookmarksActions.request())
     })
   }
 
   render() {
     const state = this.props.store.getState()
-    const isLoggedIn = state.auth.user !== null
+    const isLoggedIn = state.auth.user.email !== undefined
     return (
       <React.Fragment>
         <Helmet titleTemplate="watcode">
-          <title>watcode</title>
+          <title>왓코드 - 오늘 볼 만화 추천해줘!</title>
           <meta charSet="UTF-8" />
           <meta name="description" content="" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />

@@ -39,7 +39,7 @@ ArtworkView.propTypes = {
   id: PropTypes.number.isRequired,
   artwork: PropTypes.shape({
     id: PropTypes.number,
-    artist: PropTypes.string,
+    artist: PropTypes.array,
     title: PropTypes.string,
     tags: PropTypes.array,
     imageUrl: PropTypes.string,

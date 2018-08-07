@@ -35,6 +35,16 @@ const Html = ({ styles, state, children }) => {
           `,
           }}
         />
+        <script async src="//pagead2.googlesyndication.com/pagead/js/adsbygoogle.js" />
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            (adsbygoogle = window.adsbygoogle || []).push({
+              google_ad_client: "ca-pub-6988311040138762",
+              enable_page_level_ads: true
+            });
+          `,
+          }}
+        />
       </body>
     </html>
   )

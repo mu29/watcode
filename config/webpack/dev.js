@@ -3,7 +3,7 @@ const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 
 const rootPath = path.resolve(__dirname, '../../')
-const assetsPath = path.resolve(rootPath, 'static')
+const assetsPath = path.resolve(rootPath, 'dist')
 
 module.exports = [{
   entry: {
@@ -23,7 +23,7 @@ module.exports = [{
       aggregateTimeout: 300,
       poll: 1000,
     },
-    contentBase: './static/',
+    contentBase: assetsPath,
   },
   devtool: 'source-map',
   resolve: {

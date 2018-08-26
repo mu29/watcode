@@ -38,12 +38,12 @@ export default class App extends React.Component {
     const isLoggedIn = state.auth.user.email !== undefined
     return (
       <React.Fragment>
-        <Helmet titleTemplate="watcode">
-          <title>왓코드 - 오늘 볼 만화 추천해줘!</title>
+        <Helmet>
+          <title>왓코드 - 오늘 볼 번호 추천해줘!</title>
           <meta charSet="UTF-8" />
           <meta name="description" content="" />
           <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-          <meta property="og:site_name" content="watcode" />
+          <meta property="og:site_name" content="왓코드 - 오늘 볼 번호 추천해줘!" />
         </Helmet>
         <ThemeProvider theme={ basicTheme }>
           <Router isLoggedIn={ isLoggedIn } />

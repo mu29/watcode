@@ -1,6 +1,6 @@
 const webpack = require('webpack')
 const path = require('path')
-const nodeExternals = require('webpack-node-externals')
+const HtmlWebpackPlugin = require('html-webpack-plugin')
 
 const rootPath = path.resolve(__dirname, '../../')
 const assetsPath = path.resolve(rootPath, 'dist')
@@ -12,7 +12,7 @@ module.exports = [{
   output: {
     path: assetsPath,
     publicPath: '/',
-    filename: '[name].js',
+    filename: '[name]-[chunkhash].js',
   },
   mode: 'development',
   devServer: {
@@ -38,28 +38,10 @@ module.exports = [{
   },
   plugins: [
     new webpack.IgnorePlugin(/^\.\/locale$/, /moment$/),
+    new HtmlWebpackPlugin({
+      template: path.join(rootPath, 'src/index.html'),
+      filename: path.join(assetsPath, 'index.html'),
+      inject: true,
+    }),
   ],
-}, {
-  entry: {
-    server: './src/server.js',
-  },
-  output: {
-    path: path.resolve(rootPath, 'dist'),
-    publicPath: '/',
-    filename: '[name].js',
-  },
-  mode: 'development',
-  devtool: 'source-map',
-  resolve: {
-    extensions: ['.js', '.jsx', '.json'],
-    modules: ['node_modules'],
-  },
-  module: {
-    rules: [
-      { test: /\.jsx?$/, exclude: /node_modules/, use: 'babel-loader' },
-      { enforce: 'pre', test: /\.js$/, use: 'source-map-loader' },
-    ],
-  },
-  target: 'node',
-  externals: [nodeExternals()],
 }]

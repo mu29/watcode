@@ -3,7 +3,7 @@ const path = require('path')
 const nodeExternals = require('webpack-node-externals')
 
 const rootPath = path.resolve(__dirname, '../../')
-const assetsPath = path.resolve(rootPath, 'static')
+const assetsPath = path.resolve(rootPath, 'dist')
 
 module.exports = [{
   entry: {

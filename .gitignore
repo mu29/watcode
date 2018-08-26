@@ -1,10 +1,8 @@
 .vscode
 
 node_modules
-dist
-static/index.html
-static/*.js
-static/*.map
+dist/*.js
+dist/*.map
 
 coverage
 

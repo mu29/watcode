@@ -1,7 +1,9 @@
-import { call, takeLatest } from 'redux-saga/effects'
+import { put, call, takeLatest } from 'redux-saga/effects'
+import { push } from 'react-router-redux'
 import { bindAsyncAction } from 'store/common'
 import {
   createBookmarkActions,
+  createBookmarksActions,
   readBookmarksActions,
   deleteBookmarkActions,
   readRecommendationsActions,
@@ -10,6 +12,11 @@ import {
 export const createBookmarkWorker = function* ({ api }, { payload }) {
   const result = yield call(api.post, `/api/artworks/${payload.id}/bookmarks`, { data: payload })
   return [result]
+}
+
+export const createBookmarksWorker = function* ({ api }, { payload }) {
+  const result = yield call(api.post, '/api/bookmarks', { data: payload })
+  return [result.artworks]
 }
 
 export const readBookmarksWorker = function* ({ api }) {
@@ -32,6 +39,12 @@ export const createBookmarkExecutor = bindAsyncAction({
   worker: createBookmarkWorker,
 })
 
+export const createBookmarksExecutor = bindAsyncAction({
+  actions: createBookmarksActions,
+  worker: createBookmarksWorker,
+  onSuccess: () => put(push('/bookmarks')),
+})
+
 export const readBookmarksExecutor = bindAsyncAction({
   actions: readBookmarksActions,
   worker: readBookmarksWorker,
@@ -49,6 +62,7 @@ export const readRecommendationsExecutor = bindAsyncAction({
 
 export default function* (services) {
   yield takeLatest(createBookmarkActions.request.type, createBookmarkExecutor, services)
+  yield takeLatest(createBookmarksActions.request.type, createBookmarksExecutor, services)
   yield takeLatest(readBookmarksActions.request.type, readBookmarksExecutor, services)
   yield takeLatest(deleteBookmarkActions.request.type, deleteBookmarkExecutor, services)
   yield takeLatest(readRecommendationsActions.request.type, readRecommendationsExecutor, services)

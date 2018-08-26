@@ -2,11 +2,10 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Heading, Text, LoadingButton } from 'components'
+import { BookmarkForm } from 'containers'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
-  display: flex;
-  justify-content: space-between;
   align-items: center;
   margin: 1rem 0;
   padding: 1rem;
@@ -19,24 +18,38 @@ const Wrapper = styled.div`
   }
 `
 
-const ProfileArea = styled.div`
+const ProfileArea = styled.article`
+  display: flex;
+  justify-content: space-between;
+`
+
+const ProfileInfoArea = styled.div`
+`
+
+const Divider = styled.div`
+  margin: 1rem 0;
+  border: 0.03125rem solid ${palette('gray.30')};
 `
 
 const Profile = ({ user, onSignOut, isLoading }) => (
   <Wrapper>
     <ProfileArea>
-      <Heading level={ 6 }>{ user.displayName }</Heading>
-      <Text color="gray.60" fontWeight={ 200 } small>{ user.email }</Text>
+      <ProfileInfoArea>
+        <Heading level={ 6 }>{ user.displayName }</Heading>
+        <Text color="gray.60" fontWeight={ 200 } small>{ user.email }</Text>
+      </ProfileInfoArea>
+      <LoadingButton
+        height={ 40 }
+        fontSize={ 14 }
+        onClick={ onSignOut }
+        isLoading={ isLoading }
+        disabled={ isLoading }
+      >
+        로그아웃
+      </LoadingButton>
     </ProfileArea>
-    <LoadingButton
-      height={ 40 }
-      fontSize={ 14 }
-      onClick={ onSignOut }
-      isLoading={ isLoading }
-      disabled={ isLoading }
-    >
-      로그아웃
-    </LoadingButton>
+    <Divider />
+    <BookmarkForm />
   </Wrapper>
 )
 

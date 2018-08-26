@@ -2,6 +2,7 @@ import uniq from 'lodash/uniq'
 import { initialState } from './selectors'
 import {
   createBookmarkActions,
+  createBookmarksActions,
   readBookmarksActions,
   deleteBookmarkActions,
   readRecommendationsActions,
@@ -13,6 +14,11 @@ export default (state = initialState, action) => {
       return {
         ...state,
         bookmarks: uniq([...state.bookmarks, action.payload.id]),
+      }
+    case createBookmarksActions.success.type:
+      return {
+        ...state,
+        bookmarks: uniq([...state.bookmarks, ...action.payload.map(b => b.id)]),
       }
     case readBookmarksActions.success.type:
       return {

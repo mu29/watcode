@@ -8,7 +8,6 @@ const styles = css`
   color: ${color};
   font-family: ${fontFamily};
   font-size: ${fontSize};
-  font-weight: bold;
   text-decoration: none;
 `
 
@@ -30,7 +29,7 @@ Link.defaultProps = {
   to: undefined,
   href: undefined,
   color: 'gray.90',
-  font: 'gothic',
+  font: 'default',
   fontSize: 14,
 }
 

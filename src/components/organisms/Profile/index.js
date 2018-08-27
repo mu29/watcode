@@ -2,7 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 import { Heading, Text, LoadingButton } from 'components'
-import { BookmarkForm } from 'containers'
+import { BookmarkForm, AdminModeForm } from 'containers'
 import { palette } from 'services/style'
 
 const Wrapper = styled.div`
@@ -50,6 +50,7 @@ const Profile = ({ user, onSignOut, isLoading }) => (
     </ProfileArea>
     <Divider />
     <BookmarkForm />
+    <AdminModeForm onSubmit={ () => {} } />
   </Wrapper>
 )
 

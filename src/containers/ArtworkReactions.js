@@ -4,7 +4,8 @@ import { ArtworkReactions } from 'components'
 
 const ArtworkReactionsContainer = props => <ArtworkReactions { ...props } />
 
-const mapStateToProps = ({ bookmark }, { id }) => ({
+const mapStateToProps = ({ auth, bookmark }, { id }) => ({
+  isAdmin: auth.isAdmin,
   isBookmarked: bookmark.bookmarks.find(b => b === id) !== undefined,
 })
 

@@ -29,7 +29,7 @@ const BookmarkForm = ({
         type="textarea"
         name="content"
         rows="5"
-        placeholder="즐겨찾기에 추가할 작품 목록을 입력해주세요."
+        placeholder="즐겨찾기에 추가할 작품 목록"
         component={ ReduxField }
       />
     </FieldWrapper>

@@ -39,6 +39,10 @@ const StyledText = styled(Text)`
   font-size: 0.6875rem;
   color: ${color};
   line-height: 1.1;
+
+  &:nth-child(3) {
+    margin-left: auto;
+  }
 `
 
 const StyledLink = styled(Link)`
@@ -54,6 +58,7 @@ const StyledLink = styled(Link)`
 
 const ArtworkReactions = ({
   id,
+  isAdmin,
   isBookmarked,
   bookmarks,
   comments,
@@ -62,15 +67,24 @@ const ArtworkReactions = ({
   <Wrapper>
     <StyledIcon isBookmarked={ isBookmarked } type="regular" icon="star" />
     <StyledText isBookmarked={ isBookmarked } small>{ bookmarks }명</StyledText>
-    <StyledLink href={ `https://hitomi.la/reader/${id}.html` }>
-      { comments > 0 ? `댓글 ${comments}개 · ` : ''}조회 { views }회
-    </StyledLink>
-    <StyledIconButton type="solid" size={ 12 } icon="link" href={ `https://hitomi.la/reader/${id}.html` } />
+    {
+      isAdmin ? (
+        <React.Fragment>
+          <StyledLink href={ `https://hitomi.la/reader/${id}.html` }>
+            { comments > 0 ? `댓글 ${comments}개 · ` : ''}조회 { views }회
+          </StyledLink>
+          <StyledIconButton type="solid" size={ 12 } icon="link" href={ `https://hitomi.la/reader/${id}.html` } />
+        </React.Fragment>
+      ) : (
+        <StyledText>{ comments > 0 ? `댓글 ${comments}개 · ` : ''}조회 { views }회</StyledText>
+      )
+    }
   </Wrapper>
 )
 
 ArtworkReactions.propTypes = {
   id: PropTypes.number.isRequired,
+  isAdmin: PropTypes.bool.isRequired,
   isBookmarked: PropTypes.bool,
   bookmarks: PropTypes.number,
   comments: PropTypes.number,
